@@ -1,7 +1,0 @@
-<!doctype html>
-<html lang="ja">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>みほはくん＆みあなちゃんニュース</title><style>body{font-family:system-ui,sans-serif;max-width:900px;margin:auto;padding:24px;background:#f5f5f5;color:#222}main{white-space:pre-wrap;background:#fff;padding:24px;border-radius:12px;box-shadow:0 2px 10px #0001}a{display:inline-block;margin-bottom:16px}</style></head>
-<body><a href="history.html">履歴を見る</a><h1>最新ニュース</h1><main id="output">読み込み中...</main><script>
-const API='https://api.github.com/repos/marimutukisinnmu-rgb/News-about-Miho-hakun-and-Miana-chan/contents/ai/logs?ref=web';
-async function load(){const r=await fetch(API);if(!r.ok)throw Error('取得失敗');const files=await r.json();const logs=files.filter(x=>x.type==='file'&&x.name.endsWith('.txt')).sort((a,b)=>b.name.localeCompare(a.name));if(!logs.length){output.textContent='ニュースログはまだありません。';return}const t=await fetch(logs[0].download_url).then(r=>r.text());output.textContent=t}load().catch(e=>output.textContent='ニュースの取得に失敗しました。');
-</script></body></html>
