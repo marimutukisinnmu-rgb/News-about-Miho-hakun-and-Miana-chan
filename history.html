@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ニュース履歴</title><style>body{font-family:system-ui,sans-serif;max-width:900px;margin:auto;padding:24px;background:#f5f5f5;color:#222}ul{list-style:none;padding:0}li{background:#fff;margin:8px 0;padding:14px;border-radius:10px}a{text-decoration:none}</style></head>
+<body><a href="index.html">← 最新ニュース</a><h1>ニュース履歴</h1><ul id="list"><li>読み込み中...</li></ul><script>
+const API='https://api.github.com/repos/marimutukisinnmu-rgb/News-about-Miho-hakun-and-Miana-chan/contents/ai/logs?ref=web';
+async function load(){const r=await fetch(API);if(!r.ok)throw Error('取得失敗');const files=await r.json();const logs=files.filter(x=>x.type==='file'&&x.name.endsWith('.txt')).sort((a,b)=>b.name.localeCompare(a.name));list.innerHTML='';if(!logs.length){list.innerHTML='<li>履歴はまだありません。</li>';return}for(const f of logs){const li=document.createElement('li');const a=document.createElement('a');a.href='historyoutput.html?log='+encodeURIComponent(f.name);a.textContent=f.name;li.appendChild(a);list.appendChild(li)}}load().catch(e=>list.innerHTML='<li>履歴の取得に失敗しました。</li>');
+</script></body></html>
