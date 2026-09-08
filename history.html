@@ -5,7 +5,7 @@
 const API='https://api.github.com/repos/marimutukisinnmu-rgb/News-about-Miho-hakun-and-Miana-chan/contents/ai/logs';
 function newsNumber(name){const i=name.indexOf(' ');return Number(name.slice(1,i<0?name.length:i));}
 function newsDate(name){const m=name.match(/^#\d+ (\d{4})-(\d{2})-(\d{2})-(\d{2}):(\d{2})\.txt$/);return m?m.slice(1).join(''):name;}
-function displayName(name){const m=name.match(/^#(\d+) (\d{4})-(\d{2})-(\d{2})-(\d{2}):(\d{2})\.txt$/);return m?`${m[1]}回目(${m[2]}/${m[3]}/${m[4]} ${m[5]}:${m[6]})`:name.replace(/\.txt$/i,'');}
+function displayName(name){const m=name.match(/^#(\d+) (\d{4})-(\d{2})-(\d{2})-(\d{2}):(\d{2})\.txt$/);return m?`${Number(m[1])}回目(${m[2]}/${m[3]}/${m[4]} ${m[5]}:${m[6]})`:name.replace(/\.txt$/i,'');}
 function render(logs){list.innerHTML='';if(!logs.length){list.innerHTML='<li>該当するニュースがありません。</li>';return}for(const f of logs){const li=document.createElement('li');const a=document.createElement('a');a.href='historyoutput.html?log='+encodeURIComponent(f.name);a.textContent=displayName(f.name);li.appendChild(a);list.appendChild(li)}}
 let logs=[];
 async function load(){const r=await fetch(API+'?t='+Date.now());if(!r.ok)throw Error('取得失敗');const files=await r.json();logs=files.filter(x=>x.type==='file'&&x.name.endsWith('.txt')).sort((a,b)=>{const n=newsNumber(b.name)-newsNumber(a.name);return n||newsDate(b.name).localeCompare(newsDate(a.name));});await searchNow();}
