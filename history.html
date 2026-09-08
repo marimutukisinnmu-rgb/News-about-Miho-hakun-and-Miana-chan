@@ -8,8 +8,10 @@ function newsDate(name){const m=name.match(/^#\d+ (\d{4})-(\d{2})-(\d{2})-(\d{2}
 function displayName(name){const m=name.match(/^#(\d+) (\d{4})-(\d{2})-(\d{2})-(\d{2}):(\d{2})\.txt$/);return m?`${m[1]}回目(${m[2]}/${m[3]}/${m[4]} ${m[5]}:${m[6]})`:name.replace(/\.txt$/i,'');}
 function render(logs){list.innerHTML='';if(!logs.length){list.innerHTML='<li>該当するニュースがありません。</li>';return}for(const f of logs){const li=document.createElement('li');const a=document.createElement('a');a.href='historyoutput.html?log='+encodeURIComponent(f.name);a.textContent=displayName(f.name);li.appendChild(a);list.appendChild(li)}}
 let logs=[];
-async function load(){const r=await fetch(API);if(!r.ok)throw Error('取得失敗');const files=await r.json();logs=files.filter(x=>x.type==='file'&&x.name.endsWith('.txt')).sort((a,b)=>{const n=newsNumber(b.name)-newsNumber(a.name);return n||newsDate(b.name).localeCompare(newsDate(a.name));});render(logs)}
+async function load(){const r=await fetch(API+'?t='+Date.now());if(!r.ok)throw Error('取得失敗');const files=await r.json();logs=files.filter(x=>x.type==='file'&&x.name.endsWith('.txt')).sort((a,b)=>{const n=newsNumber(b.name)-newsNumber(a.name);return n||newsDate(b.name).localeCompare(newsDate(a.name));});await searchNow();}
+async function searchNow(){const q=searchInput.value.trim().toLocaleLowerCase();if(!q){render(logs);return}const matched=[];for(const f of logs){try{const r=await fetch(f.download_url+'?t='+Date.now());const t=r.ok?await r.text():'';if((t+' '+displayName(f.name)).toLocaleLowerCase().includes(q))matched.push(f)}catch(e){}}render(matched)}
 searchBtn.addEventListener('click',()=>{const open=searchBox.style.display==='block';searchBox.style.display=open?'none':'block';if(!open)searchInput.focus();else{searchInput.value='';render(logs)}});
-searchInput.addEventListener('input',async()=>{const q=searchInput.value.trim().toLocaleLowerCase();if(!q){render(logs);return}const matched=[];for(const f of logs){try{const t=await fetch(f.download_url).then(r=>r.ok?r.text():'');if((t+' '+displayName(f.name)).toLocaleLowerCase().includes(q))matched.push(f)}catch(e){}}render(matched)});
+searchInput.addEventListener('input',searchNow);
+searchInput.addEventListener('keydown',async e=>{if(e.key==='Enter'){e.preventDefault();await load();}});
 load().catch(e=>list.innerHTML='<li>履歴の取得に失敗しました。</li>');
 </script></body></html>
