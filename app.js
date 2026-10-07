@@ -12,7 +12,7 @@ function newsDate(name){
 
 function displayName(name){
   const m=name.match(/^#(\d+) (\d{4})-(\d{2})-(\d{2})-(\d{2}):(\d{2})\.txt$/);
-  return m?\`${Number(m[1])}回目(${m[2]}/${m[3]}/${m[4]} ${m[5]}:${m[6]})\`:name.replace(/\.txt$/i,'');
+  return m?`${Number(m[1])}回目(${m[2]}/${m[3]}/${m[4]} ${m[5]}:${m[6]})`:name.replace(/\.txt$/i,'');
 }
 
 function sortLogs(files){
