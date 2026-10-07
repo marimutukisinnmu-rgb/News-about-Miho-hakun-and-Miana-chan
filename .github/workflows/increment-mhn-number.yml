@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'ai/logs/*.txt'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -27,13 +28,18 @@ jobs:
         id: logs
         shell: bash
         run: |
-          BEFORE="${{ github.event.before }}"
-          AFTER="${{ github.sha }}"
-
-          if [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
-            COUNT=$(git diff-tree --no-commit-id --name-status -r "$AFTER" -- 'ai/logs/*.txt' | awk '$1 == "A" {count++} END {print count+0}')
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            COUNT=0
+            echo "Manual run: no automatic increment (log push is the trigger for +1)."
           else
-            COUNT=$(git diff --name-status "$BEFORE" "$AFTER" -- 'ai/logs/*.txt' | awk '$1 == "A" {count++} END {print count+0}')
+            BEFORE="${{ github.event.before }}"
+            AFTER="${{ github.sha }}"
+
+            if [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            COUNT=$(git diff-tree --no-commit-id --name-status -r "$AFTER" -- 'ai/logs/*.txt' | awk '$1 == "A" {count++} END {print count+0}')
+            else
+              COUNT=$(git diff --name-status "$BEFORE" "$AFTER" -- 'ai/logs/*.txt' | awk '$1 == "A" {count++} END {print count+0}')
+            fi
           fi
 
           echo "count=$COUNT" >> "$GITHUB_OUTPUT"
