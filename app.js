@@ -57,7 +57,11 @@ async function loadLatest(){
     const r=await fetch(url,{cache:'no-store'});
     console.log('[MHN] latest response',r.status);
     if(!r.ok) throw Error('最新ログの取得に失敗しました');
-    output.textContent=cleanNewsText(await r.text());
+    const bodyText=await r.text();
+    console.log("本文\\n"+bodyText);
+    const cleanedText=cleanNewsText(bodyText);
+    console.log("編集後\\n"+cleanedText);
+    output.textContent=cleanedText;
   }catch(e){
     console.error('[MHN] latest load error',e);
     output.textContent='ニュースの取得に失敗しました。';
