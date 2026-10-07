@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
@@ -36,7 +36,7 @@ jobs:
             AFTER="${{ github.sha }}"
 
             if [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
-            COUNT=$(git diff-tree --no-commit-id --name-status -r "$AFTER" -- 'ai/logs/*.txt' | awk '$1 == "A" {count++} END {print count+0}')
+              COUNT=$(git diff-tree --no-commit-id --name-status -r "$AFTER" -- 'ai/logs/*.txt' | awk '$1 == "A" {count++} END {print count+0}')
             else
               COUNT=$(git diff --name-status "$BEFORE" "$AFTER" -- 'ai/logs/*.txt' | awk '$1 == "A" {count++} END {print count+0}')
             fi
