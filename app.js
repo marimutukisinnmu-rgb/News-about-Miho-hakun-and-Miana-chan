@@ -10,6 +10,12 @@ function newsDate(name){
   return m?m.slice(1).join(''):'';
 }
 
+function cleanNewsText(text){
+  return String(text)
+    .replace(/\uE200[\\s\\S]*?\uE201/gu,'')
+    .replace(/\uE200[\\s\\S]*$/gu,'');
+}
+
 function displayName(name){
   const m=name.match(/^#(\d+) (\d{4})-(\d{2})-(\d{2})-(\d{2}):(\d{2})\.txt$/);
   return m?`${Number(m[1])}回目(${m[2]}/${m[3]}/${m[4]} ${m[5]}:${m[6]})`:name.replace(/\.txt$/i,'');
@@ -51,7 +57,7 @@ async function loadLatest(){
     const r=await fetch(url,{cache:'no-store'});
     console.log('[MHN] latest response',r.status);
     if(!r.ok) throw Error('最新ログの取得に失敗しました');
-    output.textContent=await r.text();
+    output.textContent=cleanNewsText(await r.text());
   }catch(e){
     console.error('[MHN] latest load error',e);
     output.textContent='ニュースの取得に失敗しました。';
