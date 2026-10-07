@@ -12,8 +12,8 @@ function newsDate(name){
 
 function cleanNewsText(text){
   return String(text)
-    .replace(/\uE200[\\s\\S]*?\uE201/gu,'')
-    .replace(/\uE200[\\s\\S]*$/gu,'');
+    .replace(/\uE200[\s\S]*?\uE201/gu,'')
+    .replace(/\uE200[\s\S]*$/gu,'');
 }
 
 function displayName(name){
