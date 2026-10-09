@@ -10,36 +10,46 @@
     * { box-sizing: border-box; }
     body {
       margin: 0; min-height: 100vh; display: grid; place-items: center;
-      padding: 24px; font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      padding: 24px 24px 44px; font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
       color: #f9fafb; background: radial-gradient(ellipse at top, #25345a 0%, #111827 55%, #080d18 100%);
     }
     main {
-      width: min(100%, 680px); padding: clamp(28px, 6vw, 56px);
+      width: min(100%, 680px); padding: clamp(24px, 5vw, 42px);
       text-align: center; border: 1px solid #475569; border-radius: 24px;
       background: rgb(15 23 42 / 78%); box-shadow: 0 24px 80px rgb(0 0 0 / 30%);
     }
-    .code { margin: 0; font-size: clamp(5rem, 20vw, 9rem); line-height: 1; font-weight: 900; letter-spacing: -.07em; }
-    h1 { margin: 18px 0 12px; font-size: clamp(1.4rem, 5vw, 2rem); }
+    .code { margin: 0; font-size: clamp(5rem, 20vw, 8rem); line-height: 1; font-weight: 900; letter-spacing: -.07em; }
+    h1 { margin: 16px 0 10px; font-size: clamp(1.4rem, 5vw, 2rem); }
     p { color: #cbd5e1; line-height: 1.8; }
-    .cats { font-size: 2.5rem; margin: 18px 0; }
+    .cat-image {
+      display: block; width: min(100%, 420px); height: auto;
+      margin: 18px auto; border-radius: 16px;
+    }
     a {
-      display: inline-block; margin-top: 16px; padding: 12px 22px; border-radius: 999px;
+      display: inline-block; margin-top: 12px; padding: 12px 22px; border-radius: 999px;
       background: #60a5fa; color: #0b1220; font-weight: 800; text-decoration: none;
     }
     a:hover { background: #93c5fd; }
     a:focus-visible { outline: 3px solid white; outline-offset: 4px; }
-    footer { margin-top: 28px; color: #94a3b8; font-size: .85rem; }
+    footer { margin-top: 22px; color: #94a3b8; font-size: .85rem; }
+    .image-notice {
+      position: fixed; right: 12px; bottom: 8px; margin: 0;
+      color: #cbd5e1; font-size: clamp(8px, 1.6vw, 11px);
+      line-height: 1.4; white-space: nowrap; text-align: right;
+      text-shadow: 0 1px 3px #080d18;
+    }
   </style>
 </head>
 <body>
   <main>
     <p class="code">404</p>
     <h1>ページが見つからないよ！</h1>
-    <div class="cats" aria-hidden="true">🐈‍⬛ 🐈</div>
-    <p>みほはくん：「あれっ！？ ページがどこかに行っちゃった！」</p>
-    <p>みあなちゃん：「404 Not Found！ URLを確認して、ニュース本部に戻ろう！」</p>
+    <img class="cat-image" src="./404cat.png" alt="段ボールを探している黒猫と白猫。段ボールは見つからない！">
+    <p>みほはくん：「あれっ！？ 段ボールがどこにもないよ！」</p>
+    <p>みあなちゃん：「まさか段ボールまで NOT FOUND！？」</p>
     <a href="./index.html">MHNのトップページへ戻る</a>
     <footer>MHN — みほはくん＆みあなちゃんのニュースタイム</footer>
   </main>
+  <p class="image-notice">この画像の保存・転載、および他のアプリやウェブサイトでの利用はご遠慮ください。</p>
 </body>
 </html>
