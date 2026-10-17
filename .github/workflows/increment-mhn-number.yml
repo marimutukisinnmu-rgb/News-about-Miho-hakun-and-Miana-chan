@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - 'ai/logs/*.txt'
+      - 'ai/log-index.json'
+      - 'ai/log-search-index.json'
   workflow_dispatch:
 
 permissions:
