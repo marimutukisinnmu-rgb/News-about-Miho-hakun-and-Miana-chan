@@ -72,7 +72,7 @@ jobs:
           import re
           from pathlib import Path
 
-          name_re = re.compile(r'^#(\d+) (\d{4}-\d{2}-\d{2}-\d{2}:\d{2})\.txt)
+          name_re = re.compile(r'^#(\d+) (\d{4}-\d{2}-\d{2}-\d{2}:\d{2})\.txt$')
           records = []
           for path in Path("ai/logs").glob("*.txt"):
               match = name_re.fullmatch(path.name)
@@ -101,11 +101,11 @@ jobs:
           }
 
           Path("ai/log-index.json").write_text(
-              json.dumps(metadata, ensure_ascii=False, separators=(",", ":")) + "\\n",
+              json.dumps(metadata, ensure_ascii=False, separators=(",", ":")),
               encoding="utf-8",
           )
           Path("ai/log-search-index.json").write_text(
-              json.dumps(search, ensure_ascii=False, separators=(",", ":")) + "\\n",
+              json.dumps(search, ensure_ascii=False, separators=(",", ":")),
               encoding="utf-8",
           )
           print(f"Generated website indexes for {len(records)} news logs.")
