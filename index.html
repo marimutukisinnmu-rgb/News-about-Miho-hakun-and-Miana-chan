@@ -34,11 +34,15 @@
 <section class="comment-section" aria-labelledby="comment-heading">
   <h2 id="comment-heading">MHNへのコメント</h2>
   <p>ご意見・感想・不具合報告などを送れます。</p>
-  <p class="privacy-note"><strong>非公開です。</strong>送信したコメントはホームページに表示されず、運営だけが確認します。氏名・住所・電話番号・メールアドレス・パスワードなどの個人情報は入力しないでください。返信できない場合もあります。</p>
+  <p class="privacy-note"><strong>非公開です。</strong>コメントとメールアドレスはホームページに表示されず、運営だけが確認します。メールアドレスは任意です。返信や共同開発の相談など、この送信への対応に限って使用します。住所・電話番号・パスワードなど、連絡に不要な個人情報は入力しないでください。</p>
   <form id="commentForm">
     <label for="commentNickname">ニックネーム（任意・40文字まで）</label>
     <input id="commentNickname" name="nickname" type="text" maxlength="40" autocomplete="nickname">
     <p class="hint">本名ではなく、公開しても問題のない名前を使ってください。</p>
+
+    <label for="commentEmail">メールアドレス（任意・返信や共同開発の連絡用）</label>
+    <input id="commentEmail" name="email" type="email" maxlength="254" autocomplete="email" inputmode="email" aria-describedby="commentEmailHint">
+    <p class="hint" id="commentEmailHint">返信や共同開発の相談を希望するときだけ入力してください。運営からこのコメントへの連絡にのみ使用します。</p>
 
     <label for="commentMessage">コメント（必須・2,000文字まで）</label>
     <textarea id="commentMessage" name="message" maxlength="2000" required aria-describedby="commentMessageHint"></textarea>
@@ -61,6 +65,6 @@
   script.async=false;
   document.body.appendChild(script);
 </script>
-<script src="comments.js?v=1"></script>
+<script src="comments.js?v=2"></script>
 </body>
 </html>
