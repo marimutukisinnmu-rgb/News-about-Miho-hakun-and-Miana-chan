@@ -21,7 +21,7 @@
   .submit-button{margin-top:16px;padding:11px 18px;border:0;border-radius:8px;background:#1d4ed8;color:white;font:inherit;font-weight:700;cursor:pointer}
   .submit-button:disabled{opacity:.65;cursor:wait}
   #commentStatus{min-height:1.6em;line-height:1.6}
-  .comment-honeypot{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+  .optional-contact-field{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
   footer{margin:24px 0 8px;font-size:.85rem;color:#666}
   @media(max-width:520px){body{padding:14px}.comment-section,main{padding:18px}}
 </style>
@@ -44,9 +44,9 @@
     <textarea id="commentMessage" name="message" maxlength="2000" required aria-describedby="commentMessageHint"></textarea>
     <p id="commentMessageHint" class="hint">コメントは公開されません。送信前に内容を確認してください。</p>
 
-    <div class="comment-honeypot" aria-hidden="true">
-      <label for="commentWebsite">この欄は入力しないでください</label>
-      <input id="commentWebsite" name="website" type="text" tabindex="-1" autocomplete="off">
+    <div class="optional-contact-field" aria-hidden="true">
+      <label for="website">ウェブサイト（任意）</label>
+      <input id="website" name="website" type="url" tabindex="-1" autocomplete="url" placeholder="https://example.com" maxlength="250">
     </div>
 
     <button class="submit-button" id="commentSubmit" type="submit">運営に非公開で送信</button>
