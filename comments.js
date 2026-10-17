@@ -4,7 +4,6 @@
 
   const status = document.getElementById("commentStatus");
   const button = document.getElementById("commentSubmit");
-  const startedAt = Date.now();
   const endpoint = "https://ewiurxmmomtcjfvjfpus.supabase.co/functions/v1/mhn-comment-submit";
   const publishableKey = "sb_publishable_nvWYS-dOfApdIClbRV0A1Q_9UgaPM90";
 
@@ -37,7 +36,6 @@
       email: String(values.get("email") || "").trim(),
       message: String(values.get("message") || ""),
       website: String(values.get("website") || ""),
-      elapsedMs: Date.now() - startedAt,
       pagePath: window.location.pathname
     };
 
