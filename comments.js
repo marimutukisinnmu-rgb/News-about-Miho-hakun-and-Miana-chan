@@ -15,6 +15,9 @@
     if (code === "please_wait") {
       return "送信前に、入力内容をもう一度確認してください。";
     }
+    if (code === "email_invalid") {
+      return "メールアドレスの形式を確認してください。メールアドレスを空欄にして送信することもできます。";
+    }
     if (code === "message_invalid" || code === "nickname_invalid") {
       return "入力内容を確認してください（コメントは1〜2,000文字、ニックネームは40文字まで）。";
     }
@@ -31,6 +34,7 @@
     const values = new FormData(form);
     const payload = {
       nickname: String(values.get("nickname") || ""),
+      email: String(values.get("email") || "").trim(),
       message: String(values.get("message") || ""),
       website: String(values.get("website") || ""),
       elapsedMs: Date.now() - startedAt,
