@@ -11,7 +11,6 @@
   const accountPanel = document.getElementById("accountPanel");
   const accountEmail = document.getElementById("accountEmail");
   const accountName = document.getElementById("accountName");
-  const googleButton = document.getElementById("googleButton");
   const logoutButton = document.getElementById("logoutButton");
 
   const SUPABASE_URL = "https://ewiurxmmomtcjfvjfpus.supabase.co";
@@ -22,7 +21,6 @@
   function say(message) { status.textContent = message; }
   function setBusy(busy) {
     submitButton.disabled = busy;
-    googleButton.disabled = busy;
     loginTab.disabled = busy;
     signupTab.disabled = busy;
   }
@@ -51,7 +49,6 @@
     if (/Email not confirmed/i.test(message)) return "メールアドレスの確認がまだ完了していません。確認メールのリンクを開いてください。";
     if (/User already registered/i.test(message)) return "このメールアドレスは登録済みの可能性があります。ログインをお試しください。";
     if (/Password should be at least/i.test(message)) return "パスワードは8文字以上にしてください。";
-    if (/provider is not enabled|Unsupported provider/i.test(message)) return "GoogleログインがSupabase側でまだ有効になっていません。管理者がGoogle OAuth設定を完了する必要があります。";
     if (/redirect|callback/i.test(message)) return "認証後の戻り先URLがSupabaseの許可リストに登録されているか確認してください。";
     return "処理に失敗しました。入力内容とネットワークを確認して、もう一度お試しください。";
   }
@@ -100,21 +97,6 @@
       } catch (error) {
         say(explainError(error));
       } finally {
-        setBusy(false);
-      }
-    });
-
-    googleButton.addEventListener("click", async () => {
-      setBusy(true);
-      say("Googleログインへ移動します…");
-      try {
-        const { error } = await supabase.auth.signInWithOAuth({
-          provider: "google",
-          options: { redirectTo: window.location.href.split(/[?#]/)[0] }
-        });
-        if (error) throw error;
-      } catch (error) {
-        say(explainError(error));
         setBusy(false);
       }
     });
