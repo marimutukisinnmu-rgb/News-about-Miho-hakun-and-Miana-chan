@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://ewiurxmmomtcjfvjfpus.supabase.co; form-action 'self';">
 <title>MHN アカウント</title>
 <style>
-*{box-sizing:border-box}body{font-family:system-ui,sans-serif;max-width:620px;margin:0 auto;padding:22px;background:#f5f5f5;color:#222;line-height:1.6}a{color:#1d4ed8}.card{background:#fff;padding:24px;border-radius:14px;box-shadow:0 2px 10px #0001;margin-top:18px}h1{font-size:1.7rem;margin:.5rem 0}p{margin:.6rem 0}.muted{color:#555;font-size:.92rem}.note{padding:12px;background:#f1f5f9;border-radius:8px}.tabs{display:flex;gap:8px;margin:18px 0}.tabs button{flex:1}.field{margin:14px 0}.field label{display:block;font-weight:650;margin-bottom:6px}.field input{width:100%;padding:12px;border:1px solid #b8c0cc;border-radius:8px;font:inherit}button{padding:11px 14px;border:0;border-radius:8px;font:inherit;font-weight:650;cursor:pointer}.tabs button,.secondary{background:#e5e7eb;color:#222}.tabs button[aria-pressed=true],.primary{background:#1d4ed8;color:white}.google{width:100%;background:#fff;border:1px solid #b8c0cc;color:#222}.primary{width:100%;margin-top:10px}.divider{display:flex;align-items:center;gap:12px;color:#666;margin:18px 0}.divider:before,.divider:after{content:"";height:1px;background:#ddd;flex:1}button:disabled{opacity:.6;cursor:wait}input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #2563eb;outline-offset:2px}#status{min-height:3em;white-space:pre-wrap}#accountPanel[hidden],#authForm[hidden]{display:none}@media(max-width:480px){body{padding:14px}.card{padding:18px}}
+*{box-sizing:border-box}body{font-family:system-ui,sans-serif;max-width:620px;margin:0 auto;padding:22px;background:#f5f5f5;color:#222;line-height:1.6}a{color:#1d4ed8}.card{background:#fff;padding:24px;border-radius:14px;box-shadow:0 2px 10px #0001;margin-top:18px}h1{font-size:1.7rem;margin:.5rem 0}p{margin:.6rem 0}.muted{color:#555;font-size:.92rem}.note{padding:12px;background:#f1f5f9;border-radius:8px}.tabs{display:flex;gap:8px;margin:18px 0}.tabs button{flex:1}.field{margin:14px 0}.field label{display:block;font-weight:650;margin-bottom:6px}.field input{width:100%;padding:12px;border:1px solid #b8c0cc;border-radius:8px;font:inherit}button{padding:11px 14px;border:0;border-radius:8px;font:inherit;font-weight:650;cursor:pointer}.tabs button,.secondary{background:#e5e7eb;color:#222}.tabs button[aria-pressed=true],.primary{background:#1d4ed8;color:white}.primary{width:100%;margin-top:10px}.divider{display:flex;align-items:center;gap:12px;color:#666;margin:18px 0}.divider:before,.divider:after{content:"";height:1px;background:#ddd;flex:1}button:disabled{opacity:.6;cursor:wait}input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #2563eb;outline-offset:2px}#status{min-height:3em;white-space:pre-wrap}#accountPanel[hidden],#authForm[hidden]{display:none}@media(max-width:480px){body{padding:14px}.card{padding:18px}}
 </style>
 </head>
 <body>
@@ -24,8 +24,6 @@
     <div class="field"><label for="password">パスワード</label><input id="password" name="password" type="password" minlength="8" autocomplete="current-password" required aria-describedby="passwordHint"><p class="muted" id="passwordHint">8文字以上。ほかのサイトと使い回さないでください。</p></div>
     <button class="primary" id="submitButton" type="submit">ログイン</button>
   </form>
-  <div class="divider">または</div>
-  <button type="button" class="google" id="googleButton">Googleでログイン</button>
   <p class="muted note">メールアドレスで新規登録した場合、確認メールのリンクを開くまで登録は完了しません。メールが届かない場合は迷惑メールフォルダーも確認してください。</p>
   <p id="status" role="status" aria-live="polite"></p>
 </section>
@@ -34,6 +32,6 @@
   <button type="button" class="primary" id="logoutButton">ログアウト</button>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.js" defer></script>
-<script src="./auth.js?v=1" defer></script>
+<script src="./auth.js?v=2" defer></script>
 </body>
 </html>
