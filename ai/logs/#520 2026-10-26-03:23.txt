@@ -50,4 +50,3 @@
 - [ロイター通信・日銀が指摘したAI投資とサイバー攻撃のリスク（10月23日）](https://www.reuters.com/world/asia-pacific/bank-japan-warns-risks-ai-market-shock-cyberattacks-2026-10-23/)
 - [AP通信・日米などの共同訓練「Keen Sword 27」](https://apnews.com/article/e24603d4c8fdf9427db206c401cdf09e)
 - [日経平均の記録](https://indexes.nikkei.co.jp/nkave/archives/summary?dt=09292026&idx=nk225)
-- [全国の開店予定情報](https://github.com/marimutukisinnmu-rgb/japan-store-openings-json/blob/main/json/latest.json)
