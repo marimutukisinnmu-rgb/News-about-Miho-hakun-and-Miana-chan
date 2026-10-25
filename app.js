@@ -35,7 +35,21 @@ function cleanNewsText(text) {
     .replace(/\uE200/gu, "");
 }
 
-function renderNewsMarkdown(output, text) {\n  const source = String(text);\n  if (window.marked && typeof window.marked.parse === "function" && window.DOMPurify) {\n    try {\n      const html = window.marked.parse(source, { gfm: true, breaks: false });\n      output.innerHTML = window.DOMPurify.sanitize(html, { USE_PROFILES: { html: true } });\n      return;\n    } catch (_) {\n      // If Markdown rendering fails, preserve the original text safely.\n    }\n  }\n  output.textContent = source;\n}\n\nfunction displayName(name) {
+function renderNewsMarkdown(output, text) {
+  const source = String(text);
+  if (window.marked && typeof window.marked.parse === "function" && window.DOMPurify) {
+    try {
+      const html = window.marked.parse(source, { gfm: true, breaks: false });
+      output.innerHTML = window.DOMPurify.sanitize(html, { USE_PROFILES: { html: true } });
+      return;
+    } catch (_) {
+      // If Markdown rendering fails, preserve the original text safely.
+    }
+  }
+  output.textContent = source;
+}
+
+function displayName(name) {
   const match = name.match(LOG_NAME_RE);
   return match
     ? Number(match[1]) + "回目(" + match[2] + "/" + match[3] + "/" +
