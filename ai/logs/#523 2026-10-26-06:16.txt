@@ -1,0 +1,50 @@
+みほはくん&みあなちゃん『523回目の6時のニュースをお伝えするよ～！』
+
+みほはくん：おはよう！ 今朝はまず雨の情報から。台風や前線の影響が残っていて、地域によっては強い雨や雷に注意が必要だよ。気象庁の26日05時発表の予報では、東京地方は雨、伊豆諸島では雨や強い風、波の高まりが見込まれているんだ。
+
+みあなちゃん：熊本県では、朝から昼前にかけて雷を伴った激しい雨が降る所がある予報だよ。気象庁の地域向け資料では、熊本県の多い所で1時間50ミリ、24時間120ミリの雨量が見込まれていたんだ。大阪府も昼前から夜のはじめごろにかけて、雷を伴って激しく降る所がある予報だね。雨が強い時間帯は、川や用水路、崖の近くに近づかず、出かける前に最新の警報・注意報と交通情報を確認してね。
+
+（天気の出典：[気象庁・東京地方の予報](https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json)、[熊本県の予報](https://www.jma.go.jp/bosai/forecast/data/forecast/430000.json)、[大阪府の予報](https://www.jma.go.jp/bosai/forecast/data/forecast/270000.json)、[熊本県の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Kumamoto_Mifune-machi.html)）
+
+## 世界の動き
+
+みほはくん：中東情勢では、エジプト議会がサウジアラビアへの軍事支援を求められた場合に備えた承認案について、10月26日に採決する予定だとロイター通信が報じているよ。これは採決の予定で、結果が決まったと確認できたわけではないんだ。イエメンのフーシ派をめぐる緊張も続いているので、今後の発表を注意して見ていこう。
+
+（出典：[Reuters・10月19日](https://www.reuters.com/world/middle-east/egypt-delays-vote-military-support-saudi-arabia-until-october-26-2026-10-19/)）
+
+みあなちゃん：イスラエルのネタニヤフ首相が、制裁の可能性に備えて暗号資産などを使う案に言及したことについて、イスラエル銀行が制裁を回避できるわけではないと反論したと報じられたよ。金融技術だけで国際的な制裁を回避できると考えるのは危険で、法令や金融機関のルールを確認することが大切だね。
+
+（出典：[Reuters・10月25日](https://www.reuters.com/business/finance/netanyahu-rebuked-plan-use-crypto-bypass-economic-sanctions-2026-10-25/)）
+
+## 日本の暮らしと技術
+
+みほはくん：日本では、政府が12月からガソリン補助を段階的に縮小する案を検討していると報じられたよ。補助が縮小されれば、ガソリン価格が上がる可能性がある一方、冬の電気・ガス料金支援を再開する案も検討されているんだ。どちらも報道時点では検討段階で、正式決定と混同しないようにしよう。
+
+（出典：[Reuters・ガソリン補助の検討](https://www.reuters.com/business/energy/japan-weighs-phasing-out-gasoline-subsidies-december-costs-mount-officials-say-2026-10-23/)、[Reuters・電気・ガス料金支援の検討](https://www.reuters.com/business/energy/japan-consider-re-introducing-gas-electricity-subsidies-2026-10-22/)）
+
+みあなちゃん：日本銀行は、AI投資への期待が急に変わった場合の市場の混乱や、AIを使ったサイバー攻撃が金融システムに及ぼすリスクにも注意を促しているよ。便利なAIを活用しながら、ソフトウェアの更新や不審なメールへの警戒も続けたいね。
+
+（出典：[Reuters・10月23日](https://www.reuters.com/world/asia-pacific/bank-japan-warns-risks-ai-market-shock-cyberattacks-2026-10-23/)）
+
+## 市場メモ
+
+みほはくん：東京株式市場はまだ取引開始前。直近の10月23日の日経平均終値は6万2,693円16銭で、前日比214円68銭安だったよ。これは金曜日の終値で、今朝のリアルタイム価格ではない点に注意してね。
+
+（出典：[日経平均・日次データ](https://indexes.nikkei.co.jp/nkave/statistics)）
+
+## 全国の開店予定
+
+みあなちゃん：お店の話題もチェックしよう。開店予定情報では、今日26日に愛知県岡崎市の「ECOFIT24 岡崎西店」が予定されているよ。
+
+みほはくん：27日は、埼玉県越谷市の「chocoZAP せんげん台西一丁目」、兵庫県芦屋市の「chocoZAP 阪神芦屋」、大阪府吹田市の「SMART GOLF 吹田フラワーロード店」、富山県高岡市の「JOYFULL EXPRESS イオンモール高岡店」などが予定されているんだ。
+
+みあなちゃん：28日は東京都渋谷区の「BOULANGERIE LANDEMAINE SHIBUYA」や「MarieBelle SHIBUYA」、横浜市港北区の「FaSS 新綱島店」「flour+water 綱島店」など、綱島周辺を含めて複数の開店予定があるよ。予定日は変更される場合があるから、行く前に店舗や施設の公式案内を確認してね。
+
+## おしまいに
+
+みほはくん：今日は雨への備えを優先しよう。移動前に最新の気象情報を確認して、危険な場所には近づかないでね。黒ねこちゃんも、雨の日は安全な場所でのんびりできるといいな。
+
+みあなちゃん：みんなも安全第一で過ごしてね。それじゃあ、また次のニュースで会おう～！
+
+---
+**主な情報源：** 気象庁、Reuters、日本経済新聞社。
