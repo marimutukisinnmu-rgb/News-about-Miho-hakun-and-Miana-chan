@@ -1,7 +1,32 @@
 (() => {
   "use strict";
-  const nav = document.querySelector("[data-mhn-nav]");
-  if (!nav || !window.supabase || !window.supabase.createClient) return;
+
+  const navs = [...document.querySelectorAll("[data-mhn-nav]")];
+  if (!navs.length || !window.supabase || !window.supabase.createClient) return;
+
+  // Remove duplicate links even if an older cached script appends them later.
+  function dedupeNav(nav) {
+    const seen = new Set();
+    for (const child of [...nav.children]) {
+      if (child.tagName !== "A") continue;
+      const href = child.getAttribute("href");
+      if (seen.has(href)) child.remove();
+      else seen.add(href);
+    }
+    // Clean up repeated whitespace nodes left between removed links.
+    for (const node of [...nav.childNodes]) {
+      if (node.nodeType === Node.TEXT_NODE && !node.textContent.trim()) {
+        const prev = node.previousSibling;
+        const next = node.nextSibling;
+        if (!prev || !next || (prev.nodeType === Node.TEXT_NODE && !prev.textContent.trim())) node.remove();
+      }
+    }
+  }
+
+  for (const nav of navs) {
+    dedupeNav(nav);
+    new MutationObserver(() => dedupeNav(nav)).observe(nav, { childList: true });
+  }
 
   const client = window.supabase.createClient(
     "https://ewiurxmmomtcjfvjfpus.supabase.co",
@@ -30,7 +55,9 @@
 
     if (!session || !session.user) {
       addLink("auth.html", "アカウント登録・ログイン");
-      if (version === renderVersion) nav.replaceChildren(...items);
+      if (version === renderVersion) {
+        for (const nav of navs) nav.replaceChildren(...items.map(node => node.cloneNode(true)));
+      }
       return;
     }
 
@@ -44,7 +71,6 @@
       if (!error) profile = data;
     } catch (_) {}
 
-    // A newer session event may have started another render while this query ran.
     if (version !== renderVersion) return;
 
     const name = profile && profile.display_name
@@ -53,15 +79,13 @@
     addLink("auth.html", name);
     if (profile && profile.role === "admin") addLink("admin.html", "管理画面");
 
-    // Replace once, after all async work; never append links from stale renders.
-    nav.replaceChildren(...items);
+    for (const nav of navs) nav.replaceChildren(...items.map(node => node.cloneNode(true)));
   }
 
   client.auth.getSession().then(({ data }) => {
     void render(data && data.session);
   });
   client.auth.onAuthStateChange((_event, session) => {
-    // Defer work until after Supabase finishes its auth-state callback.
     setTimeout(() => { void render(session); }, 0);
   });
 })();
