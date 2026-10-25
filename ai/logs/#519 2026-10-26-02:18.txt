@@ -56,4 +56,3 @@
 - [ロイター通信・冬の電気・ガス料金支援の検討（10月22日）](https://www.reuters.com/business/energy/japan-consider-re-introducing-gas-electricity-subsidies-sources-say-2026-10-22/)
 - [AP通信・日本の2026年度上半期の貿易収支（10月22日）](https://apnews.com/article/japan-trade-oil-imports-exports-war-c2265fa62a4511229dd83693d94d32e2)
 - [株探・10月23日の東京為替と日経平均](https://s.kabutan.jp/news/n202610231070/)
-- [全国の開店予定情報](https://github.com/marimutukisinnmu-rgb/japan-store-openings-json/blob/main/json/latest.json)
