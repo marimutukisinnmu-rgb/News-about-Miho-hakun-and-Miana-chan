@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f5f5f5">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://api.github.com https://raw.githubusercontent.com https://ewiurxmmomtcjfvjfpus.supabase.co; form-action 'self';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://api.github.com https://raw.githubusercontent.com https://ewiurxmmomtcjfvjfpus.supabase.co; form-action 'self';">
 <title>みほはくん＆みあなちゃんニュース</title>
 <style>
   *{box-sizing:border-box}
@@ -28,7 +28,7 @@
 </style>
 </head>
 <body>
-<nav aria-label="サイトメニュー"><a href="history.html">履歴を見る</a> <a href="auth.html">アカウント登録・ログイン</a></nav>
+<nav data-mhn-nav aria-label="サイトメニュー"><a href="index.html">最新ニュース</a> <a href="history.html">履歴を見る</a> <a href="auth.html">アカウント登録・ログイン</a></nav>
 <h1>最新ニュース</h1>
 <main id="output">読み込み中...</main>
 
@@ -60,6 +60,8 @@
 </section>
 
 <footer>MHN — みほはくん＆みあなちゃんのニュースタイム</footer>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.js" defer></script>
+<script src="nav.js?v=1" defer></script>
 <script src="app.js?v=3" defer></script>
 <script src="comments.js?v=3" defer></script>
 </body>
