@@ -35,7 +35,7 @@ function cleanNewsText(text) {
     .replace(/\uE200/gu, "");
 }
 
-function displayName(name) {
+function renderNewsMarkdown(output, text) {\n  const source = String(text);\n  if (window.marked && typeof window.marked.parse === "function" && window.DOMPurify) {\n    try {\n      const html = window.marked.parse(source, { gfm: true, breaks: false });\n      output.innerHTML = window.DOMPurify.sanitize(html, { USE_PROFILES: { html: true } });\n      return;\n    } catch (_) {\n      // If Markdown rendering fails, preserve the original text safely.\n    }\n  }\n  output.textContent = source;\n}\n\nfunction displayName(name) {
   const match = name.match(LOG_NAME_RE);
   return match
     ? Number(match[1]) + "回目(" + match[2] + "/" + match[3] + "/" +
@@ -251,7 +251,7 @@ async function loadLatest() {
       output.textContent = "ニュースログはまだありません。";
       return;
     }
-    output.textContent = await fetchLogText(logs[0]);
+    renderNewsMarkdown(output, await fetchLogText(logs[0]));
   } catch (error) {
     console.error("[MHN] latest load failed");
     output.textContent = "ニュースの取得に失敗しました。時間をおいて再度お試しください。";
