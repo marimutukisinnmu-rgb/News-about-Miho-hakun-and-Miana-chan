@@ -53,7 +53,7 @@
 - [気象庁・千葉県の気象支援資料（10月25日17時）](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Chiba_Matsudo-shi.html)
 - [台風30号の接近と大雨の見通し（10月25日）](https://jpjj.jp/articles/typhoon-30-champi-kyushu-approach/)
 - [ロイター通信・台湾を通過した台風30号の被害（10月24日）](https://www.reuters.com/business/environment/typhoon-champi-sweeps-past-taiwan-one-dead-500-injured-2026-10-24/)
-- [ロイター通信・イランの無人機撃墜主張（10月25日）](https://www.reuters.com/business/finance/netanyahu-rebuked-plan-use-crypto-bypass-economic-sanctions-2026-10-25/)
+- [ロイター通信・イランの無人機撃墜主張（10月25日）](https://www.reuters.com/world/middle-east/iranian-army-says-it-shot-down-us-drone-over-bandar-abbas-tasnim-reports-2026-10-25/)
 - [AP通信・日米などの共同訓練](https://apnews.com/article/e24603d4c8fdf9427db206c401cdf09e)
 - [AP通信・皇室典範改正法の施行（10月24日）](https://apnews.com/article/0bb12e8b9eb3cc5b37c19a572b03ed71)
 - [ロイター通信・冬の電気・ガス料金支援案（10月22日）](https://www.reuters.com/business/energy/japan-consider-re-introducing-gas-electricity-subsidies-sources-say-2026-10-22/)
