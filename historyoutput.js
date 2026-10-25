@@ -8,7 +8,7 @@
   const params = new URLSearchParams(window.location.search);
   const log = params.get("log");
 
-  function cleanNewsText(text) {
+  function renderNewsMarkdown(text) {\n    const source = String(text);\n    if (window.marked && typeof window.marked.parse === "function" && window.DOMPurify) {\n      try {\n        const html = window.marked.parse(source, { gfm: true, breaks: false });\n        output.innerHTML = window.DOMPurify.sanitize(html, { USE_PROFILES: { html: true } });\n        return;\n      } catch (_) {\n        // Fall back to safe plain text if rendering fails.\n      }\n    }\n    output.textContent = source;\n  }\n\n  function cleanNewsText(text) {
     return String(text)
       .replace(/\uE200[\s\S]*?\uE201/gu, "")
       .replace(/\uE200/gu, "");
@@ -25,7 +25,7 @@
       return response.text();
     })
     .then((text) => {
-      output.textContent = cleanNewsText(text);
+      renderNewsMarkdown(cleanNewsText(text));
     })
     .catch(() => {
       output.textContent = "ニュースの取得に失敗しました。時間をおいて再度お試しください。";
