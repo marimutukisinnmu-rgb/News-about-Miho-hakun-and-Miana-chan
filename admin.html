@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f5f5">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://ewiurxmmomtcjfvjfpus.supabase.co; form-action 'self';">
+<title>MHN 管理画面</title>
+<style>
+*{box-sizing:border-box}body{font-family:system-ui,sans-serif;max-width:900px;margin:auto;padding:24px;background:#f5f5f5;color:#222;line-height:1.6}nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px}a{color:#1d4ed8}.panel{background:#fff;padding:24px;border-radius:12px;box-shadow:0 2px 10px #0001;margin:18px 0}.status{padding:12px 14px;border-radius:8px;background:#f1f5f9;white-space:pre-wrap}dt{font-weight:700;margin-top:12px}dd{margin-left:0;overflow-wrap:anywhere}.muted{color:#555;font-size:.92rem}@media(max-width:520px){body{padding:14px}.panel{padding:18px}}
+</style>
+</head>
+<body>
+<nav data-mhn-nav aria-label="サイトメニュー"><a href="index.html">最新ニュース</a> <a href="history.html">履歴を見る</a></nav>
+<h1>MHN 管理画面</h1>
+<section class="panel">
+  <h2>管理者アクセス確認</h2>
+  <p id="adminStatus" class="status" role="status" aria-live="polite">ログイン状態と管理者権限を確認しています…</p>
+  <dl id="accountDetails" hidden>
+    <dt>表示名</dt><dd id="adminName"></dd>
+    <dt>メールアドレス</dt><dd id="adminEmail"></dd>
+    <dt>権限</dt><dd id="adminRole"></dd>
+  </dl>
+</section>
+<section class="panel">
+  <h2>管理機能について</h2>
+  <p>このページは、ログイン中のアカウントがMHNの管理者であることを確認するための管理トップです。</p>
+  <p class="muted">非公開コメントの閲覧・返信などの操作機能は、このページにはまだ実装されていません。権限のない利用者に管理データを返さないよう、専用のサーバー側認証処理を用意してから追加する必要があります。</p>
+  <p><a href="index.html">最新ニュースへ戻る</a></p>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.js" defer></script>
+<script src="nav.js?v=1" defer></script>
+<script src="admin.js?v=1" defer></script>
+</body>
+</html>
