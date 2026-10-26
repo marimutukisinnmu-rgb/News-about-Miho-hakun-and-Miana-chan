@@ -1,0 +1,63 @@
+みほはくん&みあなちゃん『534回目の5時のニュースをお伝えするよ～！』
+
+みほはくん「おはよう！ 10月27日、火曜日の朝だよ。まずは天気と防災、それから世界の動きも確認していこう。」
+
+## 🌦️ きょうの天気・防災
+
+みあなちゃん「気象庁が26日夕方に出した地域別の資料では、東北は曇りや雨の所があり、関東は雨のあと昼前から曇りになる見込み。北陸は曇りで夕方に一時雨、近畿でも北部を中心に夕方に雨が降る所がある予報だよ。」
+
+みほはくん「地域によって変わるから、これは全国どこでも同じという意味じゃないよ。警報や注意報は更新されることがあるので、出かける前に[気象庁の防災情報](https://www.jma.go.jp/bosai/)で自分の地域を確認しよう。」
+
+（参考：[福井県の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Fukui_Fukui-shi.html)、[千葉県市川市の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Chiba_Ichikawa-shi.html)、[和歌山県の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Wakayama_Kozagawa-cho.html)）
+
+## 🌏 ウクライナの人道支援をめぐる停戦
+
+みほはくん「ロシアが占領するウクライナ南部のオレシュキーでは、人道支援物資の搬入と住民の避難を助けるための一時停戦が、10月27日に始まる予定だと報じられているよ。」
+
+みあなちゃん「ただ、ロシア国防省は停戦開始前にウクライナ側の攻撃があったと主張しているんだ。ロイターはその主張を独自に確認できておらず、ウクライナ側から直ちに反応はなかったと伝えているよ。停戦が実際に機能するか、支援や避難が安全に行えるかが大事だね。」
+
+（出典：[ロイター通信・オレシュキーでの一時停戦と人道支援](https://www.reuters.com/world/europe/russia-says-ukraine-has-repeatedly-struck-oleshky-ahead-local-ceasefire-2026-10-26/)）
+
+## 🛢️ 中東情勢とエネルギー輸送
+
+みあなちゃん「イエメンのフーシ派は10月26日、サウジアラビアの原油輸送関連施設やリヤドの空港を攻撃したと主張したよ。サウジ側は、報道時点でその攻撃を確認していないんだ。」
+
+みほはくん「一方、サウジ主導の連合軍はリヤドに向けて発射されたミサイルを迎撃したと発表しているよ。エネルギー施設や海上輸送路の緊張は、原油供給や国際市場にも影響する可能性があるから、発表された主張と確認済みの事実を分けて見ようね。」
+
+（出典：[ロイター通信・フーシ派の攻撃主張とサウジ側の発表](https://www.reuters.com/world/middle-east/houthis-say-they-attacked-east-west-oil-pumping-stations-no-saudi-confirmation-2026-10-26/)）
+
+## 🌀 台風チャンピの影響
+
+みほはくん「10月26日の報道では、台風チャンピの影響で台湾で1人が死亡し、527人が負傷したと伝えられたよ。停電した世帯も多く、復旧が進められていたんだ。」
+
+みあなちゃん「同じ報道時点では、チャンピは日本の南西側の海上で熱帯低気圧に弱まったとされているよ。ただし、これは26日時点の報道だから、現在の位置や勢力を示す情報ではないよ。最新の台風情報は気象庁で確認しよう。」
+
+（出典：[The Guardian・台風チャンピの被害と進路](https://www.theguardian.com/world/2026/oct/26/typhoon-champi-taiwan-japan-storm-greece-floods)）
+
+## 🛡️ サイバー攻撃への備え
+
+みあなちゃん「日本政府は、AIを使ってサイバー攻撃を模擬し、システムの弱点を見つけるチームを設ける計画を発表したと報じられているよ。PHPの脆弱性をめぐって、世界各地で銀行・航空・鉄道・行政サービスなどが対策のために一時停止する事例が出ていたんだ。」
+
+みほはくん「攻撃を受けてから対応するだけでなく、事前に弱点を見つける取り組みが重要だね。私たちも、ソフトを更新して、パスワードの使い回しを避け、不審なリンクを開かないようにしよう。」
+
+（出典：[ロイター通信・日本のAIを使ったサイバー攻撃対策](https://www.reuters.com/business/media-telecom/japan-simulate-cyberattacks-php-flaws-roil-global-internet-2026-10-23/)）
+
+## 🏬 きょう・あすの新規開店予定
+
+みほはくん「10月27日は、東京都千代田区の『HANAGATAYA グランスタ東京北通路店』のリニューアル、大阪府吹田市の『SMART GOLF 吹田フラワーロード店』、富山県高岡市の『JOYFULL EXPRESS イオンモール高岡店』などが予定に載っているよ。」
+
+みあなちゃん「大阪では『chocoZAP 生駒南口』や『chocoZAP 平野宮町』なども27日の予定。28日は渋谷区の『BOULANGERIE LANDEMAINE SHIBUYA』や『MarieBelle SHIBUYA』、横浜市港北区の新綱島エリアにも複数の店舗が予定されているよ。予定は変更されることがあるから、訪問前に店舗や施設の公式案内を確認してね。」
+
+## おしまいに
+
+みほはくん「今朝は天気と防災に加えて、人道支援をめぐる停戦、中東情勢、台風の被害、サイバー対策をお伝えしたよ。」
+
+みあなちゃん「ニュースでは、誰が何を発表したのか、独立して確認された事実なのかを分けて見ることも大切だね。天気や災害情報は最新の公式発表を確認して、安全に一日を始めよう～！」
+
+---
+### 主な情報源
+- [気象庁・防災情報](https://www.jma.go.jp/bosai/)
+- [ロイター通信・オレシュキーでの一時停戦](https://www.reuters.com/world/europe/russia-says-ukraine-has-repeatedly-struck-oleshky-ahead-local-ceasefire-2026-10-26/)
+- [ロイター通信・中東情勢](https://www.reuters.com/world/middle-east/houthis-say-they-attacked-east-west-oil-pumping-stations-no-saudi-confirmation-2026-10-26/)
+- [The Guardian・台風チャンピ](https://www.theguardian.com/world/2026/oct/26/typhoon-champi-taiwan-japan-storm-greece-floods)
+- [ロイター通信・AIを使ったサイバー攻撃対策](https://www.reuters.com/business/media-telecom/japan-simulate-cyberattacks-php-flaws-roil-global-internet-2026-10-23/)
