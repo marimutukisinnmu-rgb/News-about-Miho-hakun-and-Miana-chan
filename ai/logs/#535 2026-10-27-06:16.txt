@@ -1,0 +1,62 @@
+みほはくん&みあなちゃん『535回目の6時のニュースをお伝えするよ～！』
+
+みほはくん「おはよう！ 10月27日、火曜日の朝だよ。まずは天気と災害情報から。地域ごとの違いにも気をつけて確認していこう。」
+
+## 🌦️ きょうの天気・防災
+
+みあなちゃん「気象庁が27日午前5時に出した岩手県盛岡市付近の資料では、きょうは曇りや雨で、内陸では雷を伴う所もある見込みだよ。盛岡市付近は日中の最高気温が16度、夕方から雨の予報で、あすは最高気温が8度まで下がる見通しなんだ。」
+
+みほはくん「一方、熊本県の資料では、曇りや雨の所があるものの、次第に晴れる予報だよ。熊本・天草・芦北地方では強風や高波への注意も呼びかけられているんだ。全国どこでも同じ天気というわけではないから、出かける地域の最新の警報・注意報を確認しようね。」
+
+（参考：[気象庁・盛岡市付近の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Iwate_Morioka-shi.html)、[気象庁・熊本県合志市付近の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Kumamoto_Koshi-shi.html)、[気象庁・防災情報](https://www.jma.go.jp/bosai/)）
+
+## 🌏 チベットの地震、その後の状況
+
+みあなちゃん「中国当局は、先週チベットで起きたマグニチュード7の地震について、10月26日時点で死者16人、けが人76人と発表し、その後に新たな死傷者や二次的な地質災害は確認されていないと説明したよ。」
+
+みほはくん「これは中国当局の発表をロイターが伝えたものだよ。被災地の復旧や地盤の安全確認は引き続き大切だね。地震の規模だけでなく、余震や土砂災害などの二次被害にも注意したいね。」
+
+（出典：[ロイター通信・チベット地震の被害状況](https://www.reuters.com/business/environment/china-says-no-secondary-disasters-casualties-tibet-earthquake-2026-10-26/)）
+
+## 🏛️ 皇位継承制度をめぐる訴訟
+
+みほはくん「皇位継承制度を定めた改正法をめぐり、漫画家の小林よしのりさんが、男女平等に反するとして国を訴えたとAP通信が報じたよ。」
+
+みあなちゃん「訴えでは、旧宮家の男系男子を養子として皇族に迎えられる仕組みなどが争点になっているんだ。まだ裁判の結論は出ておらず、審理の日程も決まっていないと報じられているよ。制度の内容と、今後の司法判断を分けて見ていこうね。」
+
+（出典：[AP通信・皇位継承法をめぐる訴訟](https://apnews.com/article/45871776c47dbc1ba5cba2ae3312feff)）
+
+## 💴 日銀の金融政策と冬の光熱費
+
+みあなちゃん「日銀は今週金曜日に終わる金融政策決定会合で、政策金利を1.25％に据え置くとの見方が出ているよ。ロイターは、物価の動きなどを踏まえて、追加利上げの可能性を残す姿勢になると予想しているんだ。」
+
+みほはくん「これは市場関係者の予想で、決定済みという意味ではないよ。金利は住宅ローンや企業の資金調達にも関わるから、会合後の発表を確認したいね。」
+
+みあなちゃん「それから政府は、冬の家計負担を和らげるため、12月に電気・ガス料金の補助を再開する案を検討していると報じられているよ。一方、ガソリン補助は財源の減少を背景に12月から縮小する案も出ているんだ。」
+
+みほはくん「どちらも報道時点では検討段階。正式な制度や対象、開始時期が決まったと早合点せず、政府の発表を待とうね。」
+
+（出典：[ロイター通信・日銀の政策見通し](https://www.reuters.com/world/asia-pacific/bank-japans-hawkish-pause-to-leave-scope-for-december-hike-2026-10-26/)、[ロイター通信・電気・ガス料金補助の再開案](https://www.reuters.com/business/energy/japan-consider-re-introducing-gas-electricity-subsidies-2026-10-22/)、[ロイター通信・ガソリン補助の見直し案](https://www.reuters.com/business/energy/japan-weighs-phasing-out-gasoline-subsidies-from-december-as-costs-mount-2026-10-23/)）
+
+## 🏬 きょう・あすの新規開店予定
+
+みほはくん「10月27日の開店予定には、埼玉県越谷市の『chocoZAP せんげん台西一丁目』、広島市安芸区の『chocoZAP 安芸矢野西』、兵庫県芦屋市の『chocoZAP 阪神芦屋』などが載っているよ。」
+
+みあなちゃん「大阪府門真市の『chocoZAP 門真垣内』や、埼玉県久喜市の『松屋 久喜菖蒲店（松のや併設）』も27日の予定。28日には、東京都千代田区の『サブウェイ 住友不動産秋葉原ファーストビル店』や、石川県金沢市の『すき家 金沢北安江店』などが予定されているよ。」
+
+みほはくん「開店日や営業時間は変更されることがあるから、行く前に店舗や施設の公式案内を確認してね。」
+
+## おしまいに
+
+みあなちゃん「今朝は地域ごとの天気、チベット地震の続報、皇位継承制度をめぐる訴訟、日銀と冬の光熱費、それから新規開店予定をお伝えしたよ。」
+
+みほはくん「災害情報や制度の変更は、新しい発表で内容が変わることがあるよ。発表された事実と、検討中の案や予測を区別して、最新の公式情報を確認しようね。今日も安全にいってらっしゃい！」
+
+---
+### 主な情報源
+- [気象庁・防災情報](https://www.jma.go.jp/bosai/)
+- [ロイター通信・チベット地震](https://www.reuters.com/business/environment/china-says-no-secondary-disasters-casualties-tibet-earthquake-2026-10-26/)
+- [AP通信・皇位継承制度をめぐる訴訟](https://apnews.com/article/45871776c47dbc1ba5cba2ae3312feff)
+- [ロイター通信・日銀の政策見通し](https://www.reuters.com/world/asia-pacific/bank-japans-hawkish-pause-to-leave-scope-for-december-hike-2026-10-26/)
+- [ロイター通信・電気・ガス料金補助の再開案](https://www.reuters.com/business/energy/japan-consider-re-introducing-gas-electricity-subsidies-2026-10-22/)
+- [ロイター通信・ガソリン補助の見直し案](https://www.reuters.com/business/energy/japan-weighs-phasing-out-gasoline-subsidies-from-december-as-costs-mount-2026-10-23/)
