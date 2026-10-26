@@ -1,0 +1,45 @@
+みほはくん&みあなちゃん『526回目の21時のニュースをお伝えするよ～！』
+
+みほはくん：こんばんは！ まず防災情報から確認しよう。気象庁の全国警報・注意報ページは、今回参照できた表示が10月26日10時26分更新となっていて、21時台の最新状況としては確認しきれなかったよ。だから「警報なし」とは決めつけず、外出や避難の判断には気象庁の最新発表を確認してね。
+
+みあなちゃん：地震も同じだね。最後に確認できた地震記録は午後のものだったけれど、その後に地震がなかったとは言えないよ。揺れを感じたら身の安全を優先して、津波情報や自治体からの避難情報も確認しよう。
+
+（出典：[気象庁・防災情報](https://www.jma.go.jp/bosai/)、[気象庁・地震と津波](https://www.jma.go.jp/jma/menu/bunyaeq.html)）
+
+## 中東情勢：緊張の中で外交協議も
+
+みあなちゃん：中東では、サウジアラビア、トルコ、パキスタンの関係者がイラン側とテヘランで地域の安全保障について協議したと報じられているよ。戦闘の拡大を避けるための外交が続いているんだ。
+
+みほはくん：一方、イエメンのフーシ派はサウジアラビアの原油パイプライン関連施設やリヤドの空港を攻撃したと主張したよ。サウジ側による攻撃の確認は報道時点で取れていないから、当事者の主張と独立して確認された事実を分けて見ることが大切だね。原油輸送や海上交通への影響にも注意が必要だよ。
+
+（出典：[Reuters・中東の外交協議](https://www.reuters.com/world/asia-pacific/top-officials-mecca-pact-countries-meet-iranian-officials-tehran-monday-two-2026-10-26/)、[Reuters・フーシ派の攻撃主張](https://www.reuters.com/world/middle-east/houthis-say-they-attacked-east-west-oil-pumping-stations-no-saudi-confirmation-2026-10-26/)、[AP通信・地域情勢](https://apnews.com/article/36486edb61b3bf4e0df67e8a17123e44)）
+
+## 日銀の金融政策に注目
+
+みほはくん：日本銀行の金融政策決定会合は今週末に予定されているよ。ロイター通信が26日に伝えた市場関係者の見方では、政策金利を1.25％で据え置きつつ、今後の利上げに含みを持たせる可能性があるんだ。
+
+みあなちゃん：ただし、これは会合前の予想で、決定済みの内容ではないよ。物価や賃金、円相場、エネルギー価格がどう動くかも合わせて見ていこう。
+
+（出典：[Reuters・日銀の政策見通し（10月26日）](https://www.reuters.com/world/asia-pacific/bank-japans-hawkish-pause-leave-scope-december-hike-2026-10-26/)）
+
+## 東京株式市場と為替
+
+みほはくん：10月26日の東京株式市場では、日経平均株価が503円51銭安の6万2,189円65銭で取引を終え、3営業日続落。一方、TOPIXは0.18％高の3,972.98だったよ。指数によって動きが分かれたね。
+
+みあなちゃん：為替は、確認できた10月26日のドル円の遅延相場データで1ドル約157.01円。リアルタイムの値ではないので、取引時の相場と混同しないようにしよう。
+
+（出典：[Reuters・日本株の終値](https://www.reuters.com/world/asia-pacific/japans-nikkei-edges-lower-tech-sector-weighs-energy-shares-rise-2026-10-26/)、[Yahoo Finance・USD/JPY履歴](https://finance.yahoo.com/quote/JPY%3DX/history/)）
+
+## 全国の開店予定
+
+みあなちゃん：開店予定の集計は10月26日20時42分更新分を確認したよ。27日は大阪市平野区の「chocoZAP 平野宮町」、吹田市の「SMART GOLF 吹田フラワーロード店」、富山県高岡市の「JOYFULL EXPRESS イオンモール高岡店」などが予定されているんだ。
+
+みほはくん：28日は東京都渋谷区の「BOULANGERIE LANDEMAINE SHIBUYA」や「MarieBelle SHIBUYA」、横浜市港北区の新綱島周辺に飲食店などが複数予定されているよ。29日は大阪府富田林市の「chocoZAP 富田林北口」や、東京都墨田区の「RANDY’S DONUTS 東京ソラマチ店」なども掲載されているんだ。
+
+みあなちゃん：予定は変更されることもあるから、出かける前に店舗や施設の公式案内も確認してね。
+
+（出典：[全国の開店予定データ](https://github.com/marimutukisinnmu-rgb/japan-store-openings-json/blob/main/json/latest.json)）
+
+---
+
+※警報・注意報、相場、報道内容、開店予定は更新される場合があります。災害時は最新の公式発表を確認してください。
