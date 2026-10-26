@@ -1,0 +1,85 @@
+みほはくん&みあなちゃん『533回目の4時のニュースをお伝えするよ～！』
+
+みほはくん「10月27日、火曜日の早朝ニュースだよ。まずは防災から。今朝も地震や気象情報は更新されることがあるから、出かける前には気象庁や自治体の最新発表を確認しよう。」
+
+## 🌦️ 早朝の天気・防災
+
+みあなちゃん「気象庁の地域別資料では、27日の東北は曇りや雨の所があり、盛岡市付近では朝に雨が予想されているよ。福島県の郡山市付近も朝は雨、その後は天気が回復する見込み。北陸の福井県あわら市付近は曇りで、夕方に一時雨の予報だよ。」
+
+みほはくん「熊本県では、気圧の谷や寒気の影響で曇りや雨の所があるものの、次第に晴れる所もある見込みだね。地域差が大きいから、これは全国一律の予報ではないことに注意しよう。」
+
+みあなちゃん「気象庁の防災情報XMLを基にした警報・注意報一覧では、27日1時46分ごろの更新時点で、滋賀県の強風注意報、東京都の濃霧・強風・雷・波浪注意報、千葉県の強風・波浪注意報などが掲載されていたよ。ただし、これはその時点の情報で、今も継続中かどうかは最新の発表で確認してね。」
+
+みほはくん「警報・注意報は変わることがあるよ。最新情報は[気象庁の防災情報](https://www.jma.go.jp/bosai/)で確認しよう。」
+
+## 🌀 台風チャンピの影響
+
+みほはくん「10月26日の報道では、台風チャンピの影響で台湾で1人が死亡し、527人が負傷したと伝えられたよ。停電も発生し、多くの世帯で復旧が進められたんだ。」
+
+みあなちゃん「同じ報道では、チャンピは日本列島の南西側の海上で熱帯低気圧に弱まったとされているよ。ただ、進路や勢力は変わるから、過去の被害だけで日本への影響を決めつけず、気象庁の最新の台風情報を確認しようね。」
+
+（出典：[The Guardian・台風チャンピの被害と進路](https://www.theguardian.com/world/2026/oct/26/typhoon-champi-taiwan-japan-storm-greece-floods)）
+
+## 🇯🇵 国内のニュース
+
+みあなちゃん「元総理大臣の福田康夫さんが90歳で亡くなったと、10月26日に自民党が明らかにしたよ。福田さんは2007年から2008年まで総理大臣を務め、退任後も中国をはじめアジア各国との対話を重視してきた人物なんだ。AP通信によると、亡くなったのは先週の木曜日で、詳しい死因は公表されていないよ。」
+
+みほはくん「外交では、長く続く対話の積み重ねも大切なんだね。ご冥福をお祈りします。」
+
+みあなちゃん「皇位継承制度をめぐる議論も続いているよ。皇室典範の改正法が施行され、旧宮家の男系男子を養子として皇族に迎える仕組みなどが盛り込まれた一方、漫画家の小林よしのりさんが制度は憲法上の平等に反するとして国を提訴したと報じられたよ。提訴された段階で、裁判所の判断が出たわけではない点は区別しようね。」
+
+みほはくん「制度の安定性と、平等や本人の権利をどう両立するか。これからの議論を、確認された事実と意見を分けて見ていきたいね。」
+
+（出典：[AP通信・福田康夫元首相の訃報](https://apnews.com/article/7b036fa04eb545214572136f145ed0c3)、[AP通信・皇位継承制度をめぐる動き](https://apnews.com/article/0bb12e8b9eb3cc5b37c19a572b03ed71)）
+
+## ⚖️ 沖縄の事件をめぐる司法手続き
+
+みあなちゃん「ロイター通信などは10月26日、沖縄県で起きた女性の死亡事件をめぐり、米海兵隊員が強盗と殺人の罪で起訴されたと報じたよ。」
+
+みほはくん「本人は容疑を否認していると伝えられているんだ。起訴は裁判の結論ではないから、今後の司法手続きと確認された事実を分けて見守りたいね。」
+
+（出典：[ロイター通信・沖縄の事件をめぐる起訴](https://www.reuters.com/legal/government/japan-indicts-us-marine-over-okinawa-killing-media-say-2026-10-26/)）
+
+## 🌍 中東情勢
+
+みほはくん「10月26日の報道によると、サウジアラビア、トルコ、パキスタンの高官がイラン側と協議し、地域の緊張緩和や安全保障について話し合ったよ。」
+
+みあなちゃん「一方、イエメンのフーシ派はサウジアラビアの石油関連施設などを攻撃したと主張しているけれど、報道時点でサウジ側による確認は取れていないと伝えられているよ。発表した側の主張と、独立して確認された事実を分けることが大切だね。」
+
+（出典：[ロイター通信・イラン側との協議](https://www.reuters.com/world/asia-pacific/top-officials-mecca-pact-countries-meet-iranian-officials-tehran-monday-two-2026-10-26/)）
+
+## 🛡️ サイバー攻撃と利用者への補償
+
+みあなちゃん「ロイター通信によると、GMOインターネットグループは外国為替取引サービスへの不正アクセスを受け、対象利用者への補償や一律5,000円の見舞金などを発表したよ。同じ報道では、10月20日までに国内で確認されたサイバーセキュリティ事案は723件に達したとされているんだ。」
+
+みほはくん「企業の防御だけでなく、私たちもパスワードの使い回しを避け、二要素認証を有効にして、不審なリンクをすぐに開かないようにしたいね。」
+
+（出典：[ロイター通信・日本企業へのサイバー攻撃と補償](https://www.reuters.com/business/finance/japan-companies-compensate-users-cyberattacks-buffet-economy-2026-10-26/)）
+
+## 🏬 今日からの新規開店予定
+
+みほはくん「開店予定の情報も見ていこう。10月27日は、埼玉県越谷市の『chocoZAP せんげん台西一丁目』、大阪府吹田市の『SMART GOLF 吹田フラワーロード店』、富山県高岡市の『JOYFULL EXPRESS イオンモール高岡店』などが予定に載っているよ。」
+
+みあなちゃん「大阪市平野区の『chocoZAP 平野宮町』や、兵庫県芦屋市の『chocoZAP 阪神芦屋』も27日の予定だね。28日には、東京都渋谷区の『BOULANGERIE LANDEMAINE SHIBUYA』や『MarieBelle SHIBUYA』、横浜市港北区の新綱島エリアの複数店舗も掲載されているよ。予定は変更されることがあるから、訪問前に店舗や施設の公式案内を確認してね。」
+
+（出典：[全国の開店予定データ](https://github.com/marimutukisinnmu-rgb/japan-store-openings-json/blob/main/json/latest.json)）
+
+## おしまいに
+
+みほはくん「今朝は、防災情報に加えて国内外のニュース、サイバーセキュリティ、開店予定をお伝えしたよ。」
+
+みあなちゃん「天気や災害情報は新しい発表で変わることがあるから、最新の公式情報を確認してね。それでは、今日も安全第一で過ごそう～！」
+
+---
+### 主な情報源
+- [気象庁・防災情報](https://www.jma.go.jp/bosai/)
+- [気象庁・宮城県富谷市の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Miyagi_Tomiya-shi.html)
+- [気象庁・岩手県盛岡市の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Iwate_Morioka-shi.html)
+- [気象庁・福島県郡山市の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Fukushima_Koriyama-shi.html)
+- [気象庁・福井県あわら市の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Fukui_Awara-shi.html)
+- [気象庁・熊本県熊本市の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Kumamoto_Kumamoto-shi.html)
+- [警報・注意報の更新一覧](https://agora.ex.nii.ac.jp/cps/weather/warning/)
+- [AP通信・福田康夫元首相の訃報](https://apnews.com/article/7b036fa04eb545214572136f145ed0c3)
+- [ロイター通信・沖縄の事件をめぐる起訴](https://www.reuters.com/legal/government/japan-indicts-us-marine-over-okinawa-killing-media-say-2026-10-26/)
+- [ロイター通信・サイバー攻撃と補償](https://www.reuters.com/business/finance/japan-companies-compensate-users-cyberattacks-buffet-economy-2026-10-26/)
+- [ロイター通信・中東情勢](https://www.reuters.com/world/asia-pacific/top-officials-mecca-pact-countries-meet-iranian-officials-tehran-monday-two-2026-10-26-)
