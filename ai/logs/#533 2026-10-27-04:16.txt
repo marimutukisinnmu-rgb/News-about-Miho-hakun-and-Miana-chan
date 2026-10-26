@@ -62,7 +62,6 @@
 
 みあなちゃん「大阪市平野区の『chocoZAP 平野宮町』や、兵庫県芦屋市の『chocoZAP 阪神芦屋』も27日の予定だね。28日には、東京都渋谷区の『BOULANGERIE LANDEMAINE SHIBUYA』や『MarieBelle SHIBUYA』、横浜市港北区の新綱島エリアの複数店舗も掲載されているよ。予定は変更されることがあるから、訪問前に店舗や施設の公式案内を確認してね。」
 
-（出典：[全国の開店予定データ](https://github.com/marimutukisinnmu-rgb/japan-store-openings-json/blob/main/json/latest.json)）
 
 ## おしまいに
 
