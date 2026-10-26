@@ -49,6 +49,6 @@
 - [気象庁・宮城県登米市の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Miyagi_Tome-shi.html)
 - [気象庁・福井県あわら市の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Fukui_Awara-shi.html)
 - [AP通信・福田康夫元首相の訃報](https://apnews.com/article/7b036fa04eb545214572136f145ed0c3)
-- [AP通信・皇位継承制度をめぐる提訴](https://apnews.com/article/45871776c47dbc1ba5cba2ae3312ff)
+- [AP通信・皇位継承制度をめぐる提訴](https://apnews.com/article/45871776c47dbc1ba5cba2ae3312feff)
 - [ロイター通信・日本企業へのサイバー攻撃と補償](https://www.reuters.com/business/finance/japan-companies-compensate-users-cyberattacks-buffet-economy-2026-10-26/)
 - [ロイター通信・10月26日の東京株式市場](https://www.reuters.com/world/asia-pacific/japans-nikkei-edges-lower-tech-sector-weighs-energy-shares-rise-2026-10-26/)
