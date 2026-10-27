@@ -1,0 +1,5 @@
+# MHN GitHub Pages: allow crawling of public pages.
+User-agent: *
+Allow: /
+
+Sitemap: https://marimutukisinnmu-rgb.github.io/News-about-Miho-hakun-and-Miana-chan/sitemap.xml
