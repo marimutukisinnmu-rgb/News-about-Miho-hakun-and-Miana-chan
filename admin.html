@@ -3,34 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f5f5f5">
+<meta name="theme-color" content="#10151f">
 <meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://ewiurxmmomtcjfvjfpus.supabase.co; form-action 'self';">
 <title>MHN 管理画面</title>
 <style>
-*{box-sizing:border-box}body{font-family:system-ui,sans-serif;max-width:900px;margin:auto;padding:24px;background:#f5f5f5;color:#222;line-height:1.6}nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px}a{color:#1d4ed8}.panel{background:#fff;padding:24px;border-radius:12px;box-shadow:0 2px 10px #0001;margin:18px 0}.status{padding:12px 14px;border-radius:8px;background:#f1f5f9;white-space:pre-wrap}dt{font-weight:700;margin-top:12px}dd{margin-left:0;overflow-wrap:anywhere}.muted{color:#555;font-size:.92rem}@media(max-width:520px){body{padding:14px}.panel{padding:18px}}
+*{box-sizing:border-box}body{font-family:system-ui,sans-serif;max-width:900px;margin:auto;padding:24px;background:#10151f;color:#e5e7eb;line-height:1.6}nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px}a{color:#93c5fd}.panel{background:#1b2432;border:1px solid #344155;padding:24px;border-radius:12px;margin:18px 0}.status{padding:12px 14px;border-radius:8px;background:#0f172a;white-space:pre-wrap;overflow-wrap:anywhere}dt{font-weight:700;margin-top:12px}dd{margin-left:0;overflow-wrap:anywhere}.muted{color:#b6c1d1;font-size:.92rem}.warning{border-left:4px solid #f59e0b;padding:10px 14px;background:#2b281f}label{display:block;font-weight:650;margin:12px 0 5px}input{width:100%;padding:12px;border:1px solid #64748b;border-radius:8px;background:#0f172a;color:#fff;font:inherit}button{padding:11px 16px;border:0;border-radius:8px;background:#2563eb;color:white;font:inherit;font-weight:700;cursor:pointer;margin:8px 8px 0 0}button:disabled{opacity:.55;cursor:wait}button.secondary{background:#475569}section[hidden],dl[hidden],div[hidden]{display:none!important}:focus-visible{outline:3px solid #fbbf24;outline-offset:3px}@media(max-width:520px){body{padding:14px}.panel{padding:18px}}
 </style>
 </head>
 <body>
-<nav data-mhn-nav aria-label="サイトメニュー"><a href="index.html">最新ニュース</a> <a href="history.html">履歴を見る</a></nav>
+<nav data-mhn-nav aria-label="サイトメニュー"><a href="index.html">最新ニュース</a><a href="history.html">履歴を見る</a></nav>
 <h1>MHN 管理画面</h1>
-<section class="panel">
-  <h2>管理者アクセス確認</h2>
-  <p id="adminStatus" class="status" role="status" aria-live="polite">ログイン状態と管理者権限を確認しています…</p>
-  <dl id="accountDetails" hidden>
-    <dt>表示名</dt><dd id="adminName"></dd>
-    <dt>メールアドレス</dt><dd id="adminEmail"></dd>
-    <dt>権限</dt><dd id="adminRole"></dd>
-  </dl>
+<section class="panel warning"><strong>セキュリティ優先モード</strong><p>管理者ロールと AAL2 を確認するまで管理画面を表示しません。画面側の判定だけを認可として扱わず、管理用APIでも検証する必要があります。</p></section>
+<section class="panel"><h2>アクセス確認</h2><p id="adminStatus" class="status" role="status" aria-live="polite">ログイン状態と管理者権限を確認しています…</p></section>
+<section class="panel" id="mfaPanel" hidden>
+<h2 id="mfaTitle">認証アプリによる追加認証</h2>
+<p id="mfaDescription" class="muted"></p>
+<div id="enrollPanel" hidden><p>認証アプリで登録するための秘密鍵です。秘密鍵は誰にも共有しないでください。画面を閉じると再表示できない場合があります。</p><label for="totpSecret">TOTP秘密鍵</label><input id="totpSecret" readonly autocomplete="off"><p class="muted">認証アプリに秘密鍵を登録し、表示された最新の6桁コードを入力してください。</p></div>
+<form id="mfaForm"><label for="totpCode">ワンタイムコード（6桁）</label><input id="totpCode" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" minlength="6" maxlength="6" required><button id="verifyButton" type="submit">コードを検証</button></form>
+<p id="mfaStatus" class="status" role="status" aria-live="polite"></p>
 </section>
-<section class="panel">
-  <h2>管理機能について</h2>
-  <p>このページは、ログイン中のアカウントがMHNの管理者であることを確認するための管理トップです。</p>
-  <p class="muted">非公開コメントの閲覧・返信などの操作機能は、このページにはまだ実装されていません。権限のない利用者に管理データを返さないよう、専用のサーバー側認証処理を用意してから追加する必要があります。</p>
-  <p><a href="index.html">最新ニュースへ戻る</a></p>
+<section class="panel" id="accountPanel" hidden>
+<h2>管理者セッション確認済み</h2>
+<dl><dt>表示名</dt><dd id="adminName"></dd><dt>メールアドレス</dt><dd id="adminEmail"></dd><dt>権限</dt><dd id="adminRole"></dd><dt>認証レベル</dt><dd>AAL2（多要素認証済み）</dd></dl>
+<div class="warning"><strong>管理操作はまだ有効化していません。</strong><p>非公開コメントの閲覧などは、管理者ロールと AAL2 をサーバー側で検証する専用APIを実装・検証するまで公開しません。</p></div>
+<button id="refreshButton" class="secondary" type="button">認証状態を再確認</button><button id="logoutButton" type="button">ログアウト</button>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.js" defer></script>
 <script src="nav.js?v=3" defer></script>
-<script src="admin.js?v=1" defer></script>
+<script src="admin.js?v=2" defer></script>
 </body>
 </html>
