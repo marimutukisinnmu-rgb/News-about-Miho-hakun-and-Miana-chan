@@ -51,4 +51,3 @@
 - [Reuters・外貨準備の剰余金をめぐる提案（10月29日）](https://www.reuters.com/world/asia-pacific/japan-advisers-urge-tapping-foreign-exchange-account-surplus-fund-spending-2026-10-29/)
 - [日経平均株価・10月29日の日次サマリー](https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261029&idx=nk225)
 - [ドル円の市場データ](https://jp.investing.com/currencies/usd-jpy-historical-data)
-- [全国の開店予定情報](https://github.com/marimutukisinnmu-rgb/japan-store-openings-json/blob/main/json/latest.json)
