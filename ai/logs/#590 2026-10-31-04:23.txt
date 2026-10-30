@@ -72,8 +72,8 @@
 - 気象庁防災情報XMLを基にした警報・注意報一覧：[発表中の警報・注意報](https://agora.ex.nii.ac.jp/cps/weather/warning/)（10月31日04:11:39更新）
 - ウェザーニュース：[10月31日の全国天気予報](https://weathernews.jp/news/202610/300191/)（10月30日16:40発表）
 - 気象庁発表を基にした防災情報一覧：[台風31号などの情報](https://bousai-matome.com/disaster-info/)（台風の10月30日21:00実況）
-- 気象庁：[桜島・10月30日19:49の火山観測報](https://www.data.jma.go.jp/vois/data/report/volinfo/VG20261030201000_506.html)
-- 気象庁：[桜島・10月30日20:02の火山観測報](https://www.data.jma.go.jp/vois/data/report/volinfo/VG20261030202200_506.html)
+- 気象庁の観測報を掲載する火山噴火関連情報：[桜島の噴火・爆発情報](https://agora.ex.nii.ac.jp/eruption/)（10月30日20:02の噴火、19:49の爆発を確認）
+- 気象庁の解説情報を掲載する桜島の火山情報：[桜島の活動状況](https://agora.ex.nii.ac.jp/eruption/volcano/sakurajima/)（10月30日16:00発表、噴火警戒レベル3）
 - ロイター：[カタールによる米・イラン合意への仲介](https://www.reuters.com/world/middle-east/qatari-mediators-return-tehran-push-us-iran-deal-official-says-2026-10-30/)（10月30日掲載）
 - AP通信：[アトランタのG20外相会合](https://apnews.com/article/ed4ab8ad9fedd628c39ac05bc5092cac)（10月30日掲載）
 - ロイター：[日本の燃料価格補助の段階的見直し](https://www.reuters.com/business/energy/japan-pm-takaichi-says-government-raise-target-gasoline-price-reduce-subsidies-2026-10-29/)（10月29日掲載）
