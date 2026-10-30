@@ -66,6 +66,7 @@
 - 気象庁防災情報XMLを基にした発表中一覧：[全国の警報・注意報](https://agora.ex.nii.ac.jp/cps/weather/warning/)（10月31日02:01:32更新）
 - 気象庁：[台風31号の情報](https://www.jma.go.jp/bosai/map.html?contents=typhoon)（10月30日09:45発表の内容を確認）
 - 気象庁の火山観測報をまとめた一覧：[桜島の最新掲載情報](https://agora.ex.nii.ac.jp/eruption/)（10月30日20:02）
+- 気象庁：[桜島の噴火警戒情報](https://ds.data.jma.go.jp/vois/data/report/activity_info/index.html)（桜島の最新解説情報は10月26日16:00、噴火警戒レベル3）
 - ウェザーニュース：[10月31日の全国天気予報](https://weathernews.jp/news/202610/300191/)（10月30日16:40発表）
 - FNNプライムオンライン：[大阪府の10月31日予報](https://www.fnn.jp/articles/-/1143109)（大阪管区気象台・10月30日17:00発表）
 - 日テレNEWS NNN：[渋谷のハロウィン安全対策](https://news.livedoor.com/article/detail/32694958/)（10月30日19:12掲載）
