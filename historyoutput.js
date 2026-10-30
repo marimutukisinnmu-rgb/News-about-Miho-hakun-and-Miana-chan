@@ -9,6 +9,14 @@
   const log = params.get("log");
 
   function renderNewsMarkdown(text) {
+    if (window.MHNInfoBlock && typeof window.MHNInfoBlock.render === "function") {
+      try {
+        window.MHNInfoBlock.render(output, text);
+        return;
+      } catch (_) {
+        // Fall back to the legacy Markdown renderer if the custom block fails.
+      }
+    }
     const source = String(text);
     if (window.marked && typeof window.marked.parse === "function" && window.DOMPurify) {
       try {
@@ -16,7 +24,7 @@
         output.innerHTML = window.DOMPurify.sanitize(html, { USE_PROFILES: { html: true } });
         return;
       } catch (_) {
-        // Fall back to safe plain text if rendering fails.
+        // Fall back to safe plain text if Markdown rendering fails.
       }
     }
     output.textContent = source;
