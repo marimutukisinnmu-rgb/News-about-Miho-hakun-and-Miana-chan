@@ -78,4 +78,3 @@
 - [ロイター・北朝鮮によるミサイル発射](https://www.reuters.com/world/asia-pacific/north-korea-fires-projectile-toward-sea-off-east-coast-south-korea-military-says-2026-10-29/)
 - [ロイター・日本の戦略分野への融資構想](https://www.reuters.com/world/asia-pacific/japan-weighs-government-backed-bank-lending-scheme-spur-strategic-investment-2026-10-29/)
 - [ロイター・緑の気候基金の資金承認](https://www.reuters.com/sustainability/cop/green-climate-fund-approves-record-near-2-billion-funding-2026-10-29/)
-- [全国の開店予定一覧](https://github.com/marimutukisinnmu-rgb/japan-store-openings-json/blob/main/json/latest.json)
