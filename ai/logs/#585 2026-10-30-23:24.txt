@@ -20,6 +20,12 @@
 
 みあなちゃん「31日朝には小笠原近海へ進む予報だけれど、これは予報円の中心であって確定した位置ではないよ。23時24分時点の新しい実況は確認できていないので、最新の台風情報を見てね。」
 
+### 31日の天気
+
+みほはくん「気象庁の全国予報では、北海道の旭川は31日くもり時々雨、11月1日はくもり時々雪の見込み。仙台周辺は31日くもりや晴れで、雨や雷雨となる所もある予報だよ。」
+
+みあなちゃん「大阪市の30日8時発表の予報では、31日は晴れ時々くもり、最高23℃・最低15℃。予報は発表後に変わることがあるから、出かける前に最新情報を確認してね。」
+
 ### 地震情報
 
 みあなちゃん「気象庁の個別情報で確認できた10月30日の地震では、17時45分ごろに根室半島南東沖で最大震度2、マグニチュード4.2、深さ50キロの地震があったよ。今回確認できた記録では、この地震による津波の心配はないとされているよ。」
@@ -73,6 +79,8 @@
 - 気象庁：[桜島の火山活動状況](https://www.data.jma.go.jp/vois/data/report/activity_info/506.html)
 - 気象庁：[根室半島南東沖17:45の地震情報](https://www.data.jma.go.jp/eew/data/nc/fc_hist/2026/10/20261030174600/index.html)
 - 気象庁：[全国の天気予報](https://www.jma.go.jp/bosai/forecast/)（10月30日5時発表）
+- 気象庁：[仙台市東部の31日予報](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Miyagi_Sendai-shi%20Tobu.html)（10月30日17時発表）
+- Yahoo!天気：[大阪市の天気予報](https://weather.yahoo.co.jp/weather/27/6200.html)（10月30日8時発表）
 - ロイター：[日本銀行・植田総裁の会見](https://www.reuters.com/business/finance/boj-governor-uedas-comments-news-conference-2026-10-30/)
 - ロイター：[日経平均の下落とAI関連株](https://www.reuters.com/world/asia-pacific/japans-nikkei-slumps-3-tech-stocks-tumble-ai-worries-2026-10-30/)
 - ロイター：[円相場と各国中央銀行](https://www.reuters.com/world/asia-pacific/yen-steady-before-boj-ai-jitters-drive-treasury-rally-weigh-dollar-2026-10-30/)
