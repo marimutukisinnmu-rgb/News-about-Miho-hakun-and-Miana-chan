@@ -36,6 +36,14 @@ function cleanNewsText(text) {
 }
 
 function renderNewsMarkdown(output, text) {
+  if (window.MHNInfoBlock && typeof window.MHNInfoBlock.render === "function") {
+    try {
+      window.MHNInfoBlock.render(output, text);
+      return;
+    } catch (_) {
+      // Fall back to the legacy Markdown renderer if the custom block fails.
+    }
+  }
   const source = String(text);
   if (window.marked && typeof window.marked.parse === "function" && window.DOMPurify) {
     try {
