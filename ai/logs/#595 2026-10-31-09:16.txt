@@ -71,7 +71,7 @@
 - ウェザーニュース：[台風31号「インファ」の実況・進路予想](https://weathernews.jp/onebox/typhoon/31/)（31日06時実況、07時07分掲載）
 - FNNプライムオンライン：[松江市の小学校3校で給食後に体調不良、原因を調査](https://www.fnn.jp/articles/-/1142887)（10月30日公開）
 - FNNプライムオンライン：[渋谷のハロウィーン混雑対策](https://www.fnn.jp/articles/-/1143218)（10月30日公開）
-- AP通信：[G20外相会合、ロシア参加をめぐり集合写真を中止](https://apnews.com/article/g20-rubio-russia-ukraine-iran-war-ed4ab8ad9fedd628c39ac05bc5092cac)（10月30日公開）
+- Reuters：[G20外相会合、ウクライナ・中東情勢をめぐる各国の隔たり](https://www.reuters.com/world/china/rifts-over-wars-ukraine-middle-east-loom-over-g20-meeting-us-2026-10-30/)（10月30日公開）
 - 日本取引所グループ：[ETFの用語解説](https://www.jpx.co.jp/glossary/a-g/486.html)
 - Reuters：[日銀の政策金利据え置き](https://www.reuters.com/world/asia-pacific/boj-keeps-interest-rates-steady-signals-further-rate-hikes-2026-10-30/)（10月30日公開）
 - Reuters：[日銀のETF売却ペース見直し](https://www.reuters.com/world/asia-pacific/boj-sets-etf-sale-pace-860-billion-yen-year-2026-10-30/)（10月30日公開）
