@@ -30,7 +30,7 @@
 
 ## 国際情勢
 
-みほはくん「アメリカ・アトランタで開かれているG20外相会合では、ロシアのラブロフ外相の参加をめぐって欧州側から反発があり、恒例の集合写真が取りやめになったとAP通信が報じたよ。」
+みほはくん「アメリカ・アトランタで開かれているG20外相会合では、ロシアのラブロフ外相の参加をめぐって欧州側から反発があり、恒例の集合写真が取りやめになったとReutersが報じたよ。」
 
 みあなちゃん「ウクライナ情勢や中東、関税、南シナ海などをめぐって各国の意見の隔たりが大きく、共同声明の取りまとめも難しい見通しだよ。外交の場でどこまで共通点を見つけられるか、続報を見ていきたいね。」
 
@@ -73,6 +73,7 @@
 - FNNプライムオンライン：[渋谷のハロウィーン混雑対策](https://www.fnn.jp/articles/-/1143218)（10月30日公開）
 - AP通信：[G20外相会合、ロシア参加をめぐり集合写真を中止](https://apnews.com/article/g20-rubio-russia-ukraine-iran-war-ed4ab8ad9fedd628c39ac05bc5092cac)（10月30日公開）
 - 日本取引所グループ：[ETFの用語解説](https://www.jpx.co.jp/glossary/a-g/486.html)
+- Reuters：[日銀の政策金利据え置き](https://www.reuters.com/world/asia-pacific/boj-keeps-interest-rates-steady-signals-further-rate-hikes-2026-10-30/)（10月30日公開）
 - Reuters：[日銀のETF売却ペース見直し](https://www.reuters.com/world/asia-pacific/boj-sets-etf-sale-pace-860-billion-yen-year-2026-10-30/)（10月30日公開）
 - キデイランド：[miffy style POP UP SHOPの開催案内](https://prtimes.jp/main/html/rd/p/000000407.000001117.html)
 - STUDIO IVY：[東三国店の開店案内](https://prtimes.jp/main/html/rd/p/000000138.000121091.html)（11月1日予定）
