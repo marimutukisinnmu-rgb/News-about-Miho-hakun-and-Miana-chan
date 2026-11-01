@@ -20,7 +20,7 @@
 
 みほはくん「従来の大会記録を3分以上更新したんだね。箱根駅伝での三冠にも注目が集まりそう！」
 
-みあなちゃん「10月31日のハロウィーンは土曜日と重なり、渋谷・新宿で警戒が強化されたよ。渋谷ではハチ公像を覆う対策や交通規制が行われ、警視庁は数百人規模で警戒。NHKの朝の報道では、大きなトラブルは確認されていないと伝えられたよ。」
+みあなちゃん「10月31日のハロウィーンは土曜日と重なり、渋谷・新宿で警戒が強化されたよ。渋谷ではハチ公像を覆う対策や交通規制が行われ、警視庁は数百人規模で警戒にあたったんだ。」
 
 みほはくん「混雑する場所では、周りの人と安全に過ごせるよう、案内や交通規制を守ることが大切だね。」
 
@@ -52,11 +52,14 @@
 ## きょうの確認先
 
 - 気象庁：[三重県南東沖の地震情報](https://www.data.jma.go.jp/eew/data/nc/fc_hist/2026/11/20261101071547/index.html)
+- Yahoo!天気・災害：[今日の地震情報](https://typhoon.yahoo.co.jp/weather/earthquake/)
 - 気象庁：[台風情報](https://www.jma.go.jp/bosai/map.html?contents=typhoon)
 - 気象庁：[警報・注意報](https://www.jma.go.jp/bosai/warning/)
+- 防災情報XMLデータベース：[地方気象台の発表履歴](https://agora.ex.nii.ac.jp/cps/weather/report/office/)
 - 気象庁：[全国の天気予報](https://www.jma.go.jp/bosai/forecast/)
 - 日刊スポーツ：[全日本大学駅伝の結果](https://www.nikkansports.com/m/sports/athletics/news/amp/202611010000798.html)
 - FNN：[渋谷・新宿のハロウィーン警戒](https://www.fnn.jp/articles/-/1143835)
+- FNN：[防災庁の発足日について](https://www.fnn.jp/articles/-/1120814)
 - Japan Customs：[新免税制度](https://www.customs.go.jp/kaigairyoko/taxrefund.htm)
 - Reuters：[米・イラン戦争終結を目指す協議](https://www.reuters.com/world/middle-east/iranian-negotiators-doha-continue-talks-end-us-iran-war-official-says-2026-11-01/)
 - Reuters：[台湾東方沖の沿岸警備船をめぐる報道](https://www.reuters.com/world/china/taiwan-says-china-harassing-shipping-with-east-coast-patrol-2026-11-01/)
