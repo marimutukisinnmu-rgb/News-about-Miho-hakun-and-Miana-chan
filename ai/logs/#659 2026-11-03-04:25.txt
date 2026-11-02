@@ -41,6 +41,8 @@
 
 - 気象庁：[警報・注意報](https://www.jma.go.jp/bosai/warning/)
 - 気象庁：[地震・津波情報](https://www.data.jma.go.jp/multi/quake/index.html)
+- 日本気象協会：[11月3日の東海の天気](https://tenki.jp/forecaster/n_takeshita/2026/11/02/41176.html)（11月2日14:09）
+- 日本気象協会：[5日の広い範囲の雨と寒気](https://tenki.jp/forecaster/deskpart/2026/11/02/41175.html)（11月2日11:40）
 - AP通信：[防災庁の発足](https://apnews.com/article/9c9178280d94edbafd8fdf32b01facf0)
 - Reuters：[防衛費の検討案](https://www.reuters.com/world/asia-pacific/japan-defence-ministry-sees-defence-buildup-5078-bln-under-new-five-year-plan-2026-11-01/)
 - Reuters：[ウクライナ・ザポリージャ州の攻撃に関する報道](https://www.reuters.com/world/ukraines-zelenskiy-russian-bombing-kills-18-southeastern-zaporizhzhia-region-2026-11-02/)
