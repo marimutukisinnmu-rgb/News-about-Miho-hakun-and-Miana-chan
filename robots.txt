@@ -2,4 +2,7 @@
 User-agent: *
 Allow: /
 
+User-Agent: __usage_ai-training
+Disallow: /
+
 Sitemap: https://marimutukisinnmu-rgb.github.io/News-about-Miho-hakun-and-Miana-chan/sitemap.xml
