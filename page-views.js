@@ -82,15 +82,48 @@
     };
   }
 
+
+  function getSupabaseClient() {
+    if (window.__mhnSupabaseClient) return window.__mhnSupabaseClient;
+    if (!window.supabase || typeof window.supabase.createClient !== "function") return null;
+
+    const client = window.supabase.createClient(
+      "https://ewiurxmmomtcjfvjfpus.supabase.co",
+      "sb_publishable_nvWYS-dOfApdIClbRV0A1Q_9UgaPM90",
+      { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } }
+    );
+    window.__mhnSupabaseClient = client;
+    return client;
+  }
+
+  async function getAuthorizationHeader() {
+    const client = getSupabaseClient();
+    if (!client || !client.auth || typeof client.auth.getSession !== "function") return null;
+
+    try {
+      const { data, error } = await client.auth.getSession();
+      const token = data && data.session && data.session.access_token;
+      return !error && typeof token === "string" && token.length > 0
+        ? "Bearer " + token
+        : null;
+    } catch (_) {
+      return null;
+    }
+  }
+
   async function recordPageView() {
     try {
       const device = await collectDeviceInfo();
+      const headers = {
+        "Content-Type": "application/json",
+        "apikey": PUBLISHABLE_KEY
+      };
+      const authorization = await getAuthorizationHeader();
+      if (authorization) headers.Authorization = authorization;
+
       const response = await fetch(ENDPOINT, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "apikey": PUBLISHABLE_KEY
-        },
+        headers,
         body: JSON.stringify({
           pagePath: getPagePath(),
           deviceType: device.deviceType,

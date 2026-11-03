@@ -33,6 +33,7 @@
     "sb_publishable_nvWYS-dOfApdIClbRV0A1Q_9UgaPM90",
     { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } }
   );
+  window.__mhnSupabaseClient = client;
   let renderVersion = 0;
 
   function link(href, label) {
