@@ -51,8 +51,6 @@
 
 - 気象庁：[11月5日の緊急地震速報訓練](https://www.jma.go.jp/jma/kishou/know/jishin/eew/kunren/2026/kunren.html)
 - 気象庁：[11月5日の訓練実施のお知らせ](https://www.jma.go.jp/jma/press/2610/09a/20261009_eewkunren.html)
-- 気象庁：[宮城県沖の緊急地震速報（4時21分）](https://www.data.jma.go.jp/eew/data/nc/fc_hist/2026/11/20261105042154/index.html)
-- TBS NEWS DIG：[宮城県沖の地震・震度1](https://newsdig.tbs.co.jp/list/bousai/earthquake/detail?event=20261105042154)
 - FNNプライムオンライン：[伊豆諸島のレベル4土砂災害危険警報（4時33分時点）](https://www.fnn.jp/articles/-/1146273)
 - 熊本朝日放送：[関東・伊豆諸島の大雨情報（5時53分）](https://www.kab.co.jp/news/article/17024346)
 - tenki.jp：[関東の5日朝の大雨と道路冠水への注意（5時59分）](https://tenki.jp/forecaster/y_nakagawa/2026/11/05/41206.html)
