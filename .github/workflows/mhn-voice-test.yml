@@ -226,14 +226,19 @@ jobs:
               params_b = second.getparams()
               frames_b = second.readframes(second.getnframes())
 
-          if params_a[:4] != params_b[:4]:
+          format_a = (params_a.nchannels, params_a.sampwidth, params_a.framerate, params_a.comptype)
+          format_b = (params_b.nchannels, params_b.sampwidth, params_b.framerate, params_b.comptype)
+          if format_a != format_b:
               raise RuntimeError("The two WAV files have incompatible audio formats.")
 
           silence_frames = int(params_a.framerate * 0.35)
           silence = b"\x00" * silence_frames * params_a.nchannels * params_a.sampwidth
           combined = OUT / "mhn-voice-test.wav"
           with wave.open(str(combined), "wb") as output:
-              output.setparams(params_a)
+              output.setparams((
+                  params_a.nchannels, params_a.sampwidth, params_a.framerate,
+                  0, params_a.comptype, params_a.compname
+              ))
               output.writeframes(frames_a + silence + frames_b)
           print(f"Combined test audio: {combined} ({combined.stat().st_size} bytes)")
           PY
