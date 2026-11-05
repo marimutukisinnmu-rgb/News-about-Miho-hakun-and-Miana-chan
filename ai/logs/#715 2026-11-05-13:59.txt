@@ -46,6 +46,7 @@
 - 気象庁：[11月5日の緊急地震速報訓練](https://www.jma.go.jp/jma/kishou/know/jishin/eew/kunren/2026/kunren.html)（11月5日10時ごろ予定）
 - 気象庁：[訓練参加機関の発表](https://www.jma.go.jp/jma/press/2610/29b/20261029_eewkunren.html)（10月29日発表）
 - 気象庁：[千葉県・鎌ケ谷市の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Chiba_Kamagaya-shi.html)（11月5日5時）
+- 気象庁：[宮城県・塩竈市の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Miyagi_Shiogama-shi.html)（11月5日5時）
 - 気象庁：[熊本県・熊本市の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Kumamoto_Kumamoto-shi.html)（11月5日5時）
 - 気象庁：[警報・注意報一覧](https://www.jma.go.jp/bosai/warning/)（ページ表示の更新時刻：11月5日1時33分）
 - 日本銀行：[9月17・18日会合の議事要旨](https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2026/g260918.pdf)（11月5日8時50分公表）
