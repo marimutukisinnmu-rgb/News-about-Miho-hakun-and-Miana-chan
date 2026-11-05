@@ -1,0 +1,252 @@
+name: MHN Voice Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "list: list VOICEVOX voices / test: generate two sample voices"
+        required: true
+        type: choice
+        options:
+          - list
+          - test
+        default: list
+      speaker_a:
+        description: "VOICEVOX style ID for sample A (test mode)"
+        required: false
+        type: string
+        default: "2"
+      speaker_b:
+        description: "VOICEVOX style ID for sample B (test mode)"
+        required: false
+        type: string
+        default: "3"
+      text_a:
+        description: "Text spoken by sample A"
+        required: false
+        type: string
+        default: "こんにちは！こちらはMHN、みほはくんとみあなちゃんのニュースタイム。ボイスチェックです！"
+      text_b:
+        description: "Text spoken by sample B"
+        required: false
+        type: string
+        default: "続いて、こちらもボイスチェックです。ニュースを聞きやすくお届けできるかな？"
+      speed_a:
+        description: "Speaking speed for sample A"
+        required: false
+        type: string
+        default: "1.0"
+      speed_b:
+        description: "Speaking speed for sample B"
+        required: false
+        type: string
+        default: "1.0"
+      pitch_a:
+        description: "Pitch scale for sample A"
+        required: false
+        type: string
+        default: "0.0"
+      pitch_b:
+        description: "Pitch scale for sample B"
+        required: false
+        type: string
+        default: "0.0"
+      intonation_a:
+        description: "Intonation scale for sample A"
+        required: false
+        type: string
+        default: "1.0"
+      intonation_b:
+        description: "Intonation scale for sample B"
+        required: false
+        type: string
+        default: "1.0"
+      volume_a:
+        description: "Volume scale for sample A"
+        required: false
+        type: string
+        default: "1.0"
+      volume_b:
+        description: "Volume scale for sample B"
+        required: false
+        type: string
+        default: "1.0"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mhn-voice-test-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  voice-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Start VOICEVOX CPU engine
+        shell: bash
+        run: |
+          docker pull voicevox/voicevox_engine:cpu-latest
+          docker run -d --name mhn-voicevox -p 127.0.0.1:50021:50021 voicevox/voicevox_engine:cpu-latest
+
+      - name: Wait for VOICEVOX API
+        shell: bash
+        run: |
+          for attempt in $(seq 1 120); do
+            if curl --fail --silent http://127.0.0.1:50021/speakers -o /tmp/voicevox-speakers.json; then
+              echo "VOICEVOX API is ready."
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "VOICEVOX did not become ready in time."
+          docker logs mhn-voicevox || true
+          exit 1
+
+      - name: Generate speaker list or test WAV files
+        shell: bash
+        env:
+          MODE: ${{ inputs.mode }}
+          SPEAKER_A: ${{ inputs.speaker_a }}
+          SPEAKER_B: ${{ inputs.speaker_b }}
+          TEXT_A: ${{ inputs.text_a }}
+          TEXT_B: ${{ inputs.text_b }}
+          SPEED_A: ${{ inputs.speed_a }}
+          SPEED_B: ${{ inputs.speed_b }}
+          PITCH_A: ${{ inputs.pitch_a }}
+          PITCH_B: ${{ inputs.pitch_b }}
+          INTONATION_A: ${{ inputs.intonation_a }}
+          INTONATION_B: ${{ inputs.intonation_b }}
+          VOLUME_A: ${{ inputs.volume_a }}
+          VOLUME_B: ${{ inputs.volume_b }}
+        run: |
+          mkdir -p output
+          python - <<'PY'
+          import json
+          import os
+          import urllib.parse
+          import urllib.request
+          import wave
+          from pathlib import Path
+
+          BASE = "http://127.0.0.1:50021"
+          OUT = Path("output")
+          OUT.mkdir(exist_ok=True)
+
+          def get_json(path):
+              with urllib.request.urlopen(BASE + path, timeout=60) as response:
+                  return json.loads(response.read().decode("utf-8"))
+
+          def post_json(path, body=None):
+              data = None if body is None else json.dumps(body, ensure_ascii=False).encode("utf-8")
+              request = urllib.request.Request(
+                  BASE + path,
+                  data=data,
+                  headers={"Content-Type": "application/json"} if data is not None else {},
+                  method="POST",
+              )
+              with urllib.request.urlopen(request, timeout=300) as response:
+                  return response.read()
+
+          speakers = get_json("/speakers")
+          (OUT / "speakers.json").write_text(
+              json.dumps(speakers, ensure_ascii=False, indent=2), encoding="utf-8"
+          )
+          lines = ["VOICEVOX 利用可能な話者・スタイル一覧", ""]
+          for character in speakers:
+              lines.append(str(character.get("name", "Unknown")))
+              for style in character.get("styles", []):
+                  lines.append(
+                      "  ID {id}: {name} [{type}]".format(
+                          id=style.get("id"),
+                          name=style.get("name", "Unknown"),
+                          type=style.get("type", "talk"),
+                      )
+                  )
+              lines.append("")
+          (OUT / "speakers.txt").write_text("\n".join(lines), encoding="utf-8")
+          print("\n".join(lines))
+
+          if os.environ.get("MODE", "list") == "list":
+              print("Speaker list generated.")
+              raise SystemExit(0)
+
+          def number(name, default):
+              value = float(os.environ.get(name, default))
+              if not (-10 <= value <= 10):
+                  raise ValueError(f"{name} is outside the allowed test range: {value}")
+              return value
+
+          def synthesize(label, speaker, text, speed, pitch, intonation, volume):
+              if not text.strip():
+                  raise ValueError(f"TEXT_{label} is empty.")
+              query_url = "/audio_query?" + urllib.parse.urlencode({
+                  "text": text,
+                  "speaker": str(speaker),
+              })
+              query_bytes = post_json(query_url)
+              query = json.loads(query_bytes.decode("utf-8"))
+              query["speedScale"] = speed
+              query["pitchScale"] = pitch
+              query["intonationScale"] = intonation
+              query["volumeScale"] = volume
+              wav_bytes = post_json(
+                  "/synthesis?" + urllib.parse.urlencode({"speaker": str(speaker)}),
+                  query,
+              )
+              out_path = OUT / f"voice-{label.lower()}.wav"
+              out_path.write_bytes(wav_bytes)
+              with wave.open(str(out_path), "rb") as audio:
+                  frames = audio.getnframes()
+                  rate = audio.getframerate()
+                  channels = audio.getnchannels()
+              if len(wav_bytes) <= 44 or frames <= 0:
+                  raise RuntimeError(f"Generated WAV is empty: {out_path}")
+              print(f"{out_path}: {len(wav_bytes)} bytes, {rate} Hz, {channels} ch")
+
+          a = int(os.environ.get("SPEAKER_A", "2"))
+          b = int(os.environ.get("SPEAKER_B", "3"))
+          synthesize(
+              "A", a, os.environ.get("TEXT_A", ""),
+              number("SPEED_A", "1.0"), number("PITCH_A", "0.0"),
+              number("INTONATION_A", "1.0"), number("VOLUME_A", "1.0")
+          )
+          synthesize(
+              "B", b, os.environ.get("TEXT_B", ""),
+              number("SPEED_B", "1.0"), number("PITCH_B", "0.0"),
+              number("INTONATION_B", "1.0"), number("VOLUME_B", "1.0")
+          )
+
+          paths = [OUT / "voice-a.wav", OUT / "voice-b.wav"]
+          with wave.open(str(paths[0]), "rb") as first:
+              params_a = first.getparams()
+              frames_a = first.readframes(first.getnframes())
+          with wave.open(str(paths[1]), "rb") as second:
+              params_b = second.getparams()
+              frames_b = second.readframes(second.getnframes())
+
+          if params_a[:4] != params_b[:4]:
+              raise RuntimeError("The two WAV files have incompatible audio formats.")
+
+          silence_frames = int(params_a.framerate * 0.35)
+          silence = b"\x00" * silence_frames * params_a.nchannels * params_a.sampwidth
+          combined = OUT / "mhn-voice-test.wav"
+          with wave.open(str(combined), "wb") as output:
+              output.setparams(params_a)
+              output.writeframes(frames_a + silence + frames_b)
+          print(f"Combined test audio: {combined} ({combined.stat().st_size} bytes)")
+          PY
+
+      - name: Show engine logs on failure
+        if: failure()
+        shell: bash
+        run: docker logs mhn-voicevox || true
+
+      - name: Upload test result
+        uses: actions/upload-artifact@v4
+        with:
+          name: mhn-voice-output
+          path: output/*
+          if-no-files-found: error
+          retention-days: 1
