@@ -1,0 +1,57 @@
+みほはくん&みあなちゃん『717回目の15時のニュースをお伝えするよ～！』
+
+## 津波防災の日
+
+みほはくん「11月5日は『津波防災の日』、そして『世界津波の日』。強い揺れや、ゆっくり長い揺れを感じたら、津波警報を待たずに海岸や河口から離れて、高い場所へ避難することが大切だよ。」
+
+みあなちゃん「津波は何度も押し寄せることがあるから、最初の波のあとも油断しないでね。警報や注意報が解除されるまでは、海岸に戻らないようにしよう。」
+
+## 国際情勢・海上安全
+
+みあなちゃん「ホルムズ海峡では、イラン革命防衛隊が、別々の事故でタンカー2隻とタグボートが火災を起こしたと発表したよ。Reutersも報じているけれど、発表した側の説明として伝えられていて、詳しい状況には確認が必要だね。」
+
+みほはくん「原油価格は4日連続で下落したと報じられたよ。米中間選挙の結果を受けて、イランとの戦争がさらに拡大するリスクが下がるとの見方が市場に出ているんだ。ただし、価格の動きだけで戦争の終結が決まったわけではないよ。」
+
+## 国内・経済
+
+みほはくん「日本のサービス業は、10月も活動が拡大し、5か月連続の成長になったとReutersが報じたよ。伸びは大きくないものの、事業活動と新規受注が前月より少し強まったという内容だね。」
+
+みあなちゃん「日銀の9月会合の議事要旨では、物価上昇が想定を上回る場合に、利上げを続けたり、より速いペースを検討したりする考えが出ていたそうだよ。これは会合での議論の記録で、今日新たな利上げが決まったという意味ではないから、そこは区別しよう。」
+
+みほはくん「企業の動きでは、政府系ファンドの産業革新投資機構が、半導体材料メーカーのJSRを三井化学に売却する計画だと報じられたよ。金額は1兆3,000億円を超える可能性があるとのこと。ただ、三井化学は選択肢を検討中で、決定したわけではないと説明しているね。」
+
+## 市場・為替
+
+みあなちゃん「日経平均は朝に上昇して始まったあと、値動きが大きくなったよ。確認できた13時05分の遅延値は6万1,403円45銭で、前日比785円18銭安。これは午後の途中時点の数字で、終値とは区別して見てね。」
+
+みほはくん「為替は14時44分の表示で、1ドル＝157円92銭。前日比では円高・ドル安方向だったよ。数字にはそれぞれの時刻があるから、最新値として扱うときは更新時刻も一緒に確認しよう。」
+
+## 天気・警報注意報
+
+みほはくん「気象庁の今朝5時の地域資料では、千葉県の一部で、雨の多い所は1時間40ミリ、24時間で80ミリの予想。熊本県では、雨や雷、突風、急に強まる雨への注意が呼びかけられていたよ。」
+
+みあなちゃん「これは朝の予報だから、今の警報・注意報は地域ごとに変わっている可能性があるよ。外出や移動の前には、気象庁の最新一覧を確認してね。」
+
+## 今日・明日の新規オープン
+
+みあなちゃん「今日11月5日の開店予定には、京都市南区の『Kodak Apparel（イオンモールKYOTO）』や、京都市山科区の『ケンタッキーフライドチキン イオンタウン山科椥辻店』があるよ。」
+
+みほはくん「明日6日には、名古屋PARCOで『hololive production official pop up shop in NAGOYA』のオープン予定も掲載されているね。営業時間や営業状況は変わることがあるから、訪れる前に施設や店舗の案内を確認しよう。」
+
+みあなちゃん「災害情報は発表時刻を確かめて、津波への備えも忘れずに。それじゃあ、また次のニュースで！」
+
+↓i↓
+## きょうの確認先
+
+- 気象庁：[警報・注意報一覧](https://www.jma.go.jp/bosai/warning/)（表示更新 11月5日 01:33）
+- 気象庁：[千葉県・鎌ケ谷市の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Chiba_Kamagaya-shi.html)（11月5日 05:00）
+- 気象庁：[熊本県・熊本市の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Kumamoto_Kumamoto-shi.html)（11月5日 05:00）
+- Reuters：[ホルムズ海峡での船舶火災に関する報道](https://www.reuters.com/world/middle-east/irans-irgc-says-two-tankers-tugboat-caught-fire-strait-hormuz-2026-11-05/)（11月5日）
+- Reuters：[原油価格が4日連続で下落](https://www.reuters.com/business/energy/oil-falls-fourth-day-expectations-lower-risk-iran-war-escalation-2026-11-05/)（11月5日）
+- Reuters：[日本のサービス業活動が5か月連続で拡大](https://www.reuters.com/world/asia-pacific/japan-services-activity-expands-fifth-month-pmi-shows-2026-11-05/)（11月5日）
+- Reuters：[日銀9月会合の議事要旨](https://www.reuters.com/world/asia-pacific/boj-board-saw-need-to-keep-raising-rates-september-meeting-minutes-show-2026-11-05/)（11月5日）
+- Reuters：[JSRの売却計画に関する報道](https://www.reuters.com/world/asia-pacific/japan-fund-jic-plans-sell-jsr-mitsui-chemicals-sources-say-2026-11-04/)（11月4日）
+- ダイヤモンド：[日経平均株価](https://diamond.jp/list/market/nikkei-average)（13:05の遅延値）
+- ダイヤモンド：[米ドル／円](https://diamond.jp/list/market/chart-detail)（14:44）
+- Reuters：[米中間選挙後の為替市場](https://www.reuters.com/world/asia-pacific/dollar-edges-lower-us-election-outcome-cheers-global-markets-2026-11-05/)（11月5日）
+↑i↑
