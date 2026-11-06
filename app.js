@@ -103,7 +103,7 @@ function readCachedLogs() {
 }
 
 async function loadLogsFromStaticIndex() {
-  const response = await fetch(LOG_INDEX_URL, { cache: "no-cache" });
+  const response = await fetch(LOG_INDEX_URL + "?_=" + Date.now(), { cache: "no-store" });
   if (!response.ok) return null;
   const index = await response.json();
   if (!index || !Array.isArray(index.logs)) return null;
@@ -118,7 +118,7 @@ async function loadLogsFromStaticIndex() {
 }
 
 async function loadLogsFromTreeApi() {
-  const response = await fetch(TREE_API, { cache: "default" });
+  const response = await fetch(TREE_API + "&_=" + Date.now(), { cache: "no-store" });
   if (!response.ok) throw new Error("ログ一覧の取得に失敗しました");
   const result = await response.json();
   if (!Array.isArray(result.tree) || result.truncated === true) {
@@ -145,7 +145,7 @@ async function loadLogsFromContentsApi() {
   for (let page = 1; page <= 20; page += 1) {
     const response = await fetch(
       contentsBase + "?ref=main&per_page=100&page=" + page,
-      { cache: "default" }
+      { cache: "no-store" }
     );
     if (!response.ok) throw new Error("ログ一覧の取得に失敗しました");
     const items = await response.json();
@@ -195,6 +195,23 @@ async function getLogs() {
     });
   }
   return logListPromise;
+}
+
+async function getLogsFresh() {
+  let logs = null;
+  try {
+    logs = await loadLogsFromStaticIndex();
+  } catch (_) {
+    // Fall through to the Git tree API.
+  }
+  if (logs === null) {
+    try {
+      logs = await loadLogsFromTreeApi();
+    } catch (_) {
+      logs = await loadLogsFromContentsApi();
+    }
+  }
+  return logs;
 }
 
 function fetchLogText(file) {
@@ -274,9 +291,84 @@ async function loadLatest() {
       return;
     }
     renderNewsMarkdown(output, await fetchLogText(logs[0]));
+    startAutoUpdate();
   } catch (error) {
     console.error("[MHN] latest load failed");
     output.textContent = "ニュースの取得に失敗しました。時間をおいて再度お試しください。";
+  }
+}
+
+let autoUpdateTimer = null;
+let autoUpdateChecks = 0;
+let autoUpdateInFlight = false;
+
+function startAutoUpdate() {
+  if (autoUpdateTimer !== null) return;
+  autoUpdateTimer = setInterval(() => {
+    void checkForNewsUpdates();
+  }, 15_000);
+}
+
+async function checkForNewsUpdates() {
+  if (autoUpdateInFlight || document.visibilityState === "hidden") return;
+  autoUpdateInFlight = true;
+
+  try {
+    const freshLogs = await getLogsFresh();
+    autoUpdateChecks += 1;
+
+    const previousLogs = Array.isArray(window.__newsLogs) ? window.__newsLogs : [];
+    const knownNames = new Set(previousLogs.map((file) => file.name));
+    const addedLogs = freshLogs.filter((file) => !knownNames.has(file.name));
+
+    if (addedLogs.length === 0) return;
+
+    const latestChanged = freshLogs.length > 0 &&
+      (!previousLogs[0] || freshLogs[0].name !== previousLogs[0].name);
+    const output = document.getElementById("output");
+    let latestText = null;
+
+    // Fetch the new content before changing the current display or baseline.
+    if (latestChanged && output) {
+      latestText = await fetchLogText(freshLogs[0]);
+    }
+
+    window.__newsLogs = freshLogs;
+    window.__newsLogsLoadedAt = Date.now();
+    cacheLogs(freshLogs);
+
+    if (latestChanged && output && latestText !== null) {
+      renderNewsMarkdown(output, latestText);
+    }
+
+    const list = document.getElementById("list");
+    if (list) {
+      const input = document.getElementById("searchInput");
+      if (input && input.value.trim()) {
+        searchCorpusPromise = null;
+        await searchNow();
+      } else {
+        render(freshLogs);
+      }
+    }
+
+    const targets = latestChanged
+      ? ["latest_news", "news_history"]
+      : ["news_history"];
+
+    if (window.MHNAnalytics && typeof window.MHNAnalytics.recordAutoUpdate === "function") {
+      void window.MHNAnalytics.recordAutoUpdate({
+        checks: autoUpdateChecks,
+        newItems: addedLogs.length,
+        targets
+      });
+    }
+    autoUpdateChecks = 0;
+  } catch (_) {
+    // Keep the last successfully rendered content and retry on the next interval.
+    console.warn("[MHN] automatic update check failed");
+  } finally {
+    autoUpdateInFlight = false;
   }
 }
 
@@ -402,6 +494,7 @@ if (document.getElementById("output")) {
     .then((logs) => {
       window.__newsLogs = logs;
       render(logs);
+      startAutoUpdate();
       const input = document.getElementById("searchInput");
       if (input && input.value.trim()) return searchNow();
     })
