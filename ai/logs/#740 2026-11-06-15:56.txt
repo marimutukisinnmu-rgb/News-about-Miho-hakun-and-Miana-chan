@@ -2,7 +2,7 @@
 
 ## 防災の動きと、きょうの空
 
-みあなちゃん「まずは災害への備えに関するニュースだよ。日本では11月3日に、災害への備えや緊急対応、復旧を継続的に調整する新しい防災機関が発足したんだ。AP通信によると、350人を超える職員が関係機関の連携を担う体制だよ。」
+みあなちゃん「まずは災害への備えに関するニュースだよ。日本では11月2日に、災害への備えや緊急対応、復旧を一貫して調整する『防災庁』が発足したんだ。AP通信によると、350人を超える職員が関係機関の連携を担う体制だよ。」
 
 みほはくん「災害が起きてからだけじゃなく、普段の備えや避難所の環境づくりも大切だね。家具の固定、避難先と避難経路、非常用品を家族で確認しておこう。」
 
@@ -16,7 +16,7 @@
 
 みあなちゃん「米国でAI関連株が急落した流れがアジア市場にも広がり、日経平均は一時さらに大きく下げたと報じられているよ。数字は時点によって変わるから、ここでは15時24分表示の値として見てね。為替は確認時のYahoo!ファイナンス表示で、1ドル＝157円71銭前後だったよ。」
 
-みほはくん「もう一つ、日銀が保有するETFの売却で得る資金の活用も話題だね。ロイターによると、高市首相はその収入を経済安全保障や成長分野への戦略投資に回す考えを示したよ。日銀は市場への影響を抑えながら売却する方針で、売却規模の拡大も注目されているんだ。」
+みほはくん「もう一つ、日銀が保有するETFの売却で得る資金の活用も話題だね。ロイターによると、高市首相はその収入を経済安全保障や成長分野への戦略投資に回す考えを示したよ。日銀は市場への影響を抑えながら売却する方針で、年間の売却目標を3,300億円から8,600億円へ引き上げたことも注目されているんだ。」
 
 ## 世界の動き
 
@@ -40,8 +40,11 @@
 - 気象庁：[石川県・七尾市付近の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Ishikawa_Nanao-shi.html)（11月6日5時発表）
 - 気象庁：[石川県・輪島市付近の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Ishikawa_Wajima-shi.html)（11月6日5時発表）
 - 気象庁：[宮城県・登米市付近の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Miyagi_Tome-shi.html)（11月6日11時発表）
+- 気象庁：[北海道の天気予報](https://www.jma.go.jp/bosai/forecast/data/forecast/016000.json)（11月6日11時発表）
+- 気象庁：[東京地方の天気予報](https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json)（11月6日11時発表）
+- 気象庁：[大阪府の天気予報](https://www.jma.go.jp/bosai/forecast/data/forecast/270000.json)（11月6日11時発表）
 - 気象庁：[全国の警報・注意報](https://www.jma.go.jp/bosai/warning/)（確認できた表示は11月5日1時33分更新）
-- AP通信：[日本の新しい防災機関の発足](https://apnews.com/article/9c9178280d94edbafd8fdf32b01facf0)（11月3日）
+- AP通信：[日本の防災庁の発足](https://apnews.com/article/9c9178280d94edbafd8fdf32b01facf0)（11月2日発足を報道）
 - ロイター：[日銀ETF売却収入の戦略投資への活用方針](https://www.reuters.com/world/asia-pacific/japan-vigilant-market-moves-will-focus-boosting-economy-pm-takaichi-says-2026-11-06/)（11月6日）
 - AP通信：[アジア市場のAI関連株安](https://apnews.com/article/bba6f0bf9035a6e6b1c4fef3e8230b89)（11月6日）
 - Yahoo!ファイナンス：[日経平均の時系列](https://finance.yahoo.co.jp/quote/998407.O/history)（15時24分表示・15分ディレイ）
