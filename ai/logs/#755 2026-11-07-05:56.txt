@@ -77,5 +77,4 @@
 - [心斎橋BIG STEP：サーティワンのオープン案内](https://mail.big-step.co.jp/index.php/shop/detail/66)（11月7日予定）
 - [魁力屋：高槻店リニューアルのお知らせ](https://prtimes.jp/main/html/rd/p/000000063.000185678.html)（11月7日予定）
 - [松屋フーズ：新店・一時閉店一覧](https://qr.matsuyafoods.co.jp/sp/shopsearch/shop_new_close.html)（大正駅前店・11月7日10時予定）
-- [全国 開店予定情報](https://github.com/marimutukisinnmu-rgb/japan-store-openings-json/blob/main/json/latest.json)（11月7日0時42分更新）
 ↑i↑
