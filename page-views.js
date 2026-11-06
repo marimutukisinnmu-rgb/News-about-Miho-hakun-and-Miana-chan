@@ -145,5 +145,53 @@
     }
   }
 
+  async function recordAutoUpdate(metadata) {
+    try {
+      if (
+        !metadata ||
+        !Number.isSafeInteger(metadata.checks) ||
+        metadata.checks < 1 ||
+        !Number.isSafeInteger(metadata.newItems) ||
+        metadata.newItems < 1 ||
+        !Array.isArray(metadata.targets)
+      ) return;
+
+      const device = await collectDeviceInfo();
+      const headers = {
+        "Content-Type": "application/json",
+        "apikey": PUBLISHABLE_KEY
+      };
+      const authorization = await getAuthorizationHeader();
+      if (authorization) headers.Authorization = authorization;
+
+      const response = await fetch(ENDPOINT, {
+        method: "POST",
+        headers,
+        body: JSON.stringify({
+          eventType: "auto_update",
+          pagePath: getPagePath(),
+          deviceType: device.deviceType,
+          deviceModel: device.deviceModel,
+          platform: device.platform,
+          userAgent: device.userAgent,
+          updateChecks: metadata.checks,
+          newItemsCount: metadata.newItems,
+          updateTargets: metadata.targets
+        }),
+        credentials: "omit",
+        cache: "no-store",
+        keepalive: true
+      });
+
+      if (!response.ok) {
+        console.warn("[MHN analytics] auto-update record was not accepted:", response.status);
+      }
+    } catch (_) {
+      console.warn("[MHN analytics] auto-update record request failed");
+    }
+  }
+
+  window.MHNAnalytics = Object.freeze({ recordAutoUpdate });
+
   void recordPageView();
 })();
