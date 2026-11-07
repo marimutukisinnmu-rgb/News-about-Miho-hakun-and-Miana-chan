@@ -48,6 +48,7 @@
 ## きょうの確認先
 
 - 気象庁：[台風情報](https://www.jma.go.jp/bosai/map.html?contents=typhoon)
+- 応用気象エンジニアリング：[台風32号・18時45分発表の実況](https://amecs.co.jp/wx/typhoon/index.html)
 - 海上保安庁：[宮城海上保安部・沿岸の警報注意報](https://www6.kaiho.mlit.go.jp/n/02kanku/miyagi/keihou_chuihou.html)（17:35更新）
 - 海上保安庁：[横須賀海上保安部・沿岸の警報注意報](https://www6.kaiho.mlit.go.jp/n/03kanku/yokosuka/keihou_chuihou.html)（18:15更新）
 - 大阪市：[火災気象通報発表中](https://www.city.osaka.lg.jp/shobo/page/0000691143.html)（11月7日発表）
