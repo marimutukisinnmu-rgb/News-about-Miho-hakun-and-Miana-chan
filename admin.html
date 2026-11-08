@@ -8,14 +8,54 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://ewiurxmmomtcjfvjfpus.supabase.co; form-action 'self';">
 <title>MHN 管理画面</title>
 <style>
-*{box-sizing:border-box}body{font-family:system-ui,sans-serif;max-width:900px;margin:auto;padding:24px;background:#f5f5f5;color:#222;line-height:1.6}nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px}a{color:#1d4ed8}.panel{background:#fff;padding:24px;border-radius:12px;box-shadow:0 2px 10px #0001;margin:18px 0}.status{padding:12px 14px;border-radius:8px;background:#f1f5f9;white-space:pre-wrap}dt{font-weight:700;margin-top:12px}dd{margin-left:0;overflow-wrap:anywhere}.muted{color:#555;font-size:.92rem}@media(max-width:520px){body{padding:14px}.panel{padding:18px}}
+*{box-sizing:border-box}
+body{font-family:system-ui,sans-serif;max-width:1050px;margin:auto;padding:24px;background:#f5f5f5;color:#222;line-height:1.6}
+a{color:#1d4ed8}
+nav{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px}
+h1{margin:.3em 0 .7em}
+h2{margin:0 0 14px}
+.panel,.comment-card{background:#fff;padding:22px;border-radius:12px;box-shadow:0 2px 10px #0001;margin:18px 0}
+.status{padding:12px 14px;border-radius:8px;background:#f1f5f9;white-space:pre-wrap}
+.muted{color:#555;font-size:.9rem}
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:end}
+.field{flex:1;min-width:190px}
+label{display:block;font-weight:650;margin:0 0 6px}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid #b8c0cc;border-radius:8px;font:inherit;background:#fff;color:#222}
+textarea{min-height:90px;resize:vertical}
+button{padding:10px 15px;border:0;border-radius:8px;background:#1d4ed8;color:#fff;font:inherit;font-weight:700;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}
+button.secondary{background:#e5e7eb;color:#222}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}
+.stat{padding:14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px}
+.stat strong{display:block;font-size:1.55rem;font-variant-numeric:tabular-nums}
+.stat span{font-size:.86rem;color:#555}
+.comment-card{padding:20px}
+.comment-head{display:flex;justify-content:space-between;gap:12px;align-items:start;flex-wrap:wrap}
+.comment-name{font-weight:750;font-size:1.05rem}
+.pill{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.8rem;font-weight:700;background:#e2e8f0;color:#334155}
+.pill.new{background:#fef3c7;color:#92400e}
+.pill.reviewed{background:#dcfce7;color:#166534}
+.pill.archived{background:#e5e7eb;color:#4b5563}
+.message{white-space:pre-wrap;overflow-wrap:anywhere;background:#f8fafc;padding:14px;border-radius:8px;margin:14px 0}
+.meta{display:flex;gap:8px 18px;flex-wrap:wrap;color:#555;font-size:.88rem}
+.admin-fields{display:grid;grid-template-columns:minmax(150px,.7fr) minmax(220px,2fr);gap:12px;margin-top:16px}
+.actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.actions select{max-width:190px}
+#accountDetails{margin:0}
+#accountDetails dt{font-weight:700;margin-top:8px}
+#accountDetails dd{margin:0;overflow-wrap:anywhere}
+#commentList:empty:after{content:"表示できるコメントはありません。";display:block;padding:24px;text-align:center;color:#666;background:#fff;border-radius:12px}
+[hidden]{display:none!important}
+@media(max-width:650px){body{padding:14px}.panel,.comment-card{padding:17px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.admin-fields{grid-template-columns:1fr}.actions select{max-width:none}}
 </style>
 </head>
 <body>
 <nav data-mhn-nav aria-label="サイトメニュー"><a href="index.html">最新ニュース</a> <a href="history.html">履歴を見る</a></nav>
 <h1>MHN 管理画面</h1>
-<section class="panel">
-  <h2>管理者アクセス確認</h2>
+
+<section class="panel" aria-labelledby="accessHeading">
+  <h2 id="accessHeading">管理者アクセス</h2>
   <p id="adminStatus" class="status" role="status" aria-live="polite">ログイン状態と管理者権限を確認しています…</p>
   <dl id="accountDetails" hidden>
     <dt>表示名</dt><dd id="adminName"></dd>
@@ -23,15 +63,34 @@
     <dt>権限</dt><dd id="adminRole"></dd>
   </dl>
 </section>
-<section class="panel">
-  <h2>管理機能について</h2>
-  <p>このページは、ログイン中のアカウントがMHNの管理者であることを確認するための管理トップです。</p>
-  <p class="muted">非公開コメントの閲覧・返信などの操作機能は、このページにはまだ実装されていません。権限のない利用者に管理データを返さないよう、専用のサーバー側認証処理を用意してから追加する必要があります。</p>
-  <p><a href="index.html">最新ニュースへ戻る</a></p>
+
+<section id="adminWorkspace" hidden>
+  <section class="panel" aria-labelledby="inboxHeading">
+    <div class="comment-head">
+      <div><h2 id="inboxHeading">非公開コメント受信箱</h2><p class="muted">運営だけが閲覧できるコメントです。最新100件を表示します。</p></div>
+      <button type="button" id="refreshButton" class="secondary">再読み込み</button>
+    </div>
+    <div class="stats" aria-label="コメント件数">
+      <div class="stat"><strong id="countAll">—</strong><span>合計</span></div>
+      <div class="stat"><strong id="countNew">—</strong><span>未確認</span></div>
+      <div class="stat"><strong id="countReviewed">—</strong><span>確認済み</span></div>
+      <div class="stat"><strong id="countArchived">—</strong><span>アーカイブ</span></div>
+    </div>
+    <div class="toolbar">
+      <div class="field"><label for="statusFilter">ステータス</label><select id="statusFilter"><option value="all">すべて</option><option value="new">未確認</option><option value="reviewed">確認済み</option><option value="archived">アーカイブ</option></select></div>
+      <div class="field"><label for="searchInput">キーワード検索</label><input id="searchInput" type="search" maxlength="100" placeholder="名前・コメント・ページなど"></div>
+    </div>
+    <p id="listStatus" class="muted" role="status" aria-live="polite"></p>
+  </section>
+  <section id="commentList" aria-label="コメント一覧"></section>
 </section>
+
+<p><a href="index.html">最新ニュースへ戻る</a></p>
+<p class="muted">管理操作はサーバー側でもログインと管理者権限を検証します。メールアドレスは返信・連絡先として登録された場合のみ、この管理画面に表示されます。メール送信機能はまだありません。</p>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.js" defer></script>
 <script src="nav.js?v=3" defer></script>
-<script src="admin.js?v=1" defer></script>
+<script src="admin.js?v=2" defer></script>
 <p class="mhn-analytics-notice" style="max-width:900px;margin:20px auto;color:#666;font-size:.82rem;line-height:1.6">アクセス解析のため、閲覧日時・ページ・端末種別・取得できる場合の機種名・User-Agentを記録します。ログイン中はプロフィールの表示名も記録し、未ログインまたは表示名未設定の場合は記録しません。IPアドレスは保存しません。</p>
 <script src="./page-views.js?v=2" defer></script>
 </body>
