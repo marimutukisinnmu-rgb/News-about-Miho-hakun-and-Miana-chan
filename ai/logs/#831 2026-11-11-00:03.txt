@@ -61,7 +61,7 @@
 - 気象庁：[全国の天気予報](https://www.jma.go.jp/bosai/forecast/)
 - ウェザーニュース：[台風32号が小笠原諸島に最接近（11月10日22時）](https://weathernews.jp/news/202611/100291/)
 - 新宿区：[Jアラート全国一斉試験放送のお知らせ](https://www.city.shinjuku.lg.jp/anzen/kikikanri01_001046.html)
-- 日本経済新聞ではなく Reuters：[9月の家計支出（11月10日）](https://www.reuters.com/world/asia-pacific/japan-september-household-spending-slumps-amid-bad-weather-2026-11-10/)
+- Reuters：[9月の家計支出（11月10日）](https://www.reuters.com/world/asia-pacific/japan-september-household-spending-slumps-amid-bad-weather-2026-11-10/)
 - The Japan Times：[安全保障3文書の改定協議（11月10日）](https://www.japantimes.co.jp/news/2026/11/10/japan/politics/japan-ruling-bloc-security-documents-talks/)
 - AP通信：[日本とフィリピンの沿岸監視協力](https://apnews.com/article/fe32ef6b4c11bb348bb4d5df253a8378)
 - AP通信：[アブダビでの米・ロ・ウクライナ協議](https://apnews.com/article/3d878a3e56d5df5bd198a6d20c824d18)
