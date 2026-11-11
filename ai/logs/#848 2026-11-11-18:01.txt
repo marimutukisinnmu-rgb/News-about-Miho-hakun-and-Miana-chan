@@ -52,6 +52,7 @@
 ## きょうの確認先
 
 - 気象庁：[全国の天気予報](https://www.jma.go.jp/bosai/forecast/)（11月11日11時発表）
+- 大阪管区気象台の予報を掲載したページ：[近畿地方の天気](https://weather.3rd-in.co.jp/center/010600)（11月11日11時発表）
 - 気象庁：[警報・注意報](https://www.jma.go.jp/bosai/warning/)（一覧の表示更新 11月11日04時32分）
 - FNNプライムオンライン：[安全保障関連3文書の改定をめぐる11日の議論](https://www.fnn.jp/articles/-/1150240)
 - Reuters：[日本企業の景況感調査](https://www.reuters.com/world/asia-pacific/japan-manufacturers-mood-hits-more-than-5-year-high-chip-demand-2026-11-10/)
