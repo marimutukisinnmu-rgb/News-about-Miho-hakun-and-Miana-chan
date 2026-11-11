@@ -42,7 +42,7 @@
 
 ## きょうの新しいお店
 
-みほはくん：11日付の開店・出店情報も見てみよう。大阪では、天王寺・あべのエリアにカプセルトイ専門店「gashacoco ビッグエコー天王寺あべの駅前」が登場。阪急うめだ本店ではキャラクターグッズの期間限定ポップアップや、化粧品ブランドの売場も予定されているよ。
+みほはくん：11日付の開店・出店情報も見てみよう。大阪では、天王寺・あべのエリアにカプセルトイ専門店「gashacoco ビッグエコー天王寺あべの駅前」が登場。阪急うめだ本店ではキャラクターグッズの期間限定ポップアップや、化粧品売場のリニューアルオープンも予定されているよ。
 
 みあなちゃん：愛知県では、岡崎市のアウトレット施設にアウトドア用品店、半田市にベーカリーカフェ、名古屋市には照明・インテリアの専門店が開店予定として掲載されているね。期間限定の出店もあるから、訪れる前に開催期間や営業時間を確認してね。
 
@@ -53,11 +53,14 @@
 ↓i↓
 ## きょうの確認先
 
-- 気象庁：[全国の天気予報](https://www.jma.go.jp/bosai/forecast/)
+- 気象庁：[全国の天気予報](https://www.jma.go.jp/bosai/forecast/)（11月10日23時発表）
 - 気象庁：[台風32号の情報](https://www.jma.go.jp/bosai/map.html?contents=typhoon&typhoon=TC2638)（11月11日1時45分発表）
 - AP通信：[日本政府のサイバーセキュリティ緊急対策](https://apnews.com/article/8ba038fde849e7ea9c49126ecd770972)
-- FNNプライムオンライン：[日・ベトナム首脳会談](https://www.fnn.jp/articles/-/1149277)
+- 首相官邸：[日・ベトナム首脳会談](https://www.kantei.go.jp/jp/105/actions/202611/09vietnam2.html)
 - Reuters：[三井化学によるJSR買収計画](https://www.reuters.com/world/asia-pacific/mitsui-chemicals-dbj-buy-jsr-116-billion-filing-shows-2026-11-09/)
 - Reuters：[日本企業の景況感調査](https://www.reuters.com/world/asia-pacific/japan-manufacturers-mood-hits-more-than-5-year-high-chip-demand-2026-11-10/)
 - Reuters：[ロシア・ウクライナ協議とエネルギー施設への攻撃](https://www.reuters.com/world/russia-pounds-ukraines-power-grid-talks-open-abu-dhabi-2026-11-10/)
+- ハピネット：[gashacoco ビッグエコー天王寺あべの駅前](https://tohakusha.com/main/html/rd/p/000002939.000031422.html)
+- 阪急阪神百貨店：[PEACEMINUSONE X ZO&FRIENDS POP-UP](https://prtimes.jp/main/html/rd/p/000003460.000014431.html)
+- 阪急うめだ本店：[HANKYU BEAUTY MAISON リニューアル](https://www.hankyu-dept.co.jp/honten/shopnews/detail/12714234_2067.html)
 ↑i↑
