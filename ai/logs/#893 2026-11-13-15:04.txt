@@ -59,9 +59,9 @@
 
 - 共同通信：[マイクロソフト大規模障害　世界のメール、AIに影響](https://kumanichi.com/articles/2057254)（11月13日14:46）
 - 甲賀市：[地域情報基盤施設（音声放送システム）への不正アクセスについて](https://www.city.koka.lg.jp/27417.htm)
-- 政府のエネルギー支援：[冬の電気・ガス支援決定](https://news.livedoor.com/topics/detail/32806016/)（共同通信、11月13日9:10）
+- 政府のエネルギー支援：[冬の電気・ガス支援決定](https://news.livedoor.com/article/detail/32806016/)（共同通信、11月13日9:10）
 - Reuters：[イラン側によるバーレーンの米国関連施設への攻撃主張](https://www.reuters.com/world/middle-east/irans-guards-say-they-targeted-us-early-warning-radar-bahrain-2026-11-13/)
-- Reuters：[ウクライナ和平協議と捕虜交換をめぐる動き](https://www.reuters.com/world/europe/kushner-says-us-working-toward-largest-prisoner-exchange-russias-war-in-ukraine-2026-11-13/)
+- Reuters：[ウクライナ和平協議と捕虜交換をめぐる動き](https://www.reuters.com/world/europe/kushner-says-us-working-toward-largest-prisoner-exchange-russias-war-ukraine-2026-11-13/)
 - Reuters：[円相場と日本政府の対応](https://www.reuters.com/markets/us/japans-finance-minister-vows-action-yen-breaches-160-threshold-2026-11-13/)
 - 株探：[14時の日経平均](https://minkabu.jp/news/4662145)（11月13日14:01）
 - Yahoo!ファイナンス：[ドル／円](https://finance.yahoo.co.jp/quote/USDJPY=X)（確認値14:50）
