@@ -72,7 +72,7 @@
 - ロイター通信：[日本の次期防衛費をめぐる財務省案](https://www.reuters.com/business/retail-consumer/japan-warns-arms-suppliers-deep-order-cuts-budget-squeeze-hits-military-buildup-2026-11-13/)
 - ロイター通信：[ガザ・ナセル病院への攻撃](https://www.reuters.com/world/middle-east/israeli-strike-southern-gaza-hospital-kills-four-gaza-civil-defence-says-2026-11-11/)
 - ロイター通信：[円相場と為替介入をめぐる報道](https://www.reuters.com/markets/us/japans-finance-minister-vows-action-yen-breaches-160-threshold-2026-11-13/)
-- Yahoo!ファイナンス：[日経平均の株価データ](https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261113&idx=nk225)
+- 日経平均プロフィル：[日経平均の株価データ](https://indexes.nikkei.co.jp/nkave/archives/summary?dt=20261113&idx=nk225)
 - ウェザーニュース：[11月14日の全国の天気](https://www.weathernews.jp/news/202611/140021/)
 - 気象庁：[大阪府の天気予報](https://www.jma.go.jp/bosai/forecast/#area_type=offices&area_code=270000)
 - 気象庁防災情報XMLに基づく一覧：[全国の警報・注意報（17:26:33更新）](https://agora.ex.nii.ac.jp/cps/weather/warning/)
