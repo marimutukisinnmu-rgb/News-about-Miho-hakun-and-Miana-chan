@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f5f5f5">
+<meta name="description" content="MHNで制作・公開されたHTML作品の一覧です。">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; form-action 'self';">
+<title>HTML作品一覧｜MHN</title>
+<style>
+*{box-sizing:border-box}body{font-family:system-ui,sans-serif;max-width:900px;margin:auto;padding:24px;background:#f5f5f5;color:#222;line-height:1.7}a{color:#1d4ed8}.card{background:#fff;padding:18px 20px;border-radius:12px;box-shadow:0 2px 10px #0001;margin:12px 0}.muted{color:#555;font-size:.9rem}#siteList:empty:after{content:"現在公開中のHTML作品はありません。";display:block;background:#fff;padding:20px;border-radius:10px;color:#666}footer{margin:24px 0;color:#666;font-size:.85rem}@media(max-width:520px){body{padding:14px}}
+</style>
+</head>
+<body>
+<nav data-mhn-nav aria-label="サイトメニュー"><a href="index.html">最新ニュース</a> <a href="history.html">履歴を見る</a></nav>
+<h1>HTML作品一覧</h1>
+<p>MHNで制作され、安全性の確認を通過して公開された作品です。</p>
+<p class="muted">依頼を送信しただけでは掲載されません。個人情報や秘密情報などの検査を通過し、公開が承認された作品のみ表示します。</p>
+<section id="siteList" aria-live="polite" aria-busy="true"><p class="card">作品一覧を読み込んでいます…</p></section>
+<p id="galleryStatus" class="muted" role="status" aria-live="polite"></p>
+<footer>MHN — みほはくん＆みあなちゃんのニュースタイム</footer>
+<script src="htmlshow.js?v=1" defer></script>
+<script src="nav.js?v=4" defer></script>
+</body>
+</html>
