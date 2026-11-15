@@ -81,6 +81,7 @@
   function createCommentCard(comment) {
     const article = document.createElement("article");
     article.className = "comment-card";
+    const isHtmlRequest = String(comment.message || "").startsWith("[HTML制作依頼]");
 
     const header = document.createElement("div");
     header.className = "comment-head";
@@ -94,10 +95,18 @@
     submitted.textContent = formatDate(comment.submitted_at) + "（日本時間）";
     identity.append(nickname, submitted);
 
+    const headerBadges = document.createElement("div");
+    headerBadges.style.display = "flex";
+    headerBadges.style.gap = "8px";
+    headerBadges.style.flexWrap = "wrap";
+    const typePill = document.createElement("span");
+    typePill.className = "pill";
+    typePill.textContent = isHtmlRequest ? "HTML制作依頼" : "通常コメント";
     const pill = document.createElement("span");
     pill.className = "pill " + comment.status;
     pill.textContent = statusLabel(comment.status);
-    header.append(identity, pill);
+    headerBadges.append(typePill, pill);
+    header.append(identity, headerBadges);
 
     const message = document.createElement("div");
     message.className = "message";
@@ -105,9 +114,11 @@
 
     const meta = document.createElement("div");
     meta.className = "meta";
+    const requestId = document.createElement("span");
+    requestId.textContent = (isHtmlRequest ? "依頼ID: " : "コメントID: ") + String(comment.id || "不明");
     const source = document.createElement("span");
     source.textContent = "送信元: " + (comment.source_page || "不明");
-    meta.append(source);
+    meta.append(requestId, source);
 
     if (comment.contact_email) {
       const email = document.createElement("a");
