@@ -59,10 +59,10 @@
 - 気象庁：[全国の警報・注意報](https://www.jma.go.jp/bosai/warning/)
 - 気象庁防災情報XMLを基にした一覧：[発表中の警報・注意報](https://agora.ex.nii.ac.jp/cps/weather/warning/)（11月15日17:21:32更新）
 - 首相官邸：[防災庁の発足式](https://japan.kantei.go.jp/105/actions/202611/02hossokushiki.html)（11月2日）
-- 福岡市：[福岡市長選挙・投開票速報](https://www.city.fukuoka.lg.jp/senkan/senkyo/shisei/senkyotokusetu/shicho/shicho_sokuho.html)
+- 福岡市：[福岡市長選挙・投開票速報](https://www.city.fukuoka.lg.jp.id200833.cas.iijcdn.jp/senkan/senkyo/shisei/senkyotokusetu/shicho/shicho_sokuho.html)
 - 尼崎市：[尼崎市長選挙・開票速報](https://www.city.amagasaki.hyogo.jp/shisei/senkyo/1004442/1004495/1004504.html)
 - e-Stat：[2026年7〜9月期GDP・公表予定](https://www.e-stat.go.jp/release-calendar/detail/00100409/202611160850)
-- FNNプライムオンライン：[米中ロ首脳会談の発表](https://www.fnn.jp/articles/-/1152467)
+- TBS NEWS DIG：[米中ロ首脳会談の発表](https://news.livedoor.com/article/detail/32818567/)
 - The Guardian：[ウクライナの領土・安全保障をめぐる協議](https://www.theguardian.com/world/2026/nov/15/ukraine-war-briefing-us-proposes-kyiv-cede-land-to-russia-for-nato-membership-zelenskyy-says)
 - Reuters：[イエメン・バブ・エル・マンデブ海峡周辺の動き](https://www.reuters.com/world/middle-east/yemen-government-forces-withdraw-area-near-bab-el-mandeb-strait-houthis-control-2026-11-15/)
 - ValuePress：[3POKEOSAKAの開店案内](https://www.value-press.com/pressrelease/383530)
