@@ -4,6 +4,7 @@
   const SUPABASE_URL = "https://ewiurxmmomtcjfvjfpus.supabase.co";
   const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_nvWYS-dOfApdIClbRV0A1Q_9UgaPM90";
   const ADMIN_ENDPOINT = SUPABASE_URL + "/functions/v1/mhn-admin";
+  const HTML_REVIEW_ENDPOINT = SUPABASE_URL + "/functions/v1/mhn-html-review";
 
   const $ = (id) => document.getElementById(id);
   const status = $("adminStatus");
@@ -43,6 +44,29 @@
 
   function statusLabel(value) {
     return ({ new: "未確認", reviewed: "確認済み", archived: "アーカイブ" })[value] || "不明";
+  }
+
+  async function runHtmlReview(id) {
+    const { data, error } = await client.auth.getSession();
+    if (error || !data.session) throw new Error("ログイン状態を確認できません。再ログインしてください。");
+    const response = await fetch(HTML_REVIEW_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "apikey": SUPABASE_PUBLISHABLE_KEY,
+        "Authorization": "Bearer " + data.session.access_token
+      },
+      body: JSON.stringify({ id }),
+      credentials: "omit",
+      cache: "no-store"
+    });
+    const result = await response.json().catch(() => ({}));
+    if (!response.ok || result.ok !== true) {
+      if (response.status === 401) throw new Error("ログイン期限が切れました。再ログインしてください。");
+      if (response.status === 403) throw new Error("管理者権限がありません。");
+      throw new Error("安全検査に失敗しました。結果を安全と判断せず、手動確認してください。");
+    }
+    return result;
   }
 
   async function api(payload) {
@@ -183,6 +207,41 @@
       }
     });
     actions.append(save, saveStatus);
+
+    if (isHtmlRequest) {
+      const reviewButton = document.createElement("button");
+      reviewButton.type = "button";
+      reviewButton.className = "secondary";
+      reviewButton.textContent = "個人情報・秘密情報の候補を検査";
+      const reviewResult = document.createElement("div");
+      reviewResult.className = "message";
+      reviewResult.hidden = true;
+      reviewButton.addEventListener("click", async () => {
+        reviewButton.disabled = true;
+        reviewResult.hidden = false;
+        reviewResult.textContent = "検査しています…";
+        try {
+          const result = await runHtmlReview(comment.id);
+          const lines = [
+            "検査方式: " + result.scanner,
+            "候補検出数: " + result.finding_count,
+            ...(result.findings || []).map((item) => "・" + item.label + "（" + item.count + "件）"),
+            ...(result.findings?.length ? [] : ["候補は検出されませんでした（安全の保証ではありません）。"]),
+            "",
+            "公開許可: なし",
+            "人による確認: 必須",
+            ...(result.limitations || []).map((item) => "注意: " + item)
+          ];
+          reviewResult.textContent = lines.join("\n");
+        } catch (error) {
+          reviewResult.textContent = (error.message || "検査に失敗しました") + "\n公開判断には使用せず、手動確認してください。";
+        } finally {
+          reviewButton.disabled = false;
+        }
+      });
+      actions.append(reviewButton);
+      article.append(reviewResult);
+    }
 
     article.append(header, message, meta, fields, actions);
     return article;
