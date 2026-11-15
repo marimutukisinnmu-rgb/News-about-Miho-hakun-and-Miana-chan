@@ -53,6 +53,8 @@
 
     addLink("index.html", "最新ニュース");
     addLink("history.html", "履歴を見る");
+    addLink("htmlshow.html", "HTML作品");
+    addLink("htmlrequest.html", "HTML制作依頼");
 
     if (!session || !session.user) {
       addLink("auth.html", "アカウント登録・ログイン");
