@@ -1,0 +1,76 @@
+みほはくん&みあなちゃん『968回目の3時のニュースをお伝えするよ～！』
+
+## 深夜の防災メモ
+
+**みほはくん：** まずは地震の情報から。気象庁の速報では、16日13時24分ごろに石川県能登地方でM5.1、最大震度1、震源の深さは約280kmの地震が記録されたよ。
+
+**みあなちゃん：** その4分後の13時28分ごろには静岡県東部でM2.8、最大震度1の地震。震源は「ごく浅い」と発表されているね。どちらも速報値だから、後から内容が更新される場合があるよ。
+- [気象庁：能登地方の地震](https://www.data.jma.go.jp/eew/data/nc/fc_hist/2026/11/20261116132447/index.html)
+- [気象庁：静岡県東部の地震](https://www.data.jma.go.jp/eew/data/nc/fc_hist/2026/11/20261116132858/index.html)
+
+**みほはくん：** 地震や津波、気象警報は地域ごとに更新されるから、出かける前や天気が急変したときは、気象庁や自治体の最新発表を確認してね。
+
+## 海外の動き
+
+**みあなちゃん：** ウクライナ情勢では、ロシア国防省が、16日の夜から朝にかけてウクライナの無人機1,336機を16地域で撃墜したと発表したよ。モスクワ市長は、モスクワ周辺に約600機が向かい、そのうち191機を迎撃したと説明しているの。
+
+**みほはくん：** クリミアとロシア本土を結ぶ橋も攻撃を受けたとロシア側が発表。道路交通は一時止められた一方、鉄道は通常運行を続けたと説明されているよ。工業施設の火災や、落下した破片による負傷者も報告されているけれど、これらはロシア側当局の発表を含む情報として受け止めたいね。
+- [Reuters：ウクライナによる大規模な無人機攻撃](https://www.reuters.com/world/europe/ukraine-launches-biggest-drone-attack-russia-since-war-began-defence-ministry-2026-11-16/)
+
+**みあなちゃん：** 中東では、イラン海軍が14日にホルムズ海峡で3隻のタンカーが機雷に触れて火災になったと発表したよ。Reutersは当時、この説明を独自に確認できていないとしているの。海上輸送の安全に関わる話なので、発表主体と確認状況を分けて見ていこう。
+- [Reuters：ホルムズ海峡でのタンカー火災に関する報道](https://www.reuters.com/world/middle-east/irans-navy-says-oil-tanker-fire-after-hitting-mine-hormuz-2026-11-14/)
+
+## 日本の経済・企業
+
+**みほはくん：** 日本の7～9月期の実質GDPは、年率換算で0.1％減。4四半期ぶりのマイナスとなったよ。個人消費は前の四半期から0.3％減った一方、設備投資は1.6％増えているんだ。
+
+**みあなちゃん：** 物価高が家計を圧迫する一方で、企業の投資は増えたという、少し違う動きが見えるね。数字を一つだけ見て景気全体を決めつけないことも大切だよ。
+- [Reuters：日本の7～9月期GDP](https://www.reuters.com/business/japans-economy-unexpectedly-shrinks-july-september-consumption-falters-2026-11-16/)
+
+**みほはくん：** 日銀の植田総裁は、最近の賃金上昇について「かなり強い」との認識を示したよ。賃金と物価が緩やかに一緒に上がる状態を持続させることが望ましい、という説明もしている。
+
+**みあなちゃん：** ただし、これは総裁の発言であって、新しい利上げが決まったという意味ではないよ。日銀は10月30日の会合で政策金利を1.25％に据え置いているね。
+- [Reuters：植田総裁の賃金に関する発言](https://www.reuters.com/business/boj-chief-ueda-tells-government-panel-wage-growth-quite-strong-2026-11-16/)
+
+**みほはくん：** もう一つ、国内企業のサイバー対策にも注目。Reutersが紹介した企業調査では、回答した企業の約3分の1が、今年、自社または委託先へのサイバー攻撃を経験したと回答したそうだよ。
+
+**みあなちゃん：** 調査は214社の回答に基づくもの。被害の有無だけでなく、バックアップや従業員教育など、日頃の備えも大事になってくるね。
+- [Reuters：日本企業のサイバー攻撃に関する調査](https://www.reuters.com/world/asia-pacific/cyberattacks-hit-third-japan-firms-or-their-service-providers-this-year-2026-11-11/)
+
+## きょうの天気
+
+**みあなちゃん：** 17日火曜日は、西日本と東日本で雨の範囲が広がる予報。九州は朝から雨で、局地的に強く降る可能性があるよ。
+
+**みほはくん：** 近畿など西日本も、朝は曇っていても午後にかけて雨が降り出す見込み。関東や東海も沿岸部から雨が広がり、北陸や東北南部では帰宅時間帯に雨となる所がありそうだね。
+
+**みあなちゃん：** 北海道は晴れ間があっても寒く、日本海側では朝まで雪が残る所も。昼間も気温が上がりにくい予想だから、傘と羽織れる上着を準備しておこう。
+- [ウェザーニュース：11月17日の天気予報](https://weathernews.jp/news/202611/160171/)
+
+## 大阪の新しいお店・催し
+
+**みほはくん：** 今日17日は、ららぽーと堺の3階に「HMVららぽーと堺」がオープン予定。平日の営業時間は10時から20時と案内されているよ。
+
+**みあなちゃん：** そして明日18日は、阪神梅田本店の地下1階に、モロゾフの新ブランド「キャラメリオン」が全国初の常設店としてオープン。大丸梅田店では、まめゴマのポップアップストアも18日から12月1日まで開催される予定だよ。
+
+**みほはくん：** お店や催しの営業時間・開催内容は変更されることもあるから、行く前に施設や主催者の案内を確認してね。
+- [ローソンエンタテインメント：HMVららぽーと堺](https://prtimes.jp/main/html/rd/p/000000729.000034304.html)
+- [モロゾフ：キャラメリオン](https://www.morozoff.co.jp/brand/caramelion/)
+- [サンエックス：DAIMARU × まめゴマ](https://prtimes.jp/main/html/rd/p/000000993.000018631.html)
+
+**みあなちゃん：** 黒ねこも白ねこも、夜はゆっくり休む時間かな。今日も天気の変化に気をつけて、落ち着いて過ごそうね！
+
+↓i↓
+## きょうの確認先
+
+- 気象庁：[能登地方の地震](https://www.data.jma.go.jp/eew/data/nc/fc_hist/2026/11/20261116132447/index.html)
+- 気象庁：[静岡県東部の地震](https://www.data.jma.go.jp/eew/data/nc/fc_hist/2026/11/20261116132858/index.html)
+- Reuters：[ウクライナ情勢](https://www.reuters.com/world/europe/ukraine-launches-biggest-drone-attack-russia-since-war-began-defence-ministry-2026-11-16/)
+- Reuters：[ホルムズ海峡のタンカー火災](https://www.reuters.com/world/middle-east/irans-navy-says-oil-tanker-fire-after-hitting-mine-hormuz-2026-11-14/)
+- Reuters：[日本のGDP](https://www.reuters.com/business/japans-economy-unexpectedly-shrinks-july-september-consumption-falters-2026-11-16/)
+- Reuters：[日銀総裁の発言](https://www.reuters.com/business/boj-chief-ueda-tells-government-panel-wage-growth-quite-strong-2026-11-16/)
+- Reuters：[企業のサイバー攻撃調査](https://www.reuters.com/world/asia-pacific/cyberattacks-hit-third-japan-firms-or-their-service-providers-this-year-2026-11-11/)
+- ウェザーニュース：[11月17日の天気](https://weathernews.jp/news/202611/160171/)
+- ローソンエンタテインメント：[HMVららぽーと堺](https://prtimes.jp/main/html/rd/p/000000729.000034304.html)
+- モロゾフ：[キャラメリオン](https://www.morozoff.co.jp/brand/caramelion/)
+- サンエックス：[DAIMARU × まめゴマ](https://prtimes.jp/main/html/rd/p/000000993.000018631.html)
+↑i↑
