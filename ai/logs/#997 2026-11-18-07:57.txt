@@ -45,6 +45,7 @@
 - [防衛省：推定ロシア機による領空侵犯について](https://www.mod.go.jp/j/press/news/2026/11/17c.html)
 - [ウェザーニュース：11月18日の全国の天気予報](https://weathernews.jp/news/202611/180021/)
 - [FNN：大阪府の11月18日の天気予報](https://www.fnn.jp/articles/-/1154355)
+- [気象庁の発表をまとめた全国の災害情報（7時54分取得）](https://bousai-matome.com/disaster-info/)
 - [気象庁：警報・注意報](https://www.jma.go.jp/bosai/warning/)
 - [気象庁：気象防災速報・気象解説情報等](https://www.jma.go.jp/bosai/information/)
 - [阪神梅田本店：キャラメリオンの新規オープン案内](https://www.hanshin-dept.jp/hshonten/shopnews/detail/12719796_3429.html)
