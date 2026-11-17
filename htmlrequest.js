@@ -6,10 +6,55 @@
   const button = document.getElementById("requestSubmit");
   const endpoint = "https://ewiurxmmomtcjfvjfpus.supabase.co/functions/v1/mhn-comment-submit";
   const publishableKey = "sb_publishable_nvWYS-dOfApdIClbRV0A1Q_9UgaPM90";
+  const loginRequired = document.getElementById("loginRequired");
+  const loginAccount = document.getElementById("loginAccount");
+  let supabaseClient = null;
+
+  function setAuthState(session) {
+    const loggedIn = Boolean(session && session.user);
+    form.hidden = !loggedIn;
+    if (loginRequired) loginRequired.hidden = loggedIn;
+    if (loginAccount) {
+      loginAccount.hidden = !loggedIn;
+      loginAccount.textContent = loggedIn
+        ? "ログイン中: " + (session.user.email || "MHNアカウント")
+        : "";
+    }
+  }
+
+  function initAuth() {
+    if (!window.supabase || typeof window.supabase.createClient !== "function") {
+      if (status) status.textContent = "認証機能を読み込めませんでした。再読み込みしてください。";
+      return;
+    }
+    supabaseClient = window.supabase.createClient(
+      "https://ewiurxmmomtcjfvjfpus.supabase.co",
+      publishableKey,
+      { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } }
+    );
+    supabaseClient.auth.onAuthStateChange((_event, session) => setAuthState(session));
+    supabaseClient.auth.getSession().then(({ data, error }) => {
+      if (error) {
+        setAuthState(null);
+        if (status) status.textContent = "ログイン状態を確認できませんでした。再読み込みしてください。";
+        return;
+      }
+      setAuthState(data.session);
+    });
+  }
+
+  initAuth();
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (button.disabled) return;
+    const { data: sessionData, error: sessionError } = await supabaseClient.auth.getSession();
+    const session = sessionData && sessionData.session;
+    if (sessionError || !session) {
+      setAuthState(null);
+      status.textContent = "依頼を送信するにはMHNアカウントへのログインが必要です。";
+      return;
+    }
     const data = new FormData(form);
     const website = String(data.get("website") || "");
     const title = String(data.get("title") || "").trim();
@@ -45,7 +90,8 @@
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "apikey": publishableKey
+          "apikey": publishableKey,
+          "Authorization": "Bearer " + session.access_token
         },
         body: JSON.stringify({
           nickname,
