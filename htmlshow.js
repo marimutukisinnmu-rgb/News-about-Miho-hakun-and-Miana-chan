@@ -24,7 +24,8 @@
       }
       const fragment = document.createDocumentFragment();
       let count = 0;
-      for (const site of data.sites) {
+      const orderedSites = [...data.sites].sort((a, b) => a.number - b.number);
+      for (const site of orderedSites) {
         if (!site || typeof site.id !== "string" || !ID_RE.test(site.id) ||
             !Number.isSafeInteger(site.number) || site.number < 1 ||
             typeof site.title !== "string" || site.title.length < 1 || site.title.length > 100 ||
