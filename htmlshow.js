@@ -26,6 +26,7 @@
       let count = 0;
       for (const site of data.sites) {
         if (!site || typeof site.id !== "string" || !ID_RE.test(site.id) ||
+            !Number.isSafeInteger(site.number) || site.number < 1 ||
             typeof site.title !== "string" || site.title.length < 1 || site.title.length > 100 ||
             typeof site.summary !== "string" || site.summary.length > 300 ||
             typeof site.published_at !== "string" || !DATE_RE.test(site.published_at)) {
@@ -33,6 +34,7 @@
         }
         const card = document.createElement("article");
         card.className = "card";
+        card.append(text("p", "No." + site.number, "muted"));
         card.append(text("h2", site.title));
         if (site.summary) card.append(text("p", site.summary));
         card.append(text("p", "公開日: " + site.published_at, "muted"));
