@@ -60,6 +60,7 @@
 ## きょうの確認先
 
 - 気象庁：[警報・注意報](https://www.jma.go.jp/bosai/warning/)（11月18日11時49分更新）
+- FNNプライムオンライン：[大阪府の11月18日の天気予報](https://www.fnn.jp/articles/-/1154355)（11月18日05時10分）
 - ウェザーニュース：[次の低気圧と前線が接近、午後は日本海側を中心に雨](https://weathernews.jp/news/202611/180061/)（11月18日08時22分）
 - 気象リスクウォッチ：[気象庁防災情報XMLの発表情報](https://agora.ex.nii.ac.jp/cps/weather/report/index.html.ja)（11月18日05時04分ほか）
 - デジタル台風：[リアルタイム台風情報](https://agora.ex.nii.ac.jp/digital-typhoon/mobile/)（11月18日13時56分更新）
@@ -67,6 +68,7 @@
 - AP：[日本の10月貿易赤字](https://apnews.com/article/17623689c3248c926283044cd5ff3484)（11月18日）
 - Reuters：[ウクライナによるクリミア橋攻撃をめぐる報道](https://www.reuters.com/business/aerospace-defense/zelenskiy-says-ukraine-struck-crimea-bridge-response-russian-attacks-2026-11-17/)（11月17日）
 - Yahoo Finance：[日経平均の株価情報](https://finance.yahoo.com/quote/%5EN225/history/)（11月18日14時43分時点）
+- Zai FX／フィスコ：[東京為替概況](https://zai.diamond.jp/articles/-/499254)（11月18日14時30分更新）
 - Zai FX／フィスコ：[ドル・円の見通し](https://zai.diamond.jp/articles/-/499262)（11月18日15時37分更新）
 - モロゾフ：[キャラメリオンの店舗情報](https://www.morozoff.co.jp/brand/caramelion/)
 - PRESS BUTTER SAND：[店舗・期間限定ショップ一覧](https://buttersand.com/store/list/)
