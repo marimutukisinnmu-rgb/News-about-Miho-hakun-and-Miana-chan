@@ -8,6 +8,8 @@
 
 **みほはくん：** 大阪市は、21日は晴れ間があるものの、午後はにわか雨の可能性もある予報。最低気温は7度前後、最高気温は12度前後の見込みだよ。全国的に冷え込むので、暖かい上着があると安心だね。
 
+**みあなちゃん：** 台風については、気象庁の2026年台風位置表に掲載された最新の台風第32号（センパカ）が、11月11日21時に温帯低気圧へ変わった記録だよ。台風の発生や発達する熱帯低気圧の状況は変わることがあるので、最新の公式情報も確認してね。
+
 ## ウクライナ情勢
 
 **みあなちゃん：** ウクライナでは20日未明、ロシアによる大規模なミサイルや無人機の攻撃があり、ウクライナ当局は少なくとも8人が亡くなったと発表したよ。キーウやリビウなどで橋、鉄道、水道、電力関連の施設に被害が出て、複数の地域で停電も起きたと報じられているんだ。
@@ -49,6 +51,7 @@
 
 - 気象庁：[全国の警報・注意報](https://www.jma.go.jp/bosai/warning/)（一覧の更新：2026年11月20日11時49分）
 - FNNプライムオンライン：[21日にかけての寒気・暴風・高波・土砂災害への警戒](https://www.fnn.jp/articles/-/1156446)（2026年11月20日17時20分）
+- 気象庁：[2026年台風位置表](https://www.data.jma.go.jp/typhoon/position_table/table2026.html)／[台風第32号の位置表](https://www.data.jma.go.jp/typhoon/data/T2632.pdf)
 - ウェザーニュース：[大阪市の天気予報](https://weathernews.jp/onebox/tenki/osaka/27100/)（2026年11月20日確認）
 - Reuters：[ロシアによるウクライナへの攻撃](https://www.reuters.com/world/europe/fire-broke-out-ukraines-kyiv-after-missile-strike-mayor-says-2026-11-20/)（2026年11月20日）
 - Reuters：[高市首相とプーチン大統領の会談](https://www.reuters.com/world/china/japan-says-pm-takaichi-putin-held-talks-apec-summit-china-2026-11-19/)（2026年11月19日）
