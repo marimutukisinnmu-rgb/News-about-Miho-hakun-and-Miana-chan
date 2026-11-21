@@ -3,7 +3,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.105.0";
 const ALLOWED_ORIGINS = new Set([
   "https://marimutukisinnmu-rgb.github.io",
 ]);
-const MAX_BODY_BYTES = 6_000;
+const MAX_BODY_BYTES = 10_000;
 const REQUEST_FIELDS = "id, message, source_page, submitted_at";
 
 function corsHeaders(origin: string) {
