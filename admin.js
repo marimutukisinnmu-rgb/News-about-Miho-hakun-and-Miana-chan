@@ -266,7 +266,7 @@
 
   async function loadComments(showLoading = true) {
     refreshButton.disabled = true;
-    if (showLoading) listStatus.textContent = "コメントを読み込んでいます…";
+    if (showLoading) listStatus.textContent = "受信項目を読み込んでいます…";
     try {
       const result = await api({ action: "list", status: "all" });
       comments = Array.isArray(result.comments) ? result.comments : [];
