@@ -201,10 +201,10 @@ Deno.serve(async (req: Request) => {
   let sourcePage = "/";
   try {
     const parsedPage = new URL(pagePathInput, origin);
-    if (parsedPage.origin !== origin) {
+    if (parsedPage.origin !== origin || parsedPage.pathname.length > 250) {
       return jsonResponse(origin, { error: "page_invalid" }, 400);
     }
-    sourcePage = parsedPage.pathname.slice(0, 250);
+    sourcePage = parsedPage.pathname;
   } catch {
     return jsonResponse(origin, { error: "page_invalid" }, 400);
   }
