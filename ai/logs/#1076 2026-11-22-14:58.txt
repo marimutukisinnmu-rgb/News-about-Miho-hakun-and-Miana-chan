@@ -12,9 +12,9 @@
 
 ## 世界の動き
 
-みほはくん「中東情勢では、ホルムズ海峡周辺でタンカーへの攻撃・被害が相次いだとAP通信が伝えているよ。イギリスの海上保安機関は、土曜日に2隻が飛翔物で攻撃されたと発表し、当時、けが人の報告はなかったとしているんだ。」
+みほはくん「中東情勢では、ホルムズ海峡周辺ではタンカーへの被害報告が相次いだよ。ロイターによると、英国の海上保安機関は土曜日、オマーンのカサブ沖でタンカーに関する2件の攻撃報告を受けたと発表したんだ。乗組員のけがは報告されていない一方、環境への影響は確認中としているよ。」
 
-みあなちゃん「別の船については、イラン海軍が機雷に触れて火災が起きたと説明しているよ。発表主体によって説明が異なる部分もあるから、確認できた事実と各当局の主張を分けて見ることが大切だね。カタールを通じた外交協議も続いているよ。」
+みあなちゃん「イラン海軍も別のタンカーが機雷に触れて火災が起きたと主張しているけれど、ロイターはその説明を独立に確認できず、英国側の報告と同じ船のことかどうかも分かっていないとしているよ。別々の事故と決めつけず、続報を待つ必要があるね。カタールの代表団がテヘランで協議したとの報道もあり、外交による緊張緩和が続くか注目されるよ。」
 
 みほはくん「ガザでは、食料を運んでいた車両への攻撃で3人が死亡したとガザ保健当局が発表したよ。イスラエル軍は武装組織の関係者を標的にしたと説明している一方、ロイターはその説明を独自に確認できていないとしている。車両は人道支援団体のものではなかったと、その団体も説明しているよ。」
 
@@ -52,7 +52,8 @@
 - 福島県の大雪・避難状況：[福島テレビ](https://www.fnn.jp/articles/-/1157241)
 - 北塩原村の道路状況：[共同通信](https://www.kumanichi.com/articles/2060706)
 - 将棋の結果：[日本将棋連盟](https://www.shogi.or.jp/match/)
-- ホルムズ海峡・ガザ情勢：[AP通信](https://apnews.com/article/29159a6f3365ff447c0ccbd1d7260f75)
+- ホルムズ海峡周辺のタンカー被害：[Reuters](https://www.reuters.com/business/energy/tanker-hit-by-unknown-projectile-near-omans-khasab-ukmto-says-2026-11-21/)
+- カタールの外交協議：[Reuters](https://www.reuters.com/world/middle-east/qatari-delegation-visits-tehran-talks-iranian-official-says-2026-11-21/)
 - ガザ情勢：[Reuters](https://www.reuters.com/world/middle-east/israeli-strike-kills-three-vehicle-distributing-aid-gaza-witnesses-say-2026-11-21/)
 - COP31：[Reuters](https://www.reuters.com/sustainability/cop/cop31-climate-talks-close-final-deal-says-summit-president-2026-11-21/)
 - 全国の警報・注意報：[気象庁](https://www.jma.go.jp/bosai/warning/)
