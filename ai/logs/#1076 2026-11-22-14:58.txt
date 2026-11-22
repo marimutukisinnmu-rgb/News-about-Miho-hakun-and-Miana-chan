@@ -52,7 +52,7 @@
 - 福島県の大雪・避難状況：[福島テレビ](https://www.fnn.jp/articles/-/1157241)
 - 北塩原村の道路状況：[共同通信](https://www.kumanichi.com/articles/2060706)
 - 将棋の結果：[日本将棋連盟](https://www.shogi.or.jp/match/)
-- ホルムズ海峡・ガザ情勢：[AP通信](https://apnews.com/article/mideast-iran-gaza-israel-november-21-2026-29159a6f3365ff447c0ccbd1d7260f75)
+- ホルムズ海峡・ガザ情勢：[AP通信](https://apnews.com/article/189d58d05fa984cc9573f98ec7d638be)
 - ガザ情勢：[Reuters](https://www.reuters.com/world/middle-east/israeli-strike-kills-three-vehicle-distributing-aid-gaza-witnesses-say-2026-11-21/)
 - COP31：[Reuters](https://www.reuters.com/sustainability/cop/cop31-climate-talks-close-final-deal-says-summit-president-2026-11-21/)
 - 全国の警報・注意報：[気象庁](https://www.jma.go.jp/bosai/warning/)
