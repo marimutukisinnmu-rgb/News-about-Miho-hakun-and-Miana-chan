@@ -150,9 +150,24 @@
     }
   });
 
-  client.auth.getSession().then(({ data, error }) => {
-    if (!error) void refreshEligibility(data && data.session);
-  }).catch(hideFeature);
+  async function refreshFromCurrentSession() {
+    try {
+      const { data, error } = await client.auth.getSession();
+      if (error) {
+        hideFeature();
+        return;
+      }
+      await refreshEligibility(data && data.session);
+    } catch (_) {
+      hideFeature();
+    }
+  }
+
+  window.addEventListener("mhn:html-request-submitted", () => {
+    void refreshFromCurrentSession();
+  });
+
+  void refreshFromCurrentSession();
 
   client.auth.onAuthStateChange((_event, session) => {
     void refreshEligibility(session);
