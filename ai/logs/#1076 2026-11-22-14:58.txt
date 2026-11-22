@@ -2,7 +2,7 @@
 
 ## 国内ニュース
 
-みほはくん「まずは福島県の大雪のニュース。北塩原村では、倒木で国道459号などが通れなくなり、桧原・裏磐梯地区の住民およそ948人と宿泊客約450人、合わせて約1,400人が孤立した状態になっているよ。」
+みほはくん「まずは福島県の大雪のニュース。北塩原村では、倒木で国道459号などが通れなくなり、桧原・裏磐梯地区の514世帯・948人と、宿泊客も少なくとも500人程度、合わせて約1,450人規模が孤立した状態になっているよ。」
 
 みあなちゃん「その後、一部区間は緊急車両が通れるように除雪が進み、観光客の避難も始まったんだね。県は防災ヘリで水や食料を届けているけれど、一般車両の通行再開はまだ見通せないよ。現地の人たちの安全確保と、道路・停電の復旧が急がれるね。」
 
@@ -52,12 +52,12 @@
 - 福島県の大雪・避難状況：[福島テレビ](https://www.fnn.jp/articles/-/1157241)
 - 北塩原村の道路状況：[共同通信](https://www.kumanichi.com/articles/2060706)
 - 将棋の結果：[日本将棋連盟](https://www.shogi.or.jp/match/)
-- ホルムズ海峡・ガザ情勢：[AP通信](https://apnews.com/article/189d58d05fa984cc9573f98ec7d638be)
+- ホルムズ海峡・ガザ情勢：[AP通信](https://apnews.com/article/29159a6f3365ff447c0ccbd1d7260f75)
 - ガザ情勢：[Reuters](https://www.reuters.com/world/middle-east/israeli-strike-kills-three-vehicle-distributing-aid-gaza-witnesses-say-2026-11-21/)
 - COP31：[Reuters](https://www.reuters.com/sustainability/cop/cop31-climate-talks-close-final-deal-says-summit-president-2026-11-21/)
 - 全国の警報・注意報：[気象庁](https://www.jma.go.jp/bosai/warning/)
 - 新潟県の警報・注意報：[新潟県防災ポータル](https://www.bousai.pref.niigata.jp/weather/weatherdetail.html)
 - 全国の週間天気：[ウェザーニュース](https://weathernews.com/news/ja/japan/2026/11/21/weather-591/)
 - 大阪府の天気：[気象庁・大阪府予報](https://www.jma.go.jp/bosai/forecast/#area_type=class10s&area_code=270000)
-- 全国の開店予定情報：[開店予定一覧](https://github.com/marimutukisinnmu-rgb/japan-store-openings-json/blob/main/json/latest.json)
+- 全国の開店予定情報：[開店予定一覧](https://github.com/marimutukisinnmu-rgb/japan-store-openings-json/blob/main/json/latest.json)（14:14更新）
 ↑i↑
