@@ -31,10 +31,12 @@
     if (button.disabled) return;
 
     const values = new FormData(form);
+    const message = String(values.get("message") || "");
+    const isHtmlRequest = message.trimStart().startsWith("[HTML制作依頼]");
     const payload = {
       nickname: String(values.get("nickname") || ""),
       email: String(values.get("email") || "").trim(),
-      message: String(values.get("message") || ""),
+      message,
       website: String(values.get("website") || ""),
       pagePath: window.location.pathname
     };
@@ -43,12 +45,30 @@
     status.textContent = "送信しています…";
 
     try {
+      const headers = {
+        "Content-Type": "application/json",
+        "apikey": publishableKey
+      };
+
+      if (isHtmlRequest) {
+        const client = window.__mhnSupabaseClient;
+        if (!client || !client.auth || typeof client.auth.getSession !== "function") {
+          status.textContent = "認証機能を読み込めませんでした。再読み込みしてください。";
+          return;
+        }
+
+        const { data, error } = await client.auth.getSession();
+        const session = data && data.session;
+        if (error || !session || !session.user || !session.access_token) {
+          status.textContent = "HTML制作依頼にはログインが必要です。MHNアカウントにログインしてから送信してください。";
+          return;
+        }
+        headers.Authorization = "Bearer " + session.access_token;
+      }
+
       const response = await fetch(endpoint, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "apikey": publishableKey
-        },
+        headers,
         body: JSON.stringify(payload),
         credentials: "omit",
         cache: "no-store"
@@ -61,7 +81,12 @@
       }
 
       form.reset();
-      status.textContent = "送信を受け付けました。コメントは公開されず、運営だけが確認します。";
+      if (isHtmlRequest) {
+        status.textContent = "HTML制作依頼を受け付けました。運営が内容を確認します。修正案機能はこのページで利用できます。";
+        window.dispatchEvent(new Event("mhn:html-request-submitted"));
+      } else {
+        status.textContent = "送信を受け付けました。コメントは公開されず、運営だけが確認します。";
+      }
     } catch (error) {
       console.error("[MHN comments] submission failed");
       status.textContent = "通信に失敗しました。ネットワークを確認して再度お試しください。";
