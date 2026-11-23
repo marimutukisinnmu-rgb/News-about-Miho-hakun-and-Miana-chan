@@ -21,6 +21,8 @@
 
   let eligibleRequests = [];
   let busy = false;
+  let eligibilityVersion = 0;
+  let activeUserId = null;
 
   function setBusy(value) {
     busy = value;
@@ -36,6 +38,13 @@
     form.hidden = true;
     eligibleRequests = [];
     requestSelect.replaceChildren();
+  }
+
+  function failClosed() {
+    eligibilityVersion += 1;
+    activeUserId = null;
+    form.reset();
+    hideFeature();
   }
 
   function populateRequests(requests) {
@@ -76,20 +85,41 @@
   }
 
   async function refreshEligibility(session) {
+    const version = ++eligibilityVersion;
+    const nextUserId = session && session.user ? session.user.id : null;
+    if (nextUserId !== activeUserId) form.reset();
+    activeUserId = nextUserId;
     hideFeature();
-    if (!session || !session.user || busy) return;
+
+    if (!session || !session.user || !session.access_token || busy) return;
+
     try {
       const result = await callApi(session, {
         action: "list",
         pagePath
       });
+
+      // Discard stale responses after logout or an account switch.
+      if (version !== eligibilityVersion) return;
+
+      // Confirm that the same authenticated account is still active before
+      // exposing request titles or enabling the requester-only button.
+      const { data: currentData, error: currentError } = await client.auth.getSession();
+      const currentSession = currentData && currentData.session;
+      if (currentError || !currentSession || !currentSession.user ||
+          currentSession.user.id !== session.user.id) {
+        if (version === eligibilityVersion) hideFeature();
+        return;
+      }
+      if (version !== eligibilityVersion) return;
+
       if (!Array.isArray(result.requests) || result.requests.length === 0) return;
       populateRequests(result.requests);
       section.hidden = false;
     } catch (_) {
       // Fail closed: no button is shown when authentication or authorization
       // cannot be verified by the server.
-      hideFeature();
+      if (version === eligibilityVersion) hideFeature();
     }
   }
 
@@ -123,7 +153,7 @@
       const { data, error } = await client.auth.getSession();
       const session = data && data.session;
       if (error || !session || !session.user) {
-        hideFeature();
+        failClosed();
         status.textContent = "ログイン状態を確認できません。再ログインしてください。";
         return;
       }
@@ -138,7 +168,7 @@
       status.textContent = "修正案を非公開で送信しました。";
     } catch (error) {
       if (error && (error.status === 401 || error.status === 403 || error.status === 404)) {
-        hideFeature();
+        failClosed();
         status.textContent = "このページに紐づく依頼を確認できませんでした。";
       } else if (error && error.status === 429) {
         status.textContent = "短時間の連続送信はできません。しばらく待ってください。";
@@ -151,8 +181,12 @@
   });
 
   client.auth.getSession().then(({ data, error }) => {
-    if (!error) void refreshEligibility(data && data.session);
-  }).catch(hideFeature);
+    if (error) {
+      failClosed();
+      return;
+    }
+    void refreshEligibility(data && data.session);
+  }).catch(failClosed);
 
   client.auth.onAuthStateChange((_event, session) => {
     void refreshEligibility(session);
