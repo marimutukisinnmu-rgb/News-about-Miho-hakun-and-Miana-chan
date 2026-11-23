@@ -32,7 +32,7 @@
 
     const values = new FormData(form);
     const message = String(values.get("message") || "");
-    const isHtmlRequest = message.trimStart().startsWith("[HTML制作依頼]");
+    const isHtmlRequest = message.startsWith("[HTML制作依頼]");
     const payload = {
       nickname: String(values.get("nickname") || ""),
       email: String(values.get("email") || "").trim(),
