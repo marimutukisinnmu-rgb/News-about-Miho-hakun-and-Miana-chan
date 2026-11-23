@@ -74,8 +74,12 @@ function normalizePagePath(value: unknown, origin: string): string | null {
   if (typeof value !== "string" || value.length < 1 || value.length > 1_000) return null;
   try {
     const parsed = new URL(value, origin);
-    if (parsed.origin !== origin || !parsed.pathname.startsWith("/")) return null;
-    return parsed.pathname.slice(0, 250);
+    if (
+      parsed.origin !== origin ||
+      !parsed.pathname.startsWith("/") ||
+      parsed.pathname.length > 250
+    ) return null;
+    return parsed.pathname;
   } catch {
     return null;
   }
