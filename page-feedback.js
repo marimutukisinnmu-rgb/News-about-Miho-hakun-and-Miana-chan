@@ -64,6 +64,7 @@
   }
 
   async function callApi(session, payload) {
+    if (!session || !session.access_token) throw new Error("unauthorized");
     const response = await fetch(endpoint, {
       method: "POST",
       headers: {
@@ -106,7 +107,7 @@
       // exposing request titles or enabling the requester-only button.
       const { data: currentData, error: currentError } = await client.auth.getSession();
       const currentSession = currentData && currentData.session;
-      if (currentError || !currentSession || !currentSession.user ||
+      if (currentError || !currentSession || !currentSession.user || !currentSession.access_token ||
           currentSession.user.id !== session.user.id) {
         if (version === eligibilityVersion) hideFeature();
         return;
@@ -152,7 +153,7 @@
     try {
       const { data, error } = await client.auth.getSession();
       const session = data && data.session;
-      if (error || !session || !session.user) {
+      if (error || !session || !session.user || !session.access_token) {
         failClosed();
         status.textContent = "ログイン状態を確認できません。再ログインしてください。";
         return;
@@ -177,16 +178,28 @@
       }
     } finally {
       setBusy(false);
+      void refreshFromCurrentSession();
     }
   });
 
-  client.auth.getSession().then(({ data, error }) => {
-    if (error) {
+  async function refreshFromCurrentSession() {
+    try {
+      const { data, error } = await client.auth.getSession();
+      if (error) {
+        failClosed();
+        return;
+      }
+      await refreshEligibility(data && data.session);
+    } catch (_) {
       failClosed();
-      return;
     }
-    void refreshEligibility(data && data.session);
-  }).catch(failClosed);
+  }
+
+  window.addEventListener("mhn:html-request-submitted", () => {
+    void refreshFromCurrentSession();
+  });
+
+  void refreshFromCurrentSession();
 
   client.auth.onAuthStateChange((_event, session) => {
     void refreshEligibility(session);
