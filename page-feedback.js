@@ -21,6 +21,7 @@
 
   let eligibleRequests = [];
   let busy = false;
+  let eligibilityVersion = 0;
 
   function setBusy(value) {
     busy = value;
@@ -76,20 +77,35 @@
   }
 
   async function refreshEligibility(session) {
+    const version = ++eligibilityVersion;
     hideFeature();
-    if (!session || !session.user || busy) return;
+    if (!session || !session.user || !session.access_token || busy) return;
+
     try {
       const result = await callApi(session, {
         action: "list",
         pagePath
       });
+
+      // A sign-out or account switch may happen while the request is in flight.
+      // Ignore stale responses and re-check the current authenticated user.
+      if (version !== eligibilityVersion) return;
+      const { data: currentData, error: currentError } = await client.auth.getSession();
+      const currentSession = currentData && currentData.session;
+      if (version !== eligibilityVersion) return;
+      if (currentError || !currentSession || !currentSession.user ||
+          currentSession.user.id !== session.user.id) {
+        hideFeature();
+        return;
+      }
+
       if (!Array.isArray(result.requests) || result.requests.length === 0) return;
       populateRequests(result.requests);
       section.hidden = false;
     } catch (_) {
       // Fail closed: no button is shown when authentication or authorization
       // cannot be verified by the server.
-      hideFeature();
+      if (version === eligibilityVersion) hideFeature();
     }
   }
 
@@ -122,7 +138,7 @@
     try {
       const { data, error } = await client.auth.getSession();
       const session = data && data.session;
-      if (error || !session || !session.user) {
+      if (error || !session || !session.user || !session.access_token) {
         hideFeature();
         status.textContent = "ログイン状態を確認できません。再ログインしてください。";
         return;
@@ -147,6 +163,7 @@
       }
     } finally {
       setBusy(false);
+      void refreshFromCurrentSession();
     }
   });
 
@@ -154,11 +171,13 @@
     try {
       const { data, error } = await client.auth.getSession();
       if (error) {
+        eligibilityVersion += 1;
         hideFeature();
         return;
       }
       await refreshEligibility(data && data.session);
     } catch (_) {
+      eligibilityVersion += 1;
       hideFeature();
     }
   }
