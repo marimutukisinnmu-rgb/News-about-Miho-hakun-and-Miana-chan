@@ -5,6 +5,7 @@ const ALLOWED_ORIGINS = new Set([
 ]);
 const MAX_BODY_BYTES = 10_000;
 const REQUEST_FIELDS = "id, message, source_page, submitted_at";
+const REQUEST_PAGE_SIZE = 20;
 
 function corsHeaders(origin: string) {
   return {
@@ -166,26 +167,44 @@ Deno.serve(async (req: Request) => {
   if (!pagePath) return jsonResponse(origin, { error: "invalid_page" }, 400);
 
   if (body.action === "list") {
-    const { data, error } = await admin
+    const offset = body.offset === undefined ? 0 : body.offset;
+    if (typeof offset !== "number" || !Number.isSafeInteger(offset) ||
+        offset < 0 || offset > 100_000) {
+      return jsonResponse(origin, { error: "invalid_pagination" }, 400);
+    }
+
+    const { data, error, count } = await admin
       .from("mhn_private_comments")
-      .select(REQUEST_FIELDS)
+      .select(REQUEST_FIELDS, { count: "exact" })
       .eq("requester_user_id", userId)
       .eq("source_page", pagePath)
       .like("message", "[HTML制作依頼]%")
       .order("submitted_at", { ascending: false })
-      .limit(20);
+      .order("id", { ascending: false })
+      .range(offset, offset + REQUEST_PAGE_SIZE - 1);
 
     if (error) {
       console.error("[mhn-page-feedback] request lookup failed");
       return jsonResponse(origin, { error: "database_read_failed" }, 503);
     }
 
-    const requests = (data ?? []).map((row) => ({
+    const rows = data ?? [];
+    const requests = rows.map((row) => ({
       id: row.id,
       title: titleFromMessage(row.message),
       submitted_at: row.submitted_at,
     }));
-    return jsonResponse(origin, { ok: true, requests });
+    const nextOffset = offset + rows.length;
+    const hasMore = typeof count === "number" && nextOffset < count;
+
+    return jsonResponse(origin, {
+      ok: true,
+      requests,
+      offset,
+      total: count ?? nextOffset,
+      has_more: hasMore,
+      next_offset: hasMore ? nextOffset : null,
+    });
   }
 
   if (body.action === "submit") {
