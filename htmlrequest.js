@@ -32,6 +32,8 @@
       publishableKey,
       { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } }
     );
+    // Share this same authenticated client with page-feedback.js.
+    window.__mhnSupabaseClient = supabaseClient;
     supabaseClient.auth.onAuthStateChange((_event, session) => setAuthState(session));
     supabaseClient.auth.getSession().then(({ data, error }) => {
       if (error) {
