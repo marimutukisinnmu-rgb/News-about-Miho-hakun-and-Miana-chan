@@ -1,11 +1,25 @@
 (() => {
+  const supabaseUrl = "https://ewiurxmmomtcjfvjfpus.supabase.co";
+  const publishableKey = "sb_publishable_nvWYS-dOfApdIClbRV0A1Q_9UgaPM90";
+
+  // Initialize the shared authenticated client before page-feedback.js runs.
+  // The publishable key is public; no service-role credential is exposed here.
+  if (!window.__mhnSupabaseClient &&
+      window.supabase &&
+      typeof window.supabase.createClient === "function") {
+    window.__mhnSupabaseClient = window.supabase.createClient(
+      supabaseUrl,
+      publishableKey,
+      { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } }
+    );
+  }
+
   const form = document.getElementById("commentForm");
   if (!form) return;
 
   const status = document.getElementById("commentStatus");
   const button = document.getElementById("commentSubmit");
   const endpoint = "https://ewiurxmmomtcjfvjfpus.supabase.co/functions/v1/mhn-comment-submit";
-  const publishableKey = "sb_publishable_nvWYS-dOfApdIClbRV0A1Q_9UgaPM90";
 
   function showError(code, httpStatus) {
     if (httpStatus === 429 || code === "rate_limited") {
