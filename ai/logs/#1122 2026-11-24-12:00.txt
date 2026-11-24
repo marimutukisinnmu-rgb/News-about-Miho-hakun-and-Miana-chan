@@ -10,7 +10,7 @@
 
 みほはくん「きょうは低気圧から延びる寒冷前線が日本列島を通過して、広い範囲で雨や風が強まる予報だよ。西日本は午前中が雨のピークで、関東は午後から夕方にかけて雨が強まりそう。前線の近くでは雷や突風、急な強い雨にも注意が必要だね。」
 
-みあなちゃん「北海道では前線が通過したあと、雨が雪に変わる所もあるんだよね。北陸では雨が続く地域があり、地盤が緩んでいる場所では土砂災害にも気をつけたいね。」
+みあなちゃん「北海道では前線が通過したあと、雨が雪に変わる所もあるんだよね。北陸では雨が続く地域があり、地盤が緩んでいる場所では土砂災害にも気をつけたいね。海上保安庁の11時40分更新情報では、佐渡に暴風・大雨などの情報が掲載され、石川県加賀には竜巻注意情報も出ているよ。北陸沿岸では風や波も強まっているから、海岸や船の利用は最新情報を確認してね。」
 
 みほはくん「大阪府は雨のち夕方からくもりで、昼過ぎまで雷を伴う所がある見込み。大阪の最高気温は16度の予想だよ。熊本県では午後にかけて雨が弱まり、次第に曇る見込みだけど、天草・芦北地方では強風や高波に注意してね。」
 
@@ -51,7 +51,7 @@
 - FNNプライムオンライン：[大阪府の11月24日天気予報](https://www.fnn.jp/articles/-/1158009)（5時10分）
 - 気象庁：[熊本市の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Kumamoto_Kumamoto-shi.html)（11時）
 - 気象庁：[石川県志賀町の気象支援資料](https://www.data.jma.go.jp/yoho/data/jishin/met/kishoushien_Ishikawa_Shika-machi.html)（5時）
-- 海上保安庁：[新潟海上保安部の警報・注意報](https://www6.kaiho.mlit.go.jp/n/09kanku/niigata/keihou_chuihou.html)（9時35分更新）
+- 海上保安庁：[新潟海上保安部の警報・注意報](https://www6.kaiho.mlit.go.jp/n/09kanku/niigata/keihou_chuihou.html)（11時40分更新）
 - Reuters：[日本の11月製造業PMI速報値](https://www.reuters.com/business/japans-factory-activity-expands-november-pmi-shows-2026-11-24/)
 - AP通信：[ウクライナによるリビアのロシア艦艇への攻撃](https://apnews.com/article/c382f8eb06dca7d87e89bc6c18ba7d61)（11月23日）
 - LUCUA osaka：[LUCUA SOUTH 第2期オープン案内](https://www.lucua.jp/special/south-open/)（11月24日）
