@@ -19,7 +19,16 @@
   const client = window.__mhnSupabaseClient;
   if (!client || !client.auth) return;
 
+  const loadMoreButton = document.createElement("button");
+  loadMoreButton.type = "button";
+  loadMoreButton.className = "submit-button";
+  loadMoreButton.textContent = "さらに依頼を読み込む";
+  loadMoreButton.setAttribute("aria-controls", requestSelect.id);
+  loadMoreButton.hidden = true;
+  section.insertBefore(loadMoreButton, status);
+
   let eligibleRequests = [];
+  let nextOffset = null;
   let busy = false;
   let eligibilityVersion = 0;
   let activeUserId = null;
@@ -31,12 +40,15 @@
     suggestionInput.disabled = value;
     openButton.disabled = value;
     cancelButton.disabled = value;
+    loadMoreButton.disabled = value;
   }
 
   function hideFeature() {
     section.hidden = true;
     form.hidden = true;
     eligibleRequests = [];
+    nextOffset = null;
+    loadMoreButton.hidden = true;
     requestSelect.replaceChildren();
   }
 
@@ -47,10 +59,22 @@
     hideFeature();
   }
 
-  function populateRequests(requests) {
-    eligibleRequests = requests;
-    requestSelect.replaceChildren();
+  function populateRequests(requests, append = false) {
+    const combined = append ? eligibleRequests.slice() : [];
+    const knownIds = new Set(combined.map((request) => request.id));
+    const added = [];
+
     for (const request of requests) {
+      if (!request || typeof request.id !== "string" || knownIds.has(request.id)) continue;
+      knownIds.add(request.id);
+      combined.push(request);
+      added.push(request);
+    }
+
+    if (!append) requestSelect.replaceChildren();
+    eligibleRequests = combined;
+
+    for (const request of added) {
       const option = document.createElement("option");
       option.value = request.id;
       const date = request.submitted_at
@@ -85,6 +109,40 @@
     return result;
   }
 
+  async function fetchRequestPage(session, offset, append, version) {
+    const result = await callApi(session, {
+      action: "list",
+      pagePath,
+      offset
+    });
+
+    // Discard stale responses after logout or an account switch.
+    if (version !== eligibilityVersion) return;
+
+    // Confirm that the same authenticated account is still active before
+    // exposing request titles or enabling the requester-only button.
+    const { data: currentData, error: currentError } = await client.auth.getSession();
+    const currentSession = currentData && currentData.session;
+    if (currentError || !currentSession || !currentSession.user || !currentSession.access_token ||
+        currentSession.user.id !== session.user.id) {
+      if (version === eligibilityVersion) failClosed();
+      return;
+    }
+    if (version !== eligibilityVersion) return;
+    if (!Array.isArray(result.requests)) throw new Error("invalid_request_list");
+
+    if (!append && result.requests.length === 0) return;
+    populateRequests(result.requests, append);
+
+    const candidateOffset = result.next_offset;
+    nextOffset = result.has_more === true &&
+        Number.isSafeInteger(candidateOffset) && candidateOffset > offset
+      ? candidateOffset
+      : null;
+    loadMoreButton.hidden = nextOffset === null;
+    section.hidden = eligibleRequests.length === 0;
+  }
+
   async function refreshEligibility(session) {
     const version = ++eligibilityVersion;
     const nextUserId = session && session.user ? session.user.id : null;
@@ -92,35 +150,14 @@
     activeUserId = nextUserId;
     hideFeature();
 
-    if (!session || !session.user || !session.access_token || busy) return;
+    if (!session || !session.user || !session.access_token) return;
 
     try {
-      const result = await callApi(session, {
-        action: "list",
-        pagePath
-      });
-
-      // Discard stale responses after logout or an account switch.
-      if (version !== eligibilityVersion) return;
-
-      // Confirm that the same authenticated account is still active before
-      // exposing request titles or enabling the requester-only button.
-      const { data: currentData, error: currentError } = await client.auth.getSession();
-      const currentSession = currentData && currentData.session;
-      if (currentError || !currentSession || !currentSession.user || !currentSession.access_token ||
-          currentSession.user.id !== session.user.id) {
-        if (version === eligibilityVersion) hideFeature();
-        return;
-      }
-      if (version !== eligibilityVersion) return;
-
-      if (!Array.isArray(result.requests) || result.requests.length === 0) return;
-      populateRequests(result.requests);
-      section.hidden = false;
+      await fetchRequestPage(session, 0, false, version);
     } catch (_) {
       // Fail closed: no button is shown when authentication or authorization
       // cannot be verified by the server.
-      if (version === eligibilityVersion) hideFeature();
+      if (version === eligibilityVersion) failClosed();
     }
   }
 
@@ -129,6 +166,27 @@
     form.hidden = false;
     status.textContent = "";
     suggestionInput.focus();
+  });
+
+  loadMoreButton.addEventListener("click", async () => {
+    if (busy || nextOffset === null) return;
+    const version = eligibilityVersion;
+    const offset = nextOffset;
+    setBusy(true);
+    try {
+      const { data, error } = await client.auth.getSession();
+      const session = data && data.session;
+      if (error || !session || !session.user || !session.access_token ||
+          session.user.id !== activeUserId) {
+        if (version === eligibilityVersion) failClosed();
+        return;
+      }
+      await fetchRequestPage(session, offset, true, version);
+    } catch (_) {
+      if (version === eligibilityVersion) failClosed();
+    } finally {
+      setBusy(false);
+    }
   });
 
   cancelButton.addEventListener("click", () => {
