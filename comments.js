@@ -1,11 +1,25 @@
 (() => {
+  const supabaseUrl = "https://ewiurxmmomtcjfvjfpus.supabase.co";
+  const publishableKey = "sb_publishable_nvWYS-dOfApdIClbRV0A1Q_9UgaPM90";
+
+  // Initialize the shared authenticated client before page-feedback.js runs.
+  // The publishable key is public; no service-role credential is exposed here.
+  if (!window.__mhnSupabaseClient &&
+      window.supabase &&
+      typeof window.supabase.createClient === "function") {
+    window.__mhnSupabaseClient = window.supabase.createClient(
+      supabaseUrl,
+      publishableKey,
+      { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } }
+    );
+  }
+
   const form = document.getElementById("commentForm");
   if (!form) return;
 
   const status = document.getElementById("commentStatus");
   const button = document.getElementById("commentSubmit");
   const endpoint = "https://ewiurxmmomtcjfvjfpus.supabase.co/functions/v1/mhn-comment-submit";
-  const publishableKey = "sb_publishable_nvWYS-dOfApdIClbRV0A1Q_9UgaPM90";
 
   function showError(code, httpStatus) {
     if (httpStatus === 429 || code === "rate_limited") {
@@ -31,10 +45,14 @@
     if (button.disabled) return;
 
     const values = new FormData(form);
+    const message = String(values.get("message") || "");
+    // Match the server's NFC normalization and trim before deciding whether
+    // this submission requires an authenticated bearer token.
+    const isHtmlRequest = message.normalize("NFC").trim().startsWith("[HTML制作依頼]");
     const payload = {
       nickname: String(values.get("nickname") || ""),
       email: String(values.get("email") || "").trim(),
-      message: String(values.get("message") || ""),
+      message,
       website: String(values.get("website") || ""),
       pagePath: window.location.pathname
     };
@@ -43,12 +61,29 @@
     status.textContent = "送信しています…";
 
     try {
+      const headers = {
+        "Content-Type": "application/json",
+        "apikey": publishableKey
+      };
+
+      if (isHtmlRequest) {
+        const client = window.__mhnSupabaseClient;
+        if (!client || !client.auth || typeof client.auth.getSession !== "function") {
+          status.textContent = "認証機能を読み込めませんでした。再読み込みしてください。";
+          return;
+        }
+        const { data, error } = await client.auth.getSession();
+        const session = data && data.session;
+        if (error || !session || !session.user || !session.access_token) {
+          status.textContent = "HTML制作依頼にはログインが必要です。MHNアカウントにログインしてから送信してください。";
+          return;
+        }
+        headers.Authorization = "Bearer " + session.access_token;
+      }
+
       const response = await fetch(endpoint, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "apikey": publishableKey
-        },
+        headers,
         body: JSON.stringify(payload),
         credentials: "omit",
         cache: "no-store"
@@ -61,7 +96,12 @@
       }
 
       form.reset();
-      status.textContent = "送信を受け付けました。コメントは公開されず、運営だけが確認します。";
+      if (isHtmlRequest) {
+        status.textContent = "HTML制作依頼を受け付けました。運営が内容を確認します。修正案機能はこのページで利用できます。";
+        window.dispatchEvent(new Event("mhn:html-request-submitted"));
+      } else {
+        status.textContent = "送信を受け付けました。コメントは公開されず、運営だけが確認します。";
+      }
     } catch (error) {
       console.error("[MHN comments] submission failed");
       status.textContent = "通信に失敗しました。ネットワークを確認して再度お試しください。";

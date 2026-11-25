@@ -29,6 +29,10 @@
   main th,main td{border:1px solid #cbd5e1;padding:7px 10px}
   main img{max-width:100%;height:auto}
   .comment-section{margin-top:28px;padding:24px;background:#fff;border-radius:12px;box-shadow:0 2px 10px #0001}
+  .feedback-panel{margin-top:24px;padding:18px;border:1px solid #dbe2ea;border-radius:10px;background:#f8fafc}
+  .feedback-panel h2{margin-top:0}
+  .feedback-panel select{display:block;width:100%;padding:11px 12px;border:1px solid #b8c0cc;border-radius:8px;font:inherit;background:#fff;color:#222}
+  .feedback-panel [hidden]{display:none!important}
   .update-note{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:-8px 0 18px;color:#475569;font-size:.92rem}
   .update-note-label{display:inline-block;padding:3px 9px;border-radius:999px;background:#e0f2fe;color:#075985;font-size:.82rem;font-weight:700}
   .comment-section h2{margin-top:0}
@@ -85,6 +89,21 @@
   </form>
 </section>
 
+<section id="pageFeedbackSection" class="feedback-panel" hidden aria-labelledby="pageFeedbackHeading">
+  <h2 id="pageFeedbackHeading">このページのHTML制作依頼への修正案</h2>
+  <p class="hint">このページでHTMLを依頼した本人だけが利用できます。送信内容は非公開で運営に届きます。</p>
+  <button id="pageFeedbackOpen" class="submit-button" type="button">修正案を送る</button>
+  <form id="pageFeedbackForm" hidden>
+    <label for="pageFeedbackRequest">対象の依頼</label>
+    <select id="pageFeedbackRequest" name="requestId" required></select>
+    <label for="pageFeedbackText">修正案・追加要望（1〜1,500文字）</label>
+    <textarea id="pageFeedbackText" name="suggestion" maxlength="1500" required placeholder="変更したい点や追加したい機能を書いてください。"></textarea>
+    <button id="pageFeedbackSubmit" class="submit-button" type="submit">非公開で送信</button>
+    <button id="pageFeedbackCancel" type="button" style="margin-top:18px;padding:11px 18px;border:0;border-radius:8px;background:#e5e7eb;color:#222;font:inherit;cursor:pointer">キャンセル</button>
+  </form>
+  <p id="pageFeedbackStatus" role="status" aria-live="polite"></p>
+</section>
+
 <footer>MHN — みほはくん＆みあなちゃんのニュースタイム</footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.57.0/dist/umd/supabase.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
@@ -92,7 +111,8 @@
 <script src="nav.js?v=3" defer></script>
 <script src="info-block.js?v=1" defer></script>
 <script src="app.js?v=6" defer></script>
-<script src="comments.js?v=3" defer></script>
+<script src="comments.js?v=4" defer></script>
+<script src="page-feedback.js?v=4" defer></script>
 <p class="mhn-analytics-notice" style="max-width:900px;margin:20px auto;color:#666;font-size:.82rem;line-height:1.6">アクセス解析のため、閲覧日時・ページ・端末種別・取得できる場合の機種名・User-Agentを記録します。ログイン中はプロフィールの表示名も記録し、未ログインまたは表示名未設定の場合は記録しません。IPアドレスは保存しません。</p>
 <script src="./page-views.js?v=3" defer></script>
 </body>

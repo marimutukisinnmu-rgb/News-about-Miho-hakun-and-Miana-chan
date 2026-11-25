@@ -32,6 +32,8 @@
       publishableKey,
       { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } }
     );
+    // Share this same authenticated client with page-feedback.js.
+    window.__mhnSupabaseClient = supabaseClient;
     supabaseClient.auth.onAuthStateChange((_event, session) => setAuthState(session));
     supabaseClient.auth.getSession().then(({ data, error }) => {
       if (error) {
@@ -48,9 +50,13 @@
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (button.disabled) return;
+    if (!supabaseClient) {
+      status.textContent = "認証機能を利用できません。再読み込みしてください。";
+      return;
+    }
     const { data: sessionData, error: sessionError } = await supabaseClient.auth.getSession();
     const session = sessionData && sessionData.session;
-    if (sessionError || !session) {
+    if (sessionError || !session || !session.user || !session.access_token) {
       setAuthState(null);
       status.textContent = "依頼を送信するにはMHNアカウントへのログインが必要です。";
       return;
@@ -116,6 +122,7 @@
       }
       form.reset();
       status.textContent = "依頼を受け付けました。運営が内容を確認します。公開が決まるまでは、依頼内容や成果物は公開されません。";
+      window.dispatchEvent(new Event("mhn:html-request-submitted"));
     } catch (_) {
       status.textContent = "通信に失敗しました。ネットワークを確認して再度お試しください。";
     } finally {
