@@ -40,6 +40,8 @@
 ## きょうの確認先
 
 - 気象庁：[警報・注意報](https://www.jma.go.jp/bosai/warning/)（ページ更新 11月25日 11:51）
+- 防災情報XMLデータベース：[全国の特別警報・警報・注意報](https://agora.ex.nii.ac.jp/cps/weather/warning/index.html.ja)（最終更新 11月25日 12:41）
+- 日本気象協会：[11月25日の全国の天気](https://tenki.jp/forecaster/deskpart/2026/11/25/41430.html)（11月25日 07:05）
 - チューリップテレビ：[北陸の寒気・落雷や突風への注意](https://newsdig.tbs.co.jp/articles/tut/3110204?display=1)（11月25日 14:55）
 - FNN：[大阪府の天気予報](https://www.fnn.jp/articles/-/1158723)（11月25日 05:10）
 - MBS：[海遊館でラッコ4頭を展示へ](https://newsdig.tbs.co.jp/articles/mbs/3110672?display=1)（11月25日 16:38）
