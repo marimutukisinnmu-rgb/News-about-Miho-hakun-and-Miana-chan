@@ -28,7 +28,7 @@
 
 みほはくん「ウクライナ南部のオデーサ州では、州知事によるとロシア軍の攻撃で2人が死亡し、3人が負傷したよ。キーウでもドローン攻撃があり、市長は2人が負傷したと発表している。いずれも現地当局の発表に基づく情報だよ。」
 
-みあなちゃん「また、ウクライナ向けの防空支援をめぐって、アメリカ側の移送承認が遅れているとの報道も出ているよ。ただし、ロイターはこの報道を独自には確認できていないと説明しているんだ。戦況や支援の動きは、確認できた発表と報道を分けて見ていこうね。」
+みあなちゃん「戦況については、現地当局の発表と、報道機関が独自に確認できた内容を分けて見ていこうね。市民の安全が守られることを願いたいね。」
 
 ## 株式・為替
 
@@ -61,7 +61,6 @@
 - [マイクロソフトの障害復旧方針（共同通信、11月25日）](https://news.livedoor.com/article/detail/32892991/)
 - [関文部科学大臣への問責決議案（KAB、11月25日）](https://www.kab.co.jp/news/article/17078253)
 - [ウクライナ・オデーサ州などへの攻撃（ロイター、11月25日）](https://www.arnnewscentre.ae/en/news/international/russian-strike-kills-2-people-in-ukraines-odesa-region-governor-says/)
-- [ウクライナ向け支援をめぐる報道（ロイター、11月24日）](https://www.reuters.com/business/aerospace-defense/us-defense-chief-has-yet-approve-patriot-missiles-already-allocated-ukraine-ft-2026-11-24/)
 - [日経平均の大引け（11月25日15時32分）](https://zai.diamond.jp/articles/-/499658)
 - [東京為替の動向（11月25日15時45分）](https://fx.minkabu.jp/news/385377)
 - [資さんうどん 和泉観音寺店の開店案内](https://kokura.keizai.biz/release/675199/)
