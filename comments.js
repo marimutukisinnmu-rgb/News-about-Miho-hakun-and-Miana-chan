@@ -46,7 +46,9 @@
 
     const values = new FormData(form);
     const message = String(values.get("message") || "");
-    const isHtmlRequest = message.startsWith("[HTML制作依頼]");
+    // Match the server's NFC normalization and trim before deciding whether
+    // this submission requires an authenticated bearer token.
+    const isHtmlRequest = message.normalize("NFC").trim().startsWith("[HTML制作依頼]");
     const payload = {
       nickname: String(values.get("nickname") || ""),
       email: String(values.get("email") || "").trim(),
