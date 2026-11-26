@@ -87,5 +87,4 @@
 - [全国の警報・注意報一覧（11月26日19時11分現在）](https://www.amecs.co.jp/wx/warning/index.html)
 - [Anker Japan：Anker Store 岡山一番街の開店案内](https://corp.ankerjapan.com/news/651)
 - [WithGreen：光が丘IMA店の店舗情報](https://store.withgreen.club/detail/067/)
-- [全国の新規開店予定情報](https://github.com/marimutukisinnmu-rgb/japan-store-openings-json/blob/main/json/latest.json)
 ↑i↑
