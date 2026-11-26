@@ -76,7 +76,7 @@
 - 共同通信：[オーストラリアのLNG国内供給法案](https://kumanichi.com/articles/2062295)
 - ウェザーニュース：[11月27日の主要都市の天気](https://weathernews.com/news/en/asia-pacific/2026/11/26/weather-607/)
 - ウェザーニュース：[那覇の天気予報](https://weathernews.jp/onebox/tenki/spot/41000132/week.html)
-- 海上保安庁：[那覇海上保安部の警報・注意報（06:55更新）](https://www6.kaiho.mlit.go.jp/n/11kanku/naha/keihou_chuihou.html)
+- 海上保安庁：[那覇海上保安部の警報・注意報（06:55更新）](https://www6.kaiho.mlit.go.jp/11kanku/naha/keihou_chuihou.html)
 - 株式会社MOFF：[Cat Café MOFF イオンモール伊達店](https://moff-moff.jp/cat-cafe/shop/date/)
 - 神戸BAL：[BYREDO神戸BALのオープン案内](https://prtimes.jp/main/html/rd/p/000000052.000120926.html)
 - 丸善ジュンク堂書店：[COMICTIONのオープン案内](https://prtimes.jp/main/html/rd/p/000000147.000027516.html)
