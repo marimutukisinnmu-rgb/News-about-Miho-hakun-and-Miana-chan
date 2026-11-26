@@ -58,5 +58,9 @@
 - [Reuters：ロシアの空軍基地への攻撃に関するウクライナ側発表](https://www.reuters.com/business/aerospace-defense/ukraine-says-it-struck-major-russian-air-base-damaging-five-planes-2026-11-25/)
 - [ウェザーニュース：11月26日の全国天気](https://weathernews.jp/news/202611/260021/)
 - [大阪管区気象台発表の大阪市予報](https://weather.3rd-in.co.jp/area20/2710000)
-- [全国の開店予定データ（11月26日10:17更新）](https://github.com/marimutukisinnmu-rgb/japan-store-openings-json/blob/main/json/latest.json)
+- [Anker Store 岡山一番街：公式オープン案内](https://corp.ankerjapan.com/news/651)
+- [WithGreen 光が丘IMA店：公式店舗情報](https://store.withgreen.club/detail/067/)
+- [ロピア 港北みなも店：公式店舗情報](https://lopia.jp/shops/kouhokuminamo)
+- [博多うどん うちだ屋：開店案内](https://prtimes.jp/main/html/rd/p/000000005.000178931.html)
+- [ミッフィーほかほかダイニング：開催案内](https://prtimes.jp/main/html/rd/p/000000334.000086964.html)
 ↑i↑
