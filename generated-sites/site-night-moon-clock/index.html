@@ -42,10 +42,10 @@ h1{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-weight:500;letter-s
 .pin{position:absolute;z-index:6;left:50%;top:50%;width:12px;height:12px;border-radius:50%;transform:translate(-50%,-50%);background:#f5dfaa;border:2px solid #fff5db;box-shadow:0 0 16px rgba(245,223,170,.7)}
 .digital-panel{min-width:0;padding:clamp(24px,4vw,36px);border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(25,35,75,.72),rgba(10,16,39,.72));box-shadow:0 22px 65px rgba(0,0,0,.2);backdrop-filter:blur(14px)}
 .panel-label{color:#d1bc83;font-size:.68rem;letter-spacing:.25em;font-weight:700;margin:0 0 15px}
-.digital{display:flex;align-items:baseline;gap:.28em;min-width:0;font-variant-numeric:tabular-nums;font-size:clamp(2.4rem,6vw,4.2rem);font-weight:300;letter-spacing:.015em;line-height:1.15;white-space:nowrap;text-shadow:0 0 28px rgba(191,207,255,.22)}
-.period{flex:0 0 auto;font-size:.38em;font-weight:600;letter-spacing:.02em;color:#d8c99e}
+.digital{display:block;width:100%;min-width:0;max-width:100%;font-variant-numeric:tabular-nums;font-size:clamp(1.7rem,9vw,3.7rem);font-weight:300;letter-spacing:.01em;line-height:1.08;white-space:normal;overflow-wrap:anywhere;text-shadow:0 0 28px rgba(191,207,255,.22)}
+.period{display:block;width:max-content;max-width:100%;font-size:clamp(.8rem,2.2vw,1rem);font-weight:600;letter-spacing:.04em;line-height:1.25;color:#d8c99e;margin-bottom:5px}
 .period:empty{display:none}
-.time-digits{min-width:0}
+.time-digits{display:block;max-width:100%;font-size:1em;white-space:nowrap;letter-spacing:0}
 .date{color:#c4cce6;font-size:.92rem;letter-spacing:.06em;margin:13px 0 0}
 .mode-row{display:flex;gap:8px;margin-top:24px}
 .mode{min-width:84px;border:1px solid rgba(226,231,255,.2);background:rgba(255,255,255,.035);color:#c5cce3;border-radius:999px;padding:9px 15px;font:inherit;font-size:.8rem;cursor:pointer;transition:all .2s}
@@ -109,6 +109,6 @@ h1{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-weight:500;letter-s
   </main>
   <footer class="footer">MADE FOR A QUIET NIGHT · MHN HTML WORKS</footer>
 </div>
-<script src="./clock.js" defer></script>
+<script src="./clock.js?v=20261127-2" defer></script>
 </body>
 </html>
