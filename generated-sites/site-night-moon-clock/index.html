@@ -40,9 +40,12 @@ h1{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-weight:500;letter-s
 .minute{width:3px;height:36%;background:linear-gradient(to top,#9daeda,#fff);box-shadow:0 0 12px rgba(206,220,255,.3)}
 .second{width:1.5px;height:40%;background:#e6bd77;z-index:5}
 .pin{position:absolute;z-index:6;left:50%;top:50%;width:12px;height:12px;border-radius:50%;transform:translate(-50%,-50%);background:#f5dfaa;border:2px solid #fff5db;box-shadow:0 0 16px rgba(245,223,170,.7)}
-.digital-panel{padding:clamp(24px,4vw,36px);border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(25,35,75,.72),rgba(10,16,39,.72));box-shadow:0 22px 65px rgba(0,0,0,.2);backdrop-filter:blur(14px)}
+.digital-panel{min-width:0;padding:clamp(24px,4vw,36px);border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(25,35,75,.72),rgba(10,16,39,.72));box-shadow:0 22px 65px rgba(0,0,0,.2);backdrop-filter:blur(14px)}
 .panel-label{color:#d1bc83;font-size:.68rem;letter-spacing:.25em;font-weight:700;margin:0 0 15px}
-.digital{font-variant-numeric:tabular-nums;font-size:clamp(2.4rem,6vw,4.2rem);font-weight:300;letter-spacing:.035em;line-height:1.15;white-space:nowrap;text-shadow:0 0 28px rgba(191,207,255,.22)}
+.digital{display:flex;align-items:baseline;gap:.28em;min-width:0;font-variant-numeric:tabular-nums;font-size:clamp(2.4rem,6vw,4.2rem);font-weight:300;letter-spacing:.015em;line-height:1.15;white-space:nowrap;text-shadow:0 0 28px rgba(191,207,255,.22)}
+.period{flex:0 0 auto;font-size:.38em;font-weight:600;letter-spacing:.02em;color:#d8c99e}
+.period:empty{display:none}
+.time-digits{min-width:0}
 .date{color:#c4cce6;font-size:.92rem;letter-spacing:.06em;margin:13px 0 0}
 .mode-row{display:flex;gap:8px;margin-top:24px}
 .mode{min-width:84px;border:1px solid rgba(226,231,255,.2);background:rgba(255,255,255,.035);color:#c5cce3;border-radius:999px;padding:9px 15px;font:inherit;font-size:.8rem;cursor:pointer;transition:all .2s}
@@ -86,7 +89,7 @@ h1{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-weight:500;letter-s
       </div>
       <section class="digital-panel" aria-label="現在時刻と月相">
         <p class="panel-label">LOCAL TIME · <span id="zoneLabel">24 HOUR</span></p>
-        <div class="digital" id="digitalTime" aria-live="off">--:--:--</div>
+        <div class="digital" id="digitalTime" aria-live="off"><span class="period" id="dayPeriod"></span><span class="time-digits" id="timeDigits">--:--:--</span></div>
         <p class="date" id="dateText">日付を読み込み中…</p>
         <div class="mode-row" role="group" aria-label="時刻表示の切り替え">
           <button class="mode" id="mode12" type="button" aria-pressed="false">12時間</button>
