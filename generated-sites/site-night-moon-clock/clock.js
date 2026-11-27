@@ -5,6 +5,8 @@
   const minuteHand = document.getElementById("minuteHand");
   const secondHand = document.getElementById("secondHand");
   const digitalTime = document.getElementById("digitalTime");
+  const dayPeriod = document.getElementById("dayPeriod");
+  const timeDigits = document.getElementById("timeDigits");
   const dateText = document.getElementById("dateText");
   const mode12 = document.getElementById("mode12");
   const mode24 = document.getElementById("mode24");
@@ -14,15 +16,9 @@
   const moonName = document.getElementById("moonName");
   const moonDetail = document.getElementById("moonDetail");
 
-  if (!hourHand || !minuteHand || !secondHand || !digitalTime) return;
+  if (!hourHand || !minuteHand || !secondHand || !digitalTime || !dayPeriod || !timeDigits) return;
 
   let hour12 = false;
-  const timeFormatter = new Intl.DateTimeFormat("ja-JP", {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: true
-  });
   const dateFormatter = new Intl.DateTimeFormat("ja-JP", {
     year: "numeric",
     month: "long",
@@ -45,12 +41,10 @@
     minuteHand.style.transform = "translateX(-50%) rotate(" + (minuteValue * 6) + "deg)";
     secondHand.style.transform = "translateX(-50%) rotate(" + (smoothSeconds * 6) + "deg)";
 
-    digitalTime.textContent = new Intl.DateTimeFormat("ja-JP", {
-      hour: "2-digit",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: hour12
-    }).format(now);
+    const displayHour = hour12 ? (hours % 12 || 12) : hours;
+    dayPeriod.textContent = hour12 ? (hours >= 12 ? "午後" : "午前") : "";
+    timeDigits.textContent = String(displayHour).padStart(2, "0") + ":" +
+      String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
     dateText.textContent = dateFormatter.format(now);
   }
 
