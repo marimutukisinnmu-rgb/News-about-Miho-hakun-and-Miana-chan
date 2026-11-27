@@ -105,7 +105,9 @@
   function createCommentCard(comment) {
     const article = document.createElement("article");
     article.className = "comment-card";
-    const isHtmlRequest = String(comment.message || "").startsWith("[HTML制作依頼]");
+    const messageText = String(comment.message || "");
+    const isHtmlRequest = messageText.startsWith("[HTML制作依頼]");
+    const isSuggestion = messageText.startsWith("[修正案]");
 
     const header = document.createElement("div");
     header.className = "comment-head";
@@ -125,7 +127,7 @@
     headerBadges.style.flexWrap = "wrap";
     const typePill = document.createElement("span");
     typePill.className = "pill";
-    typePill.textContent = isHtmlRequest ? "HTML制作依頼" : "通常コメント";
+    typePill.textContent = isHtmlRequest ? "HTML制作依頼" : isSuggestion ? "修正案" : "通常コメント";
     const pill = document.createElement("span");
     pill.className = "pill " + comment.status;
     pill.textContent = statusLabel(comment.status);
@@ -139,7 +141,7 @@
     const meta = document.createElement("div");
     meta.className = "meta";
     const requestId = document.createElement("span");
-    requestId.textContent = (isHtmlRequest ? "依頼ID: " : "コメントID: ") + String(comment.id || "不明");
+    requestId.textContent = (isHtmlRequest ? "依頼ID: " : isSuggestion ? "修正案ID: " : "コメントID: ") + String(comment.id || "不明");
     const source = document.createElement("span");
     source.textContent = "送信元: " + (comment.source_page || "不明");
     meta.append(requestId, source);
@@ -266,7 +268,7 @@
 
   async function loadComments(showLoading = true) {
     refreshButton.disabled = true;
-    if (showLoading) listStatus.textContent = "コメントを読み込んでいます…";
+    if (showLoading) listStatus.textContent = "受信項目を読み込んでいます…";
     try {
       const result = await api({ action: "list", status: "all" });
       comments = Array.isArray(result.comments) ? result.comments : [];

@@ -1,4 +1,12 @@
 {
   "version": 1,
-  "sites": []
+  "sites": [
+    {
+      "id": "site-night-moon-clock",
+      "number": 1,
+      "title": "夜空と月の時計",
+      "summary": "星空を背景にした時計。12時間・24時間表示を切り替えられ、日付に合わせて月の満ち欠けも表示します。",
+      "published_at": "2026-11-27"
+    }
+  ]
 }

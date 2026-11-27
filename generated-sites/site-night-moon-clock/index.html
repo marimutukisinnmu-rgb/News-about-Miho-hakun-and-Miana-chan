@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080d20">
+<meta name="description" content="静かな夜空と月の満ち欠けを楽しめる、スマートフォン対応のデジタル・アナログ時計。">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; base-uri 'none'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; form-action 'self';">
+<title>夜空と月の時計</title>
+<style>
+:root{color-scheme:dark;--ink:#f4f1ff;--muted:#a9b1d0;--gold:#f5dfaa;--line:rgba(226,231,255,.16);--glass:rgba(13,20,48,.62)}
+*{box-sizing:border-box}
+html{min-height:100%;background:#080d20}
+body{margin:0;min-height:100vh;min-height:100svh;color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 50% 8%,rgba(73,88,157,.32),transparent 38%),radial-gradient(ellipse at 12% 78%,rgba(63,54,119,.2),transparent 35%),linear-gradient(155deg,#111a3a 0%,#090f27 48%,#070b19 100%);overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0}
+body:before{opacity:.62;background-image:radial-gradient(1px 1px at 8% 13%,#fff 99%,transparent),radial-gradient(1.4px 1.4px at 19% 35%,#e6eaff 99%,transparent),radial-gradient(1px 1px at 33% 9%,#fff 99%,transparent),radial-gradient(1.5px 1.5px at 47% 26%,#dbe4ff 99%,transparent),radial-gradient(1px 1px at 62% 12%,#fff 99%,transparent),radial-gradient(1.3px 1.3px at 77% 31%,#fff 99%,transparent),radial-gradient(1px 1px at 91% 17%,#e4eaff 99%,transparent),radial-gradient(1px 1px at 13% 66%,#fff 99%,transparent),radial-gradient(1.5px 1.5px at 28% 83%,#dce5ff 99%,transparent),radial-gradient(1px 1px at 52% 72%,#fff 99%,transparent),radial-gradient(1.2px 1.2px at 72% 87%,#fff 99%,transparent),radial-gradient(1px 1px at 88% 68%,#e3e8ff 99%,transparent);background-size:100% 100%}
+body:after{background:radial-gradient(ellipse at center,transparent 35%,rgba(2,5,16,.45) 100%)}
+a{color:#dce4ff}
+.page{position:relative;z-index:1;width:min(1080px,100%);margin:0 auto;padding:24px clamp(16px,4vw,42px) 30px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:clamp(30px,6vh,68px)}
+.brand{display:flex;align-items:center;gap:11px;color:#dce3ff;text-decoration:none;font-size:.8rem;letter-spacing:.18em;font-weight:700}
+.brand-mark{display:grid;place-items:center;width:34px;height:34px;border:1px solid rgba(230,232,255,.35);border-radius:50%;color:var(--gold);font-size:17px}
+.back{font-size:.8rem;color:#c1c9e5;text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:9px 14px;transition:background .2s,border-color .2s}
+.back:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.35)}
+.intro{text-align:center;margin-bottom:32px}
+.eyebrow{color:#d7c48f;font-size:.7rem;letter-spacing:.34em;font-weight:700;margin:0 0 13px}
+h1{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-weight:500;letter-spacing:.12em;font-size:clamp(1.8rem,5vw,3rem);margin:0;text-shadow:0 4px 30px rgba(192,202,255,.25)}
+.subtitle{color:var(--muted);font-size:.88rem;letter-spacing:.08em;margin:13px 0 0}
+.stage{display:grid;grid-template-columns:minmax(270px,1fr) minmax(300px,.95fr);align-items:center;gap:clamp(28px,6vw,78px);max-width:850px;margin:0 auto}
+.clock-wrap{display:grid;place-items:center;position:relative;padding:8px}
+.clock-wrap:before{content:"";position:absolute;width:90%;aspect-ratio:1;border-radius:50%;background:rgba(115,135,220,.13);filter:blur(42px)}
+.clock{position:relative;width:min(100%,340px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(236,232,255,.52);background:radial-gradient(circle at 50% 42%,rgba(71,85,136,.38),rgba(10,17,43,.94) 66%);box-shadow:0 0 0 8px rgba(214,222,255,.035),0 0 0 9px rgba(220,225,255,.16),0 25px 80px rgba(0,0,0,.45),inset 0 0 48px rgba(143,160,255,.12)}
+.clock:before{content:"";position:absolute;inset:11px;border-radius:50%;background:repeating-conic-gradient(from -1deg,rgba(228,233,255,.8) 0deg .65deg,transparent .65deg 6deg);mask:radial-gradient(circle,transparent 0 88%,#000 89% 100%);-webkit-mask:radial-gradient(circle,transparent 0 88%,#000 89% 100%)}
+.clock:after{content:"";position:absolute;inset:24px;border-radius:50%;border:1px solid rgba(228,232,255,.08);pointer-events:none}
+.num{position:absolute;z-index:2;color:#e8e6f4;font-family:Georgia,serif;font-size:clamp(1rem,2vw,1.3rem);text-shadow:0 0 12px rgba(210,220,255,.3)}
+.n12{top:8%;left:50%;transform:translateX(-50%)}.n3{right:9%;top:50%;transform:translateY(-50%)}.n6{bottom:8%;left:50%;transform:translateX(-50%)}.n9{left:9%;top:50%;transform:translateY(-50%)}
+.hand{position:absolute;left:50%;bottom:50%;z-index:4;transform-origin:50% 100%;border-radius:99px;transform:translateX(-50%) rotate(0deg)}
+.hour{width:5px;height:25%;background:linear-gradient(to top,#c5c8df,#fff3d5);box-shadow:0 0 12px rgba(246,225,176,.28)}
+.minute{width:3px;height:36%;background:linear-gradient(to top,#9daeda,#fff);box-shadow:0 0 12px rgba(206,220,255,.3)}
+.second{width:1.5px;height:40%;background:#e6bd77;z-index:5}
+.pin{position:absolute;z-index:6;left:50%;top:50%;width:12px;height:12px;border-radius:50%;transform:translate(-50%,-50%);background:#f5dfaa;border:2px solid #fff5db;box-shadow:0 0 16px rgba(245,223,170,.7)}
+.digital-panel{min-width:0;padding:clamp(24px,4vw,36px);border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(25,35,75,.72),rgba(10,16,39,.72));box-shadow:0 22px 65px rgba(0,0,0,.2);backdrop-filter:blur(14px)}
+.panel-label{color:#d1bc83;font-size:.68rem;letter-spacing:.25em;font-weight:700;margin:0 0 15px}
+.digital{display:block;width:100%;min-width:0;max-width:100%;font-variant-numeric:tabular-nums;font-size:clamp(1.7rem,9vw,3.7rem);font-weight:300;letter-spacing:.01em;line-height:1.08;white-space:normal;overflow-wrap:anywhere;text-shadow:0 0 28px rgba(191,207,255,.22)}
+.period{display:block;width:max-content;max-width:100%;font-size:clamp(.8rem,2.2vw,1rem);font-weight:600;letter-spacing:.04em;line-height:1.25;color:#d8c99e;margin-bottom:5px}
+.period:empty{display:none}
+.time-digits{display:block;max-width:100%;font-size:1em;white-space:nowrap;letter-spacing:0}
+.date{color:#c4cce6;font-size:.92rem;letter-spacing:.06em;margin:13px 0 0}
+.mode-row{display:flex;gap:8px;margin-top:24px}
+.mode{min-width:84px;border:1px solid rgba(226,231,255,.2);background:rgba(255,255,255,.035);color:#c5cce3;border-radius:999px;padding:9px 15px;font:inherit;font-size:.8rem;cursor:pointer;transition:all .2s}
+.mode:hover{background:rgba(255,255,255,.1)}
+.mode[aria-pressed="true"]{color:#171b2a;background:#ead9a8;border-color:#ead9a8;font-weight:700;box-shadow:0 4px 20px rgba(234,217,168,.18)}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(224,227,255,.22),transparent);margin:26px 0 22px}
+.moon-row{display:flex;align-items:center;gap:19px}
+.moon{position:relative;flex:0 0 82px;width:82px;height:82px;border-radius:50%;overflow:hidden;background:radial-gradient(circle at 35% 30%,#fff7d9,#d4c7a3 58%,#aa9b80);box-shadow:0 0 25px rgba(240,225,182,.18),0 0 60px rgba(181,197,255,.12)}
+.moon-shadow{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 35% 30%,#25304e,#111a32 72%);transform:translateX(0);transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.moon-info{min-width:0}
+.moon-name{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:1.2rem;color:#f4e4b8;margin:0 0 5px}
+.moon-detail{font-size:.79rem;color:#aeb8d6;line-height:1.7;margin:0}
+.footnote{color:#8590b1;text-align:center;font-size:.72rem;line-height:1.8;margin:35px auto 0;max-width:620px}
+.footer{text-align:center;color:#7782a3;font-size:.7rem;letter-spacing:.14em;margin-top:28px}
+@media(max-width:720px){.page{padding-top:17px}.topbar{margin-bottom:35px}.stage{grid-template-columns:1fr;gap:25px;max-width:440px}.clock-wrap{padding:6px}.clock{width:min(78vw,310px)}.digital-panel{padding:24px}.intro{margin-bottom:27px}.footnote{margin-top:27px}}
+@media(max-width:380px){.digital{font-size:2.15rem}.digital-panel{padding:20px}.moon{width:70px;height:70px;flex-basis:70px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="topbar">
+    <a class="brand" href="../../index.html"><span class="brand-mark">✦</span><span>MHN · NIGHT SKY</span></a>
+    <a class="back" href="../../index.html">MHNへ戻る ↗</a>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <p class="eyebrow">A LITTLE MOMENT UNDER THE STARS</p>
+      <h1 id="title">夜空と月の時計</h1>
+      <p class="subtitle">星の瞬きと、今日の月と、ともに。</p>
+    </section>
+    <section class="stage" aria-label="時計と月の情報">
+      <div class="clock-wrap">
+        <div class="clock" role="img" aria-label="現在時刻を示すアナログ時計">
+          <span class="num n12">12</span><span class="num n3">3</span><span class="num n6">6</span><span class="num n9">9</span>
+          <span class="hand hour" id="hourHand"></span>
+          <span class="hand minute" id="minuteHand"></span>
+          <span class="hand second" id="secondHand"></span>
+          <span class="pin"></span>
+        </div>
+      </div>
+      <section class="digital-panel" aria-label="現在時刻と月相">
+        <p class="panel-label">LOCAL TIME · <span id="zoneLabel">24 HOUR</span></p>
+        <div class="digital" id="digitalTime" aria-live="off"><span class="period" id="dayPeriod"></span><span class="time-digits" id="timeDigits">--:--:--</span></div>
+        <p class="date" id="dateText">日付を読み込み中…</p>
+        <div class="mode-row" role="group" aria-label="時刻表示の切り替え">
+          <button class="mode" id="mode12" type="button" aria-pressed="false">12時間</button>
+          <button class="mode" id="mode24" type="button" aria-pressed="true">24時間</button>
+        </div>
+        <div class="divider"></div>
+        <div class="moon-row">
+          <div class="moon" role="img" aria-label="今日の月の形" id="moonVisual"><span class="moon-shadow" id="moonShadow"></span></div>
+          <div class="moon-info">
+            <p class="moon-name" id="moonName">月相を計算中…</p>
+            <p class="moon-detail" id="moonDetail">今日の月の明るさを表示します</p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <p class="footnote">時刻はこの端末のローカル時刻に合わせています。月の形は日付から計算した目安です。<br>夜空の下で、少しだけゆっくりした時間を。</p>
+  </main>
+  <footer class="footer">MADE FOR A QUIET NIGHT · MHN HTML WORKS</footer>
+</div>
+<script src="./clock.js?v=20261127-2" defer></script>
+</body>
+</html>

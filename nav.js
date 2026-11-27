@@ -28,11 +28,18 @@
     new MutationObserver(() => dedupeNav(nav)).observe(nav, { childList: true });
   }
 
-  const client = window.supabase.createClient(
-    "https://ewiurxmmomtcjfvjfpus.supabase.co",
-    "sb_publishable_nvWYS-dOfApdIClbRV0A1Q_9UgaPM90",
-    { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } }
-  );
+  // Reuse the authenticated client initialized by a page-specific script.
+  // Otherwise create it here, so the navigation and requester-feedback UI
+  // share one session instance and one auth-state listener source.
+  const existingClient = window.__mhnSupabaseClient;
+  const client = existingClient && existingClient.auth &&
+      typeof existingClient.auth.getSession === "function"
+    ? existingClient
+    : window.supabase.createClient(
+        "https://ewiurxmmomtcjfvjfpus.supabase.co",
+        "sb_publishable_nvWYS-dOfApdIClbRV0A1Q_9UgaPM90",
+        { auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true } }
+      );
   window.__mhnSupabaseClient = client;
   let renderVersion = 0;
 
