@@ -194,10 +194,16 @@ Deno.serve(async (req: Request) => {
     return jsonResponse(origin, { error: "message_invalid" }, 400);
   }
 
+  const isHtmlRequest = message.startsWith("[HTML制作依頼]");
+  // HTML requests must explicitly identify their originating page.
+  if (isHtmlRequest &&
+      (typeof body.pagePath !== "string" || body.pagePath.trim() === "")) {
+    return jsonResponse(origin, { error: "page_invalid" }, 400);
+  }
   if (body.pagePath !== undefined && typeof body.pagePath !== "string") {
     return jsonResponse(origin, { error: "page_invalid" }, 400);
   }
-  const pagePathInput = typeof body.pagePath === "string" ? body.pagePath : "/";
+  const pagePathInput = typeof body.pagePath === "string" ? body.pagePath.trim() : "/";
   let sourcePage = "/";
   try {
     const parsedPage = new URL(pagePathInput, origin);
@@ -209,7 +215,6 @@ Deno.serve(async (req: Request) => {
     return jsonResponse(origin, { error: "page_invalid" }, 400);
   }
 
-  const isHtmlRequest = message.startsWith("[HTML制作依頼]");
   let requesterUserId: string | null = null;
 
   if (isHtmlRequest) {
