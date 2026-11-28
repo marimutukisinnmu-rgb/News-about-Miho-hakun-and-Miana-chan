@@ -79,7 +79,7 @@
 ↓i↓
 ## きょうの確認先
 
-- 気象庁防災情報XMLをもとにした警報・注意報一覧：[全国の発表中情報](https://agora.ex.nii.ac.jp/cps/weather/warning/index.html.ja)（16:11:43更新）
+- 気象庁防災情報XMLをもとにした警報・注意報一覧：[全国の発表中情報](https://agora.ex.nii.ac.jp/cps/weather/warning/)（16:11:43更新）
 - 大阪管区気象台の予報：[大阪府の気象情報](https://weather.3rd-in.co.jp/office/270000)（11月28日 05:00発表）
 - 台風のリアルタイム速報：[デジタル台風](https://agora.ex.nii.ac.jp/digital-typhoon/mobile/)（14:37更新）
 - CPTPP：[日本に支援事務所設置へ、3カ国と加入交渉入り](https://www.nippon.com/ja/articles/-/58122)（11月27日）
